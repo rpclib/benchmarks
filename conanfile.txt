@@ -1,0 +1,8 @@
+[requires]
+Hayai/1.0.1@ebostijancic/testing
+capnproto/0.5.3@lasote/stable
+rpclib/1.0.0@sztomi/testing
+
+[generators]
+cmake
+

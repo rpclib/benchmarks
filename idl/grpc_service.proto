@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service GrpcServiceBenchmark {
+  rpc get_answer (AnswerRequest) returns (AnswerReply) {}
+}
+
+message AnswerRequest {
+  int32 number = 1;
+}
+
+message AnswerReply {
+  int32 result = 1;
+}
