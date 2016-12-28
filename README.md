@@ -1,9 +1,9 @@
 # rpclib benchmarks
 
-This is a set of benchmarks that compare the performance of various RPC libraries/frameworks in
+This is a set of benchmarks that compares the performance of various RPC libraries/frameworks in
 specific situations.
 
-# Libraries
+## Libraries
 
 This is a WIP. The following libraries are or will be benchmarked:
 
@@ -13,28 +13,35 @@ This is a WIP. The following libraries are or will be benchmarked:
   - [ ] [grpc](https://grpc.io)
   - [ ] [Apache Thrift](https://thrift.apache.org/)
 
-# Results
+## Results
 
 TBD
 
-# FAQ
+## Compiling and running
 
-## What is `rpclib`?
+TBD
+
+## FAQ
+
+### What is `rpclib`?
 
 `rpclib` is a modern msgpack-rpc implementation for library. It provides a very clean interface
 inspired by Boost.Python. See [rpclib.net](http://rpclib.net) for more information.
 
-## I think your implementation for library XXX is suboptimal. Will you change it?
+### I think your implementation for library XXX is suboptimal. Will you change it?
 
 Probably yes, please send a PR. I'm not an expert in the other libraries, so it's entirely possible
 that I used them wrong. If your PR is about an optimization that not all libraries can do (e.g.
 caching request objects), then create a separate benchmark for it.
 
-## Why don't you measure against XXX library?
+### Why don't you measure against XXX library?
 
 One of the following reasons:
 
   * I did not know about the library
   * There was no conan package for it and I didn't have time to make one
   * I didn't have time to learn the library
+
+So by all means, please let me know if there is library that is worth looking at. Bonus points if
+you make a conan package for it.
 
