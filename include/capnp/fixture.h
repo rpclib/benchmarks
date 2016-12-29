@@ -6,7 +6,6 @@
 #include "hayai/hayai.hpp"
 #include "capnp/ez-rpc.h"
 
-#include "generic_fixture.h"
 #include "target_code.h"
 
 #include "capnp/capnp_service.capnp.h"

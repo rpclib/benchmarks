@@ -11,7 +11,7 @@ This is a WIP. The following libraries are or will be benchmarked:
   - [x] [cap'n'proto rpc](https://capnproto.org/cxxrpc.html)
   - [ ] [json-rpc-cpp](https://github.com/cinemast/libjson-rpc-cpp)
   - [ ] [grpc](https://grpc.io)
-  - [ ] [Apache Thrift](https://thrift.apache.org/)
+  - [x] [Apache Thrift](https://thrift.apache.org/)
 
 ## Results
 
