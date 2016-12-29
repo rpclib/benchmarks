@@ -2,6 +2,7 @@
 Hayai/1.0.1@ebostijancic/testing
 capnproto/0.5.3@lasote/stable
 thrift/0.9.3@sztomi/testing
+xmlrpc-c/1.39.12@sztomi/testing
 rpclib/1.0.0@sztomi/testing
 
 [generators]

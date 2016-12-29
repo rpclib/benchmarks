@@ -19,7 +19,7 @@
 
 #include "target_code.h"
 
-static constexpr uint16_t thrift_port = 8080;
+static constexpr uint16_t thrift_port = 8083;
 
 class thrift_server : virtual public ThriftServiceBenchmarkIf {
 public:
@@ -51,7 +51,7 @@ public:
       server.serve();
       server_running = false;
     });
-    std::this_thread::sleep_for(std::chrono::milliseconds(2000));
+    std::this_thread::sleep_for(std::chrono::milliseconds(50));
     clientTransport->open();
     serve_thread.detach();
   }
