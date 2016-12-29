@@ -8,7 +8,7 @@
 #include <chrono>
 #include <stdio.h>
 
-#include "hayai/hayai.hpp"
+#include "benchmark/benchmark.h"
 
 #include "xmlrpc-c/base.hpp"
 #include "xmlrpc-c/registry.hpp"
@@ -35,7 +35,7 @@ public:
   }
 };
 
-class xmlrpc_c_bench : public hayai::Fixture {
+class xmlrpc_c_bench : public benchmark::Fixture {
 public:
   xmlrpc_c_bench()
       : server(xmlrpc_c::serverAbyss::constrOpt()

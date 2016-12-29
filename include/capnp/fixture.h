@@ -3,7 +3,8 @@
 #ifndef FIXTURE_H_NNOJDJZG
 #define FIXTURE_H_NNOJDJZG
 
-#include "hayai/hayai.hpp"
+#include "benchmark/benchmark.h"
+
 #include "capnp/ez-rpc.h"
 
 #include "target_code.h"
@@ -19,7 +20,7 @@ public:
   }
 };
 
-class capnp_bench : public ::hayai::Fixture {
+class capnp_bench : public benchmark::Fixture {
 public:
   capnp_bench()
       : server(kj::heap<capnp_server>(), "127.0.0.1:8081"),

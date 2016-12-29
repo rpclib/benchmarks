@@ -7,7 +7,7 @@
 #include <thread>
 #include <chrono>
 
-#include "hayai/hayai.hpp"
+#include "benchmark/benchmark.h"
 
 #include "ThriftServiceBenchmark.h"
 #include "thrift/protocol/TBinaryProtocol.h"
@@ -28,7 +28,7 @@ public:
   }
 };
 
-class thrift_bench : public hayai::Fixture {
+class thrift_bench : public benchmark::Fixture {
 public:
   thrift_bench()
       : handler(new thrift_server),

@@ -3,13 +3,14 @@
 #ifndef FIXTURE_H_EWLDRJT7
 #define FIXTURE_H_EWLDRJT7
 
-#include "hayai/hayai.hpp"
+#include "benchmark/benchmark.h"
+
 #include "target_code.h"
 
 #include "rpc/server.h"
 #include "rpc/client.h"
 
-class rpclib_bench : public ::hayai::Fixture {
+class rpclib_bench {
 public:
     rpclib_bench()
         : server(8080), client("127.0.0.1", 8080) {
