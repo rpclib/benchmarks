@@ -19,8 +19,8 @@ public:
     }
 
     void get_answer() {
-        int a = client.call("get_answer", 23).as<int>();
-        (void)a;
+        int a;
+        benchmark::DoNotOptimize(a = client.call("get_answer", 23).as<int>());
     }
 
     rpc::server server;

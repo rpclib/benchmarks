@@ -64,8 +64,8 @@ public:
   }
 
   void get_answer() {
-    int a = client.get_answer(23);
-    (void)a;
+    int a;
+    benchmark::DoNotOptimize(a = client.get_answer(23));
   }
 
   boost::shared_ptr<thrift_server> handler;

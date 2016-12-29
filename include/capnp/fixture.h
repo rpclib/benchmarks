@@ -34,8 +34,9 @@ public:
       auto request = client.getAnswerRequest();
       request.setNumber(23);
       auto resultPromise = request.send();
-      int a = resultPromise.wait(client_thing.getWaitScope()).getResult();
-      (void)a;
+      int a;
+      benchmark::DoNotOptimize(
+          a = resultPromise.wait(client_thing.getWaitScope()).getResult());
   }
 
   ~capnp_bench() noexcept {}

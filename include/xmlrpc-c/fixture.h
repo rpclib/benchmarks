@@ -55,8 +55,8 @@ public:
   void get_answer() {
     xmlrpc_c::value result;
     client.call(server_url, "get_answer", "i", &result, 23);
-    int a = xmlrpc_c::value_int(result);
-    (void)a;
+    int a;
+    benchmark::DoNotOptimize(a = xmlrpc_c::value_int(result));
   }
 
   ~xmlrpc_c_bench() {
