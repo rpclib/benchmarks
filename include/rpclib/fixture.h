@@ -10,7 +10,7 @@
 #include "rpc/server.h"
 #include "rpc/client.h"
 
-class rpclib_bench {
+class rpclib_bench : public benchmark::Fixture {
 public:
     rpclib_bench()
         : server(8080), client("127.0.0.1", 8080) {
