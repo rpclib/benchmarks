@@ -9,9 +9,10 @@ This is a WIP. The following libraries are or will be benchmarked:
 
   - [x] [rpclib](http://rpclib.net)
   - [x] [cap'n'proto rpc](https://capnproto.org/cxxrpc.html)
+  - [x] [xmlrpc-c](http://xmlrpc-c.sourceforge.net/)
+  - [x] [Apache Thrift](https://thrift.apache.org/)
   - [ ] [json-rpc-cpp](https://github.com/cinemast/libjson-rpc-cpp)
   - [ ] [grpc](https://grpc.io)
-  - [x] [Apache Thrift](https://thrift.apache.org/)
 
 ## Results
 
