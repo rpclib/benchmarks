@@ -13,6 +13,8 @@ add_executable(rpclib_benchmark
     src/thrift/thrift_service_constants.cpp
     src/thrift/thrift_service_types.cpp
     src/thrift/ThriftServiceBenchmark.cpp
+    src/grpc/grpc_service.pb.cc
+    src/grpc/grpc_service.grpc.pb.cc
     )
 
 target_link_libraries(rpclib_benchmark ${CONAN_LIBS})
@@ -24,6 +26,7 @@ target_compile_definitions(rpclib_benchmark PUBLIC ${CONAN_DEFINES})
 target_include_directories(rpclib_benchmark PUBLIC include)
 target_include_directories(rpclib_benchmark PUBLIC include/thrift)
 target_include_directories(rpclib_benchmark PUBLIC include/capnp)
+target_include_directories(rpclib_benchmark PUBLIC include/grpc)
 
 add_custom_command(TARGET rpclib_benchmark POST_BUILD
                    COMMAND ${CMAKE_COMMAND} -E

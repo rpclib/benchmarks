@@ -2,8 +2,8 @@
 // If you make any local change, they will be lost.
 // source: idl/grpc_service.proto
 
-#include "idl/grpc_service.pb.h"
-#include "idl/grpc_service.grpc.pb.h"
+#include "grpc/grpc_service.grpc.pb.h"
+#include "grpc/grpc_service.pb.h"
 
 #include <grpc++/impl/codegen/async_stream.h>
 #include <grpc++/impl/codegen/async_unary_call.h>
@@ -14,44 +14,60 @@
 #include <grpc++/impl/codegen/service_type.h>
 #include <grpc++/impl/codegen/sync_stream.h>
 
-static const char* GrpcServiceBenchmark_method_names[] = {
-  "/GrpcServiceBenchmark/get_answer",
+#include "target_code.h"
+
+static const char *GrpcServiceBenchmark_method_names[] = {
+    "/GrpcServiceBenchmark/get_answer",
 };
 
-std::unique_ptr< GrpcServiceBenchmark::Stub> GrpcServiceBenchmark::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
-  std::unique_ptr< GrpcServiceBenchmark::Stub> stub(new GrpcServiceBenchmark::Stub(channel));
+std::unique_ptr<GrpcServiceBenchmark::Stub> GrpcServiceBenchmark::NewStub(
+    const std::shared_ptr<::grpc::ChannelInterface> &channel,
+    const ::grpc::StubOptions &options) {
+  std::unique_ptr<GrpcServiceBenchmark::Stub> stub(
+      new GrpcServiceBenchmark::Stub(channel));
   return stub;
 }
 
-GrpcServiceBenchmark::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
-  : channel_(channel), rpcmethod_get_answer_(GrpcServiceBenchmark_method_names[0], ::grpc::RpcMethod::NORMAL_RPC, channel)
-  {}
+GrpcServiceBenchmark::Stub::Stub(
+    const std::shared_ptr<::grpc::ChannelInterface> &channel)
+    : channel_(channel),
+      rpcmethod_get_answer_(GrpcServiceBenchmark_method_names[0],
+                            ::grpc::RpcMethod::NORMAL_RPC, channel) {}
 
-::grpc::Status GrpcServiceBenchmark::Stub::get_answer(::grpc::ClientContext* context, const ::AnswerRequest& request, ::AnswerReply* response) {
-  return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_get_answer_, context, request, response);
+::grpc::Status
+GrpcServiceBenchmark::Stub::get_answer(::grpc::ClientContext *context,
+                                       const ::AnswerRequest &request,
+                                       ::AnswerReply *response) {
+  return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_get_answer_,
+                                   context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::AnswerReply>* GrpcServiceBenchmark::Stub::Asyncget_answerRaw(::grpc::ClientContext* context, const ::AnswerRequest& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::AnswerReply>(channel_.get(), cq, rpcmethod_get_answer_, context, request);
+::grpc::ClientAsyncResponseReader<::AnswerReply> *
+GrpcServiceBenchmark::Stub::Asyncget_answerRaw(::grpc::ClientContext *context,
+                                               const ::AnswerRequest &request,
+                                               ::grpc::CompletionQueue *cq) {
+  return new ::grpc::ClientAsyncResponseReader<::AnswerReply>(
+      channel_.get(), cq, rpcmethod_get_answer_, context, request);
 }
 
 GrpcServiceBenchmark::Service::Service() {
   (void)GrpcServiceBenchmark_method_names;
   AddMethod(new ::grpc::RpcServiceMethod(
-      GrpcServiceBenchmark_method_names[0],
-      ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< GrpcServiceBenchmark::Service, ::AnswerRequest, ::AnswerReply>(
+      GrpcServiceBenchmark_method_names[0], ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler<GrpcServiceBenchmark::Service,
+                                   ::AnswerRequest, ::AnswerReply>(
           std::mem_fn(&GrpcServiceBenchmark::Service::get_answer), this)));
 }
 
-GrpcServiceBenchmark::Service::~Service() {
-}
+GrpcServiceBenchmark::Service::~Service() {}
 
-::grpc::Status GrpcServiceBenchmark::Service::get_answer(::grpc::ServerContext* context, const ::AnswerRequest* request, ::AnswerReply* response) {
-  (void) context;
-  (void) request;
-  (void) response;
+::grpc::Status
+GrpcServiceBenchmark::Service::get_answer(::grpc::ServerContext *context,
+                                          const ::AnswerRequest *request,
+                                          ::AnswerReply *response) {
+  (void)context;
+  (void)request;
+  (void)response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
-
 

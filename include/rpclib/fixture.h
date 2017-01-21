@@ -13,7 +13,7 @@
 class rpclib_bench : public benchmark::Fixture {
 public:
     rpclib_bench()
-        : server(8080), client("127.0.0.1", 8080) {
+        : server(8086), client("127.0.0.1", 8086) {
       server.bind("get_answer", &::get_answer);
       server.async_run(1);
     }
