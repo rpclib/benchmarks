@@ -22,6 +22,7 @@ class ThriftServiceBenchmarkIf {
  public:
   virtual ~ThriftServiceBenchmarkIf() {}
   virtual int32_t get_answer(const int32_t number) = 0;
+  virtual void get_blob(std::string& _return) = 0;
 };
 
 class ThriftServiceBenchmarkIfFactory {
@@ -54,6 +55,9 @@ class ThriftServiceBenchmarkNull : virtual public ThriftServiceBenchmarkIf {
   int32_t get_answer(const int32_t /* number */) {
     int32_t _return = 0;
     return _return;
+  }
+  void get_blob(std::string& /* _return */) {
+    return;
   }
 };
 
@@ -161,6 +165,98 @@ class ThriftServiceBenchmark_get_answer_presult {
 
 };
 
+
+class ThriftServiceBenchmark_get_blob_args {
+ public:
+
+  ThriftServiceBenchmark_get_blob_args(const ThriftServiceBenchmark_get_blob_args&);
+  ThriftServiceBenchmark_get_blob_args& operator=(const ThriftServiceBenchmark_get_blob_args&);
+  ThriftServiceBenchmark_get_blob_args() {
+  }
+
+  virtual ~ThriftServiceBenchmark_get_blob_args() throw();
+
+  bool operator == (const ThriftServiceBenchmark_get_blob_args & /* rhs */) const
+  {
+    return true;
+  }
+  bool operator != (const ThriftServiceBenchmark_get_blob_args &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const ThriftServiceBenchmark_get_blob_args & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+
+class ThriftServiceBenchmark_get_blob_pargs {
+ public:
+
+
+  virtual ~ThriftServiceBenchmark_get_blob_pargs() throw();
+
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+typedef struct _ThriftServiceBenchmark_get_blob_result__isset {
+  _ThriftServiceBenchmark_get_blob_result__isset() : success(false) {}
+  bool success :1;
+} _ThriftServiceBenchmark_get_blob_result__isset;
+
+class ThriftServiceBenchmark_get_blob_result {
+ public:
+
+  ThriftServiceBenchmark_get_blob_result(const ThriftServiceBenchmark_get_blob_result&);
+  ThriftServiceBenchmark_get_blob_result& operator=(const ThriftServiceBenchmark_get_blob_result&);
+  ThriftServiceBenchmark_get_blob_result() : success() {
+  }
+
+  virtual ~ThriftServiceBenchmark_get_blob_result() throw();
+  std::string success;
+
+  _ThriftServiceBenchmark_get_blob_result__isset __isset;
+
+  void __set_success(const std::string& val);
+
+  bool operator == (const ThriftServiceBenchmark_get_blob_result & rhs) const
+  {
+    if (!(success == rhs.success))
+      return false;
+    return true;
+  }
+  bool operator != (const ThriftServiceBenchmark_get_blob_result &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const ThriftServiceBenchmark_get_blob_result & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+typedef struct _ThriftServiceBenchmark_get_blob_presult__isset {
+  _ThriftServiceBenchmark_get_blob_presult__isset() : success(false) {}
+  bool success :1;
+} _ThriftServiceBenchmark_get_blob_presult__isset;
+
+class ThriftServiceBenchmark_get_blob_presult {
+ public:
+
+
+  virtual ~ThriftServiceBenchmark_get_blob_presult() throw();
+  std::string* success;
+
+  _ThriftServiceBenchmark_get_blob_presult__isset __isset;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+
+};
+
 class ThriftServiceBenchmarkClient : virtual public ThriftServiceBenchmarkIf {
  public:
   ThriftServiceBenchmarkClient(boost::shared_ptr< ::apache::thrift::protocol::TProtocol> prot) {
@@ -189,6 +285,9 @@ class ThriftServiceBenchmarkClient : virtual public ThriftServiceBenchmarkIf {
   int32_t get_answer(const int32_t number);
   void send_get_answer(const int32_t number);
   int32_t recv_get_answer();
+  void get_blob(std::string& _return);
+  void send_get_blob();
+  void recv_get_blob(std::string& _return);
  protected:
   boost::shared_ptr< ::apache::thrift::protocol::TProtocol> piprot_;
   boost::shared_ptr< ::apache::thrift::protocol::TProtocol> poprot_;
@@ -205,10 +304,12 @@ class ThriftServiceBenchmarkProcessor : public ::apache::thrift::TDispatchProces
   typedef std::map<std::string, ProcessFunction> ProcessMap;
   ProcessMap processMap_;
   void process_get_answer(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext);
+  void process_get_blob(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext);
  public:
   ThriftServiceBenchmarkProcessor(boost::shared_ptr<ThriftServiceBenchmarkIf> iface) :
     iface_(iface) {
     processMap_["get_answer"] = &ThriftServiceBenchmarkProcessor::process_get_answer;
+    processMap_["get_blob"] = &ThriftServiceBenchmarkProcessor::process_get_blob;
   }
 
   virtual ~ThriftServiceBenchmarkProcessor() {}
@@ -246,6 +347,16 @@ class ThriftServiceBenchmarkMultiface : virtual public ThriftServiceBenchmarkIf 
     return ifaces_[i]->get_answer(number);
   }
 
+  void get_blob(std::string& _return) {
+    size_t sz = ifaces_.size();
+    size_t i = 0;
+    for (; i < (sz - 1); ++i) {
+      ifaces_[i]->get_blob(_return);
+    }
+    ifaces_[i]->get_blob(_return);
+    return;
+  }
+
 };
 
 // The 'concurrent' client is a thread safe client that correctly handles
@@ -279,6 +390,9 @@ class ThriftServiceBenchmarkConcurrentClient : virtual public ThriftServiceBench
   int32_t get_answer(const int32_t number);
   int32_t send_get_answer(const int32_t number);
   int32_t recv_get_answer(const int32_t seqid);
+  void get_blob(std::string& _return);
+  int32_t send_get_blob();
+  void recv_get_blob(std::string& _return, const int32_t seqid);
  protected:
   boost::shared_ptr< ::apache::thrift::protocol::TProtocol> piprot_;
   boost::shared_ptr< ::apache::thrift::protocol::TProtocol> poprot_;

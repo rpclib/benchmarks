@@ -25,6 +25,11 @@ class ThriftServiceBenchmarkHandler : virtual public ThriftServiceBenchmarkIf {
     printf("get_answer\n");
   }
 
+  void get_blob(std::string& _return) {
+    // Your implementation goes here
+    printf("get_blob\n");
+  }
+
 };
 
 int main(int argc, char **argv) {

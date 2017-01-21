@@ -26,6 +26,7 @@ public:
   int32_t get_answer(const int32_t number) override {
       return ::get_answer(number);
   }
+  void get_blob(std::string &_return) override {}
 };
 
 class thrift_bench : public benchmark::Fixture {

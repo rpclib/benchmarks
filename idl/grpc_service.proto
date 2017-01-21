@@ -2,6 +2,7 @@ syntax = "proto3";
 
 service GrpcServiceBenchmark {
   rpc get_answer (AnswerRequest) returns (AnswerReply) {}
+  rpc get_blob (EmptyRequest) returns (BlobResponse) {}
 }
 
 message AnswerRequest {
@@ -10,4 +11,10 @@ message AnswerRequest {
 
 message AnswerReply {
   int32 result = 1;
+}
+
+message EmptyRequest { }
+
+message BlobResponse {
+  bytes data = 1;
 }
