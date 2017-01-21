@@ -9,11 +9,9 @@ This is a WIP. The following libraries are or will be benchmarked:
 
   - [x] [rpclib](http://rpclib.net)
   - [x] [cap'n'proto rpc](https://capnproto.org/cxxrpc.html)
-  - [x] [xmlrpc-c](http://xmlrpc-c.sourceforge.net/)
   - [x] [Apache Thrift](https://thrift.apache.org/)
-  - [ ] [Apache Avro](http://avro.apache.org/)
-  - [ ] [json-rpc-cpp](https://github.com/cinemast/libjson-rpc-cpp)
-  - [ ] [grpc](https://grpc.io)
+  - [x] [grpc](https://grpc.io)
+  - [x] Direct function calls (for comparison)
 
 ## Results
 
@@ -25,6 +23,18 @@ TBD
 
 ## FAQ
 
+### What kind of benchmarks are performed?
+
+This is a WIP. These are the benchmarks that are implemented or will be implemented for each
+library from the above list.
+
+  - [x] `get\_answer`: Perform a function call that returns a number and deserialize
+    the result (so that it's available for the user code as an `int`)
+  - [ ] `get\_blob`: Perform a function call that returns a large blob and deserialize it into
+    a byte buffer.
+  - [ ] `get\_big\_struct`: Perform a function call that returns a nested struct with lots of
+    fields and lots of data in it.
+
 ### What is `rpclib`?
 
 `rpclib` is a modern msgpack-rpc implementation for library. It provides a very clean interface
@@ -33,10 +43,9 @@ inspired by Boost.Python. See [rpclib.net](http://rpclib.net) for more informati
 ### I think your implementation for library XXX is suboptimal. Will you change it?
 
 Probably yes, please send a PR. I'm not an expert in the other libraries, so it's entirely possible
-that I used them wrong. If your PR is about an optimization that not all libraries can do (e.g.
-caching request objects), then create a separate benchmark for it.
+that I used them wrong.
 
-### Why don't you measure against XXX library?
+### Why don't you measure against XYZ library?
 
 One of the following reasons:
 
@@ -45,5 +54,7 @@ One of the following reasons:
   * I didn't have time to learn the library
 
 So by all means, please let me know if there is library that is worth looking at. Bonus points if
-you make a conan package for it.
+you make a conan package and/or pull request with benchmark code for it.
+
+
 
