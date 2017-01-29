@@ -32,6 +32,13 @@ public:
       response->set_result(::get_answer(num));
       return ::grpc::Status::OK;
   }
+  ::grpc::Status get_blob(::grpc::ServerContext *context,
+                            const ::EmptyRequest *request,
+                            ::BlobResponse *response) override {
+      response->set_data(::get_blob(blob_size_));
+      return ::grpc::Status::OK;
+  }
+  int blob_size_;
 };
 
 class grpc_bench : public benchmark::Fixture {
@@ -46,7 +53,8 @@ public:
     server_ = b.BuildAndStart();
   }
 
-  void get_answer() {
+  void get_answer(int param) {
+    (void)param;
     grpc::ClientContext client_context;
     AnswerRequest request;
     AnswerReply response;
@@ -56,9 +64,19 @@ public:
     benchmark::DoNotOptimize(a = response.result());
   }
 
-  ~grpc_bench() noexcept {
-      server_->Shutdown();
+  void get_blob(int param) {
+    service_impl_.blob_size_ = param;
+    grpc::ClientContext client_context;
+    EmptyRequest request;
+    BlobResponse response;
+    auto status = client_.get_blob(&client_context, request, &response);
+    std::string s;
+    benchmark::DoNotOptimize(s = response.data());
+    std::size_t size;
+    benchmark::DoNotOptimize(size = s.size());
   }
+
+  ~grpc_bench() noexcept { server_->Shutdown(); }
 
   std::shared_ptr<grpc::ChannelInterface> channel_;
   GrpcServiceBenchmark::Stub client_;

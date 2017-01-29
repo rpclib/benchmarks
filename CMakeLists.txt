@@ -3,7 +3,12 @@ project(rpclib_benchmark)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS "ON") # for YCM
 
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/build/conanbuildinfo.cmake) #Clion, with conanbuildinfo.cmake in build folder
+    include(${CMAKE_CURRENT_SOURCE_DIR}/build/conanbuildinfo.cmake)
+else()
+    include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake) # Not CLion
+endif()
+
 conan_basic_setup()
 
 add_executable(rpclib_benchmark
@@ -17,7 +22,7 @@ add_executable(rpclib_benchmark
     src/grpc/grpc_service.grpc.pb.cc
     )
 
-target_link_libraries(rpclib_benchmark ${CONAN_LIBS})
+target_link_libraries(rpclib_benchmark ${CONAN_LIBS} dw bfd)
 set_target_properties(
         rpclib_benchmark
         PROPERTIES

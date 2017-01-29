@@ -4,8 +4,8 @@
 #define FIXTURE_H_ALZERDCI
 
 #include <atomic>
-#include <thread>
 #include <chrono>
+#include <thread>
 
 #include "benchmark/benchmark.h"
 
@@ -24,9 +24,10 @@ static constexpr uint16_t thrift_port = 8083;
 class thrift_server : virtual public ThriftServiceBenchmarkIf {
 public:
   int32_t get_answer(const int32_t number) override {
-      return ::get_answer(number);
+    return ::get_answer(number);
   }
-  void get_blob(std::string &_return) override {}
+  void get_blob(std::string &_return) override { _return = ::get_blob(blob_size); }
+  int blob_size;
 };
 
 class thrift_bench : public benchmark::Fixture {
@@ -64,9 +65,16 @@ public:
       ;
   }
 
-  void get_answer() {
+  void get_answer(int param) {
+    (void)param;
     int a;
     benchmark::DoNotOptimize(a = client.get_answer(23));
+  }
+
+  void get_blob(int param) {
+    handler->blob_size = param;
+    std::string s;
+    client.get_blob(s);
   }
 
   boost::shared_ptr<thrift_server> handler;
