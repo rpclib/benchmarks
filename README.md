@@ -28,11 +28,11 @@ TBD
 This is a WIP. These are the benchmarks that are implemented or will be implemented for each
 library from the above list.
 
-  - [x] `get\_answer`: Perform a function call that returns a number and deserialize
+  - [x] `get_answer`: Perform a function call that returns a number and deserialize
     the result (so that it's available for the user code as an `int`)
-  - [ ] `get\_blob`: Perform a function call that returns a large blob and deserialize it into
+  - [ ] `get_blob`: Perform a function call that returns a large blob and deserialize it into
     a byte buffer.
-  - [ ] `get\_big\_struct`: Perform a function call that returns a nested struct with lots of
+  - [ ] `get_big_struct`: Perform a function call that returns a nested struct with lots of
     fields and lots of data in it.
 
 ### What is `rpclib`?
@@ -40,14 +40,14 @@ library from the above list.
 `rpclib` is a modern msgpack-rpc implementation for library. It provides a very clean interface
 inspired by Boost.Python. See [rpclib.net](http://rpclib.net) for more information.
 
-### I think your implementation for library XXX is suboptimal. Will you change it?
+### I think your implementation for library XYZ is suboptimal. Will you change it?
 
 Probably yes, please send a PR. I'm not an expert in the other libraries, so it's entirely possible
 that I used them wrong.
 
-### Why don't you measure against XYZ library?
+### Why don't you measure against library XYZ?
 
-One of the following reasons:
+One or more of the following reasons:
 
   * I did not know about the library
   * There was no conan package for it and I didn't have time to make one
