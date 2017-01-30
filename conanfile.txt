@@ -1,17 +1,6 @@
 [requires]
 google-benchmark/1.1.0@cpace6/stable
-capnproto/0.5.3@lasote/stable
-thrift/0.9.3@sztomi/testing
 grpc/1.1.0-pre1@sztomi/testing
-rpclib/experimental@sztomi/testing
-backward/1.3.0@Manu343726/testing
-
-[options]
-rpclib:enable_logging=False
-backward:stack_walking_backtrace=True
-backward:stack_details_dw=True
-backward:stack_details_bfd=True
-protobuf:shared=True
 
 [generators]
 cmake
