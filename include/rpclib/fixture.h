@@ -15,6 +15,7 @@ public:
   rpclib_bench() : server(8086), client("127.0.0.1", 8086) {
     server.bind("get_answer", &::get_answer);
     server.bind("get_blob", [this]() { return ::get_blob(blob_size_); });
+    server.bind("get_structs", &::get_structs);
     server.async_run(1);
   }
 
@@ -30,6 +31,12 @@ public:
     benchmark::DoNotOptimize(s = client.call("get_blob").as<std::string>());
     std::size_t size;
     benchmark::DoNotOptimize(size = s.size());
+  }
+
+  void get_structs(int param) {
+    std::vector<Student> result;
+    benchmark::DoNotOptimize(
+        result = client.call("get_structs").as<std::vector<Student>>());
   }
 
   int blob_size_;
