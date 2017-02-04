@@ -1,6 +1,6 @@
 [requires]
 google-benchmark/1.1.0@cpace6/stable
-grpc/1.1.0-pre1@sztomi/testing
+grpc/1.1.0@sztomi/testing
 
 [generators]
 cmake
