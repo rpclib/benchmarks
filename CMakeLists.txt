@@ -23,6 +23,7 @@ add_executable(rpclib_benchmark
     src/grpc/grpc_service.grpc.pb.cc
     src/grpc/struct_helpers.cc
     src/rpclib/struct_helpers.cc
+    src/capnp/struct_helpers.cc
     )
 
 target_link_libraries(rpclib_benchmark ${CONAN_LIBS} dw bfd)

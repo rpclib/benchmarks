@@ -2,8 +2,7 @@
 #include "target_code.h"
 #include <stdlib.h>
 
-namespace grpc_code
-{
+namespace grpc_code {
 
 static Date random_Date() {
   Date date;

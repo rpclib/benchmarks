@@ -46,6 +46,7 @@ public:
     auto &students = grpc_code::get_structs();
     for (auto &s : students) {
       auto new_s = response->add_students();
+      // TODO: is there a more efficient way (to avoid copies?)
       new_s->CopyFrom(s);
     }
     return ::grpc::Status::OK;
@@ -93,7 +94,6 @@ public:
     grpc::ClientContext client_context;
     grpc_code::EmptyRequest request;
     grpc_code::StudentDataResponse response;
-    std::vector<grpc_code::Student> students;
     auto status = client_.get_structs(&client_context, request, &response);
     std::size_t count;
     benchmark::DoNotOptimize(count = response.students_size());

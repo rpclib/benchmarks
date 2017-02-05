@@ -11,6 +11,7 @@
 #include "grpc/struct_helpers.h"
 #include "rpclib/struct_helpers.h"
 #include "thrift/struct_helpers.h"
+#include "capnp/struct_helpers.h"
 
 #include <sstream>
 
@@ -45,6 +46,7 @@ constexpr std::size_t multiplier = 4;
 MAKE_BENCHMARK0(rpclib_bench, get_structs);
 MAKE_BENCHMARK0(thrift_bench, get_structs);
 MAKE_BENCHMARK0(grpc_bench, get_structs);
+MAKE_BENCHMARK0(capnp_bench, get_structs);
 MAKE_BENCHMARK0(grpc_bench, get_structs_strict);
 //MAKE_BENCHMARK(rpclib_bench, get_answer)
 //MAKE_BENCHMARK(capnp_bench, get_answer)
@@ -63,6 +65,7 @@ int main(int argc, char *argv[]) {
   rpclib_code::fill_struct_cache();
   thrift_code::fill_struct_cache();
   grpc_code::fill_struct_cache();
+  capnp_code::fill_struct_cache();
   benchmark::Initialize(&argc, argv);
   return benchmark::RunSpecifiedBenchmarks();
 }

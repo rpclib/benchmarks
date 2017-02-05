@@ -5,16 +5,16 @@
 
 #include "benchmark/benchmark.h"
 
-#include "capnp/ez-rpc.h"
+#include <capnp/ez-rpc.h>
 
 #include "target_code.h"
-
+#include "capnp/struct_helpers.h"
 #include "capnp/capnp_service.capnp.h"
 
 class capnp_bench : public benchmark::Fixture {
 private:
   static int blob_size_;
-  class capnp_server : public CapnpServiceBenchmark::Server {
+  class capnp_server : public capnp_code::CapnpServiceBenchmark::Server {
   public:
     kj::Promise<void> getAnswer(GetAnswerContext context) override {
       auto num = context.getParams().getNumber();
@@ -29,6 +29,11 @@ private:
       context.getResults().setResult(capnp::Data::Reader(arr));
       return kj::READY_NOW;
     }
+
+    kj::Promise<void> getStructs(GetStructsContext context) override {
+      context.getResults().setResult(capnp_code::get_structs());
+      return kj::READY_NOW;
+    }
   };
 
 public:
@@ -36,7 +41,7 @@ public:
       : server(kj::heap<capnp_server>(), "127.0.0.1:8081"),
         reader_options{256 * 1024 * 1024, 64},
         client_thing("127.0.0.1:8081", 8080, reader_options),
-        client(client_thing.getMain<CapnpServiceBenchmark>()) {
+        client(client_thing.getMain<capnp_code::CapnpServiceBenchmark>()) {
     auto &wait_scope = server.getWaitScope();
     server.getPort().wait(wait_scope);
   }
@@ -61,12 +66,22 @@ public:
     benchmark::DoNotOptimize(s = result.begin());
   }
 
+  void get_structs(int param) {
+    (void)param;
+    auto request = client.getStructsRequest();
+    auto resultPromise = request.send();
+    auto result =
+        resultPromise.wait(client_thing.getWaitScope()).getResult().getStudents();
+    std::size_t count;
+    benchmark::DoNotOptimize(count = result.size());
+  }
+
   ~capnp_bench() noexcept {}
 
   capnp::EzRpcServer server;
   capnp::ReaderOptions reader_options;
   capnp::EzRpcClient client_thing;
-  CapnpServiceBenchmark::Client client;
+  capnp_code::CapnpServiceBenchmark::Client client;
 };
 
 #endif /* end of include guard: FIXTURE_H_NNOJDJZG */
