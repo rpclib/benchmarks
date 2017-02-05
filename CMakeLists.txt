@@ -21,6 +21,7 @@ add_executable(rpclib_benchmark
     src/thrift/struct_helpers.cc
     src/grpc/grpc_service.pb.cc
     src/grpc/grpc_service.grpc.pb.cc
+    src/grpc/struct_helpers.cc
     src/rpclib/struct_helpers.cc
     )
 

@@ -90,6 +90,8 @@ public:
     (void)param;
     std::vector<thrift_code::Student> students;
     client.get_structs(students);
+    std::size_t count;
+    benchmark::DoNotOptimize(count = students.size());
   }
 
   boost::shared_ptr<thrift_server> handler;

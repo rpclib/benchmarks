@@ -1,18 +1,15 @@
 #include "benchmark/benchmark.h"
 
-#define RPCLIB_FIXTURE
-//#define MSGPACK_USE_DEFINE_MAP
-
 #include "target_code.h"
 
 #include "capnp/fixture.h"
 #include "direct/fixture.h"
 #include "grpc/fixture.h"
-
 #include "rpclib/fixture.h"
-#include "rpclib/struct_helpers.h"
-
 #include "thrift/fixture.h"
+
+#include "grpc/struct_helpers.h"
+#include "rpclib/struct_helpers.h"
 #include "thrift/struct_helpers.h"
 
 #include <sstream>
@@ -47,6 +44,8 @@ constexpr std::size_t multiplier = 4;
 //MAKE_BENCHMARK(grpc_bench, get_blob)->RangeMultiplier(multiplier)->Range(min_size, max_size);
 MAKE_BENCHMARK0(rpclib_bench, get_structs);
 MAKE_BENCHMARK0(thrift_bench, get_structs);
+MAKE_BENCHMARK0(grpc_bench, get_structs);
+MAKE_BENCHMARK0(grpc_bench, get_structs_strict);
 //MAKE_BENCHMARK(rpclib_bench, get_answer)
 //MAKE_BENCHMARK(capnp_bench, get_answer)
 //MAKE_BENCHMARK(capnp_bench, get_blob);
@@ -63,6 +62,7 @@ int main(int argc, char *argv[]) {
   printf("Initalizing struct cache...\n");
   rpclib_code::fill_struct_cache();
   thrift_code::fill_struct_cache();
+  grpc_code::fill_struct_cache();
   benchmark::Initialize(&argc, argv);
   return benchmark::RunSpecifiedBenchmarks();
 }
