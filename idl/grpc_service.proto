@@ -1,9 +1,6 @@
 syntax = "proto3";
 
-service GrpcServiceBenchmark {
-  rpc get_answer (AnswerRequest) returns (AnswerReply) {}
-  rpc get_blob (EmptyRequest) returns (BlobResponse) {}
-}
+package grpc_code;
 
 message AnswerRequest {
   int32 number = 1;
@@ -18,3 +15,54 @@ message EmptyRequest { }
 message BlobResponse {
   bytes data = 1;
 }
+
+message Date {
+  int32 year = 1;
+  // note: no fixed 1-byte type in protobuf,
+  // but during encoding it is going to use the
+  // smallest possible size anyway (like many others)
+  int32 month = 2;
+  int32 day = 3;
+}
+
+message Address {
+  string city = 1;
+  int32 zipcode = 2;
+  string street = 3;
+  int32 number = 4;
+}
+
+message School {
+  string name = 1;
+  Address address = 2;
+  Date foundation = 3;
+  repeated string email_addresses = 4;
+}
+
+message Subject {
+  int32 id = 1;
+  string title = 2;
+  string code = 3;
+}
+
+message Student {
+  string name = 1;
+  int32 friends = 2;
+  Address home_address = 3;
+  Address birth_place = 4;
+  Date birth = 5;
+  repeated Subject favorite_subjects = 6;
+  repeated string email_addresses = 7;
+  repeated School schools = 8;
+}
+
+message StudentDataResponse {
+  repeated Student students = 1;
+}
+
+service GrpcServiceBenchmark {
+  rpc get_answer (AnswerRequest) returns (AnswerReply) {}
+  rpc get_blob (EmptyRequest) returns (BlobResponse) {}
+  rpc get_structs (EmptyRequest) returns (StudentDataResponse) {}
+}
+
