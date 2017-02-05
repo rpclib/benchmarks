@@ -17,15 +17,98 @@
 namespace capnp {
 namespace schemas {
 
+CAPNP_DECLARE_SCHEMA(865a538b5b3a1994);
+CAPNP_DECLARE_SCHEMA(b19d39826e37b3ed);
+CAPNP_DECLARE_SCHEMA(9a63a7bade046267);
+CAPNP_DECLARE_SCHEMA(b23419e6037f239f);
+CAPNP_DECLARE_SCHEMA(ccd62e7959248f0a);
 CAPNP_DECLARE_SCHEMA(b06fe64f26aed999);
 CAPNP_DECLARE_SCHEMA(a6ad687467f1f3f3);
 CAPNP_DECLARE_SCHEMA(f58cbb5cef7e441d);
 CAPNP_DECLARE_SCHEMA(f004d62623fe8bb1);
 CAPNP_DECLARE_SCHEMA(86e99aa77f1a404e);
+CAPNP_DECLARE_SCHEMA(e3a20a01e6885cf3);
+CAPNP_DECLARE_SCHEMA(84bd4a8562722646);
 
 }  // namespace schemas
 }  // namespace capnp
 
+namespace capnp_code {
+
+struct Date {
+  Date() = delete;
+
+  class Reader;
+  class Builder;
+  class Pipeline;
+
+  struct _capnpPrivate {
+    CAPNP_DECLARE_STRUCT_HEADER(865a538b5b3a1994, 1, 0)
+    #if !CAPNP_LITE
+    static constexpr ::capnp::_::RawBrandedSchema const* brand = &schema->defaultBrand;
+    #endif  // !CAPNP_LITE
+  };
+};
+
+struct Address {
+  Address() = delete;
+
+  class Reader;
+  class Builder;
+  class Pipeline;
+
+  struct _capnpPrivate {
+    CAPNP_DECLARE_STRUCT_HEADER(b19d39826e37b3ed, 1, 2)
+    #if !CAPNP_LITE
+    static constexpr ::capnp::_::RawBrandedSchema const* brand = &schema->defaultBrand;
+    #endif  // !CAPNP_LITE
+  };
+};
+
+struct School {
+  School() = delete;
+
+  class Reader;
+  class Builder;
+  class Pipeline;
+
+  struct _capnpPrivate {
+    CAPNP_DECLARE_STRUCT_HEADER(9a63a7bade046267, 0, 4)
+    #if !CAPNP_LITE
+    static constexpr ::capnp::_::RawBrandedSchema const* brand = &schema->defaultBrand;
+    #endif  // !CAPNP_LITE
+  };
+};
+
+struct Subject {
+  Subject() = delete;
+
+  class Reader;
+  class Builder;
+  class Pipeline;
+
+  struct _capnpPrivate {
+    CAPNP_DECLARE_STRUCT_HEADER(b23419e6037f239f, 1, 2)
+    #if !CAPNP_LITE
+    static constexpr ::capnp::_::RawBrandedSchema const* brand = &schema->defaultBrand;
+    #endif  // !CAPNP_LITE
+  };
+};
+
+struct Student {
+  Student() = delete;
+
+  class Reader;
+  class Builder;
+  class Pipeline;
+
+  struct _capnpPrivate {
+    CAPNP_DECLARE_STRUCT_HEADER(ccd62e7959248f0a, 1, 7)
+    #if !CAPNP_LITE
+    static constexpr ::capnp::_::RawBrandedSchema const* brand = &schema->defaultBrand;
+    #endif  // !CAPNP_LITE
+  };
+};
 
 struct CapnpServiceBenchmark {
   CapnpServiceBenchmark() = delete;
@@ -39,6 +122,8 @@ struct CapnpServiceBenchmark {
   struct GetAnswerResults;
   struct GetBlobParams;
   struct GetBlobResults;
+  struct GetStructsParams;
+  struct GetStructsResults;
 
   #if !CAPNP_LITE
   struct _capnpPrivate {
@@ -108,7 +193,584 @@ struct CapnpServiceBenchmark::GetBlobResults {
   };
 };
 
+struct CapnpServiceBenchmark::GetStructsParams {
+  GetStructsParams() = delete;
+
+  class Reader;
+  class Builder;
+  class Pipeline;
+
+  struct _capnpPrivate {
+    CAPNP_DECLARE_STRUCT_HEADER(e3a20a01e6885cf3, 0, 0)
+    #if !CAPNP_LITE
+    static constexpr ::capnp::_::RawBrandedSchema const* brand = &schema->defaultBrand;
+    #endif  // !CAPNP_LITE
+  };
+};
+
+struct CapnpServiceBenchmark::GetStructsResults {
+  GetStructsResults() = delete;
+
+  class Reader;
+  class Builder;
+  class Pipeline;
+
+  struct _capnpPrivate {
+    CAPNP_DECLARE_STRUCT_HEADER(84bd4a8562722646, 0, 1)
+    #if !CAPNP_LITE
+    static constexpr ::capnp::_::RawBrandedSchema const* brand = &schema->defaultBrand;
+    #endif  // !CAPNP_LITE
+  };
+};
+
 // =======================================================================================
+
+class Date::Reader {
+public:
+  typedef Date Reads;
+
+  Reader() = default;
+  inline explicit Reader(::capnp::_::StructReader base): _reader(base) {}
+
+  inline ::capnp::MessageSize totalSize() const {
+    return _reader.totalSize().asPublic();
+  }
+
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const {
+    return ::capnp::_::structString(_reader, *_capnpPrivate::brand);
+  }
+#endif  // !CAPNP_LITE
+
+  inline  ::int32_t getYear() const;
+
+  inline  ::int8_t getMonth() const;
+
+  inline  ::int8_t getDay() const;
+
+private:
+  ::capnp::_::StructReader _reader;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::List;
+  friend class ::capnp::MessageBuilder;
+  friend class ::capnp::Orphanage;
+};
+
+class Date::Builder {
+public:
+  typedef Date Builds;
+
+  Builder() = delete;  // Deleted to discourage incorrect usage.
+                       // You can explicitly initialize to nullptr instead.
+  inline Builder(decltype(nullptr)) {}
+  inline explicit Builder(::capnp::_::StructBuilder base): _builder(base) {}
+  inline operator Reader() const { return Reader(_builder.asReader()); }
+  inline Reader asReader() const { return *this; }
+
+  inline ::capnp::MessageSize totalSize() const { return asReader().totalSize(); }
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const { return asReader().toString(); }
+#endif  // !CAPNP_LITE
+
+  inline  ::int32_t getYear();
+  inline void setYear( ::int32_t value);
+
+  inline  ::int8_t getMonth();
+  inline void setMonth( ::int8_t value);
+
+  inline  ::int8_t getDay();
+  inline void setDay( ::int8_t value);
+
+private:
+  ::capnp::_::StructBuilder _builder;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  friend class ::capnp::Orphanage;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+};
+
+#if !CAPNP_LITE
+class Date::Pipeline {
+public:
+  typedef Date Pipelines;
+
+  inline Pipeline(decltype(nullptr)): _typeless(nullptr) {}
+  inline explicit Pipeline(::capnp::AnyPointer::Pipeline&& typeless)
+      : _typeless(kj::mv(typeless)) {}
+
+private:
+  ::capnp::AnyPointer::Pipeline _typeless;
+  friend class ::capnp::PipelineHook;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+};
+#endif  // !CAPNP_LITE
+
+class Address::Reader {
+public:
+  typedef Address Reads;
+
+  Reader() = default;
+  inline explicit Reader(::capnp::_::StructReader base): _reader(base) {}
+
+  inline ::capnp::MessageSize totalSize() const {
+    return _reader.totalSize().asPublic();
+  }
+
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const {
+    return ::capnp::_::structString(_reader, *_capnpPrivate::brand);
+  }
+#endif  // !CAPNP_LITE
+
+  inline bool hasCity() const;
+  inline  ::capnp::Text::Reader getCity() const;
+
+  inline  ::int32_t getZipcode() const;
+
+  inline bool hasStreet() const;
+  inline  ::capnp::Text::Reader getStreet() const;
+
+  inline  ::int16_t getNumber() const;
+
+private:
+  ::capnp::_::StructReader _reader;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::List;
+  friend class ::capnp::MessageBuilder;
+  friend class ::capnp::Orphanage;
+};
+
+class Address::Builder {
+public:
+  typedef Address Builds;
+
+  Builder() = delete;  // Deleted to discourage incorrect usage.
+                       // You can explicitly initialize to nullptr instead.
+  inline Builder(decltype(nullptr)) {}
+  inline explicit Builder(::capnp::_::StructBuilder base): _builder(base) {}
+  inline operator Reader() const { return Reader(_builder.asReader()); }
+  inline Reader asReader() const { return *this; }
+
+  inline ::capnp::MessageSize totalSize() const { return asReader().totalSize(); }
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const { return asReader().toString(); }
+#endif  // !CAPNP_LITE
+
+  inline bool hasCity();
+  inline  ::capnp::Text::Builder getCity();
+  inline void setCity( ::capnp::Text::Reader value);
+  inline  ::capnp::Text::Builder initCity(unsigned int size);
+  inline void adoptCity(::capnp::Orphan< ::capnp::Text>&& value);
+  inline ::capnp::Orphan< ::capnp::Text> disownCity();
+
+  inline  ::int32_t getZipcode();
+  inline void setZipcode( ::int32_t value);
+
+  inline bool hasStreet();
+  inline  ::capnp::Text::Builder getStreet();
+  inline void setStreet( ::capnp::Text::Reader value);
+  inline  ::capnp::Text::Builder initStreet(unsigned int size);
+  inline void adoptStreet(::capnp::Orphan< ::capnp::Text>&& value);
+  inline ::capnp::Orphan< ::capnp::Text> disownStreet();
+
+  inline  ::int16_t getNumber();
+  inline void setNumber( ::int16_t value);
+
+private:
+  ::capnp::_::StructBuilder _builder;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  friend class ::capnp::Orphanage;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+};
+
+#if !CAPNP_LITE
+class Address::Pipeline {
+public:
+  typedef Address Pipelines;
+
+  inline Pipeline(decltype(nullptr)): _typeless(nullptr) {}
+  inline explicit Pipeline(::capnp::AnyPointer::Pipeline&& typeless)
+      : _typeless(kj::mv(typeless)) {}
+
+private:
+  ::capnp::AnyPointer::Pipeline _typeless;
+  friend class ::capnp::PipelineHook;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+};
+#endif  // !CAPNP_LITE
+
+class School::Reader {
+public:
+  typedef School Reads;
+
+  Reader() = default;
+  inline explicit Reader(::capnp::_::StructReader base): _reader(base) {}
+
+  inline ::capnp::MessageSize totalSize() const {
+    return _reader.totalSize().asPublic();
+  }
+
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const {
+    return ::capnp::_::structString(_reader, *_capnpPrivate::brand);
+  }
+#endif  // !CAPNP_LITE
+
+  inline bool hasName() const;
+  inline  ::capnp::Text::Reader getName() const;
+
+  inline bool hasAddress() const;
+  inline  ::capnp_code::Address::Reader getAddress() const;
+
+  inline bool hasFoundation() const;
+  inline  ::capnp_code::Date::Reader getFoundation() const;
+
+  inline bool hasEmailAddresses() const;
+  inline  ::capnp::List< ::capnp::Text>::Reader getEmailAddresses() const;
+
+private:
+  ::capnp::_::StructReader _reader;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::List;
+  friend class ::capnp::MessageBuilder;
+  friend class ::capnp::Orphanage;
+};
+
+class School::Builder {
+public:
+  typedef School Builds;
+
+  Builder() = delete;  // Deleted to discourage incorrect usage.
+                       // You can explicitly initialize to nullptr instead.
+  inline Builder(decltype(nullptr)) {}
+  inline explicit Builder(::capnp::_::StructBuilder base): _builder(base) {}
+  inline operator Reader() const { return Reader(_builder.asReader()); }
+  inline Reader asReader() const { return *this; }
+
+  inline ::capnp::MessageSize totalSize() const { return asReader().totalSize(); }
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const { return asReader().toString(); }
+#endif  // !CAPNP_LITE
+
+  inline bool hasName();
+  inline  ::capnp::Text::Builder getName();
+  inline void setName( ::capnp::Text::Reader value);
+  inline  ::capnp::Text::Builder initName(unsigned int size);
+  inline void adoptName(::capnp::Orphan< ::capnp::Text>&& value);
+  inline ::capnp::Orphan< ::capnp::Text> disownName();
+
+  inline bool hasAddress();
+  inline  ::capnp_code::Address::Builder getAddress();
+  inline void setAddress( ::capnp_code::Address::Reader value);
+  inline  ::capnp_code::Address::Builder initAddress();
+  inline void adoptAddress(::capnp::Orphan< ::capnp_code::Address>&& value);
+  inline ::capnp::Orphan< ::capnp_code::Address> disownAddress();
+
+  inline bool hasFoundation();
+  inline  ::capnp_code::Date::Builder getFoundation();
+  inline void setFoundation( ::capnp_code::Date::Reader value);
+  inline  ::capnp_code::Date::Builder initFoundation();
+  inline void adoptFoundation(::capnp::Orphan< ::capnp_code::Date>&& value);
+  inline ::capnp::Orphan< ::capnp_code::Date> disownFoundation();
+
+  inline bool hasEmailAddresses();
+  inline  ::capnp::List< ::capnp::Text>::Builder getEmailAddresses();
+  inline void setEmailAddresses( ::capnp::List< ::capnp::Text>::Reader value);
+  inline void setEmailAddresses(::kj::ArrayPtr<const  ::capnp::Text::Reader> value);
+  inline  ::capnp::List< ::capnp::Text>::Builder initEmailAddresses(unsigned int size);
+  inline void adoptEmailAddresses(::capnp::Orphan< ::capnp::List< ::capnp::Text>>&& value);
+  inline ::capnp::Orphan< ::capnp::List< ::capnp::Text>> disownEmailAddresses();
+
+private:
+  ::capnp::_::StructBuilder _builder;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  friend class ::capnp::Orphanage;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+};
+
+#if !CAPNP_LITE
+class School::Pipeline {
+public:
+  typedef School Pipelines;
+
+  inline Pipeline(decltype(nullptr)): _typeless(nullptr) {}
+  inline explicit Pipeline(::capnp::AnyPointer::Pipeline&& typeless)
+      : _typeless(kj::mv(typeless)) {}
+
+  inline  ::capnp_code::Address::Pipeline getAddress();
+  inline  ::capnp_code::Date::Pipeline getFoundation();
+private:
+  ::capnp::AnyPointer::Pipeline _typeless;
+  friend class ::capnp::PipelineHook;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+};
+#endif  // !CAPNP_LITE
+
+class Subject::Reader {
+public:
+  typedef Subject Reads;
+
+  Reader() = default;
+  inline explicit Reader(::capnp::_::StructReader base): _reader(base) {}
+
+  inline ::capnp::MessageSize totalSize() const {
+    return _reader.totalSize().asPublic();
+  }
+
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const {
+    return ::capnp::_::structString(_reader, *_capnpPrivate::brand);
+  }
+#endif  // !CAPNP_LITE
+
+  inline  ::int32_t getId() const;
+
+  inline bool hasTitle() const;
+  inline  ::capnp::Text::Reader getTitle() const;
+
+  inline bool hasCode() const;
+  inline  ::capnp::Text::Reader getCode() const;
+
+private:
+  ::capnp::_::StructReader _reader;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::List;
+  friend class ::capnp::MessageBuilder;
+  friend class ::capnp::Orphanage;
+};
+
+class Subject::Builder {
+public:
+  typedef Subject Builds;
+
+  Builder() = delete;  // Deleted to discourage incorrect usage.
+                       // You can explicitly initialize to nullptr instead.
+  inline Builder(decltype(nullptr)) {}
+  inline explicit Builder(::capnp::_::StructBuilder base): _builder(base) {}
+  inline operator Reader() const { return Reader(_builder.asReader()); }
+  inline Reader asReader() const { return *this; }
+
+  inline ::capnp::MessageSize totalSize() const { return asReader().totalSize(); }
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const { return asReader().toString(); }
+#endif  // !CAPNP_LITE
+
+  inline  ::int32_t getId();
+  inline void setId( ::int32_t value);
+
+  inline bool hasTitle();
+  inline  ::capnp::Text::Builder getTitle();
+  inline void setTitle( ::capnp::Text::Reader value);
+  inline  ::capnp::Text::Builder initTitle(unsigned int size);
+  inline void adoptTitle(::capnp::Orphan< ::capnp::Text>&& value);
+  inline ::capnp::Orphan< ::capnp::Text> disownTitle();
+
+  inline bool hasCode();
+  inline  ::capnp::Text::Builder getCode();
+  inline void setCode( ::capnp::Text::Reader value);
+  inline  ::capnp::Text::Builder initCode(unsigned int size);
+  inline void adoptCode(::capnp::Orphan< ::capnp::Text>&& value);
+  inline ::capnp::Orphan< ::capnp::Text> disownCode();
+
+private:
+  ::capnp::_::StructBuilder _builder;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  friend class ::capnp::Orphanage;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+};
+
+#if !CAPNP_LITE
+class Subject::Pipeline {
+public:
+  typedef Subject Pipelines;
+
+  inline Pipeline(decltype(nullptr)): _typeless(nullptr) {}
+  inline explicit Pipeline(::capnp::AnyPointer::Pipeline&& typeless)
+      : _typeless(kj::mv(typeless)) {}
+
+private:
+  ::capnp::AnyPointer::Pipeline _typeless;
+  friend class ::capnp::PipelineHook;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+};
+#endif  // !CAPNP_LITE
+
+class Student::Reader {
+public:
+  typedef Student Reads;
+
+  Reader() = default;
+  inline explicit Reader(::capnp::_::StructReader base): _reader(base) {}
+
+  inline ::capnp::MessageSize totalSize() const {
+    return _reader.totalSize().asPublic();
+  }
+
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const {
+    return ::capnp::_::structString(_reader, *_capnpPrivate::brand);
+  }
+#endif  // !CAPNP_LITE
+
+  inline bool hasName() const;
+  inline  ::capnp::Text::Reader getName() const;
+
+  inline  ::int32_t getFriends() const;
+
+  inline bool hasHomeAddress() const;
+  inline  ::capnp_code::Address::Reader getHomeAddress() const;
+
+  inline bool hasBirthPlace() const;
+  inline  ::capnp_code::Address::Reader getBirthPlace() const;
+
+  inline bool hasBirth() const;
+  inline  ::capnp_code::Date::Reader getBirth() const;
+
+  inline bool hasFavoriteSubjects() const;
+  inline  ::capnp::List< ::capnp_code::Subject>::Reader getFavoriteSubjects() const;
+
+  inline bool hasEmailAddresses() const;
+  inline  ::capnp::List< ::capnp::Text>::Reader getEmailAddresses() const;
+
+  inline bool hasSchools() const;
+  inline  ::capnp::List< ::capnp_code::School>::Reader getSchools() const;
+
+private:
+  ::capnp::_::StructReader _reader;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::List;
+  friend class ::capnp::MessageBuilder;
+  friend class ::capnp::Orphanage;
+};
+
+class Student::Builder {
+public:
+  typedef Student Builds;
+
+  Builder() = delete;  // Deleted to discourage incorrect usage.
+                       // You can explicitly initialize to nullptr instead.
+  inline Builder(decltype(nullptr)) {}
+  inline explicit Builder(::capnp::_::StructBuilder base): _builder(base) {}
+  inline operator Reader() const { return Reader(_builder.asReader()); }
+  inline Reader asReader() const { return *this; }
+
+  inline ::capnp::MessageSize totalSize() const { return asReader().totalSize(); }
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const { return asReader().toString(); }
+#endif  // !CAPNP_LITE
+
+  inline bool hasName();
+  inline  ::capnp::Text::Builder getName();
+  inline void setName( ::capnp::Text::Reader value);
+  inline  ::capnp::Text::Builder initName(unsigned int size);
+  inline void adoptName(::capnp::Orphan< ::capnp::Text>&& value);
+  inline ::capnp::Orphan< ::capnp::Text> disownName();
+
+  inline  ::int32_t getFriends();
+  inline void setFriends( ::int32_t value);
+
+  inline bool hasHomeAddress();
+  inline  ::capnp_code::Address::Builder getHomeAddress();
+  inline void setHomeAddress( ::capnp_code::Address::Reader value);
+  inline  ::capnp_code::Address::Builder initHomeAddress();
+  inline void adoptHomeAddress(::capnp::Orphan< ::capnp_code::Address>&& value);
+  inline ::capnp::Orphan< ::capnp_code::Address> disownHomeAddress();
+
+  inline bool hasBirthPlace();
+  inline  ::capnp_code::Address::Builder getBirthPlace();
+  inline void setBirthPlace( ::capnp_code::Address::Reader value);
+  inline  ::capnp_code::Address::Builder initBirthPlace();
+  inline void adoptBirthPlace(::capnp::Orphan< ::capnp_code::Address>&& value);
+  inline ::capnp::Orphan< ::capnp_code::Address> disownBirthPlace();
+
+  inline bool hasBirth();
+  inline  ::capnp_code::Date::Builder getBirth();
+  inline void setBirth( ::capnp_code::Date::Reader value);
+  inline  ::capnp_code::Date::Builder initBirth();
+  inline void adoptBirth(::capnp::Orphan< ::capnp_code::Date>&& value);
+  inline ::capnp::Orphan< ::capnp_code::Date> disownBirth();
+
+  inline bool hasFavoriteSubjects();
+  inline  ::capnp::List< ::capnp_code::Subject>::Builder getFavoriteSubjects();
+  inline void setFavoriteSubjects( ::capnp::List< ::capnp_code::Subject>::Reader value);
+  inline  ::capnp::List< ::capnp_code::Subject>::Builder initFavoriteSubjects(unsigned int size);
+  inline void adoptFavoriteSubjects(::capnp::Orphan< ::capnp::List< ::capnp_code::Subject>>&& value);
+  inline ::capnp::Orphan< ::capnp::List< ::capnp_code::Subject>> disownFavoriteSubjects();
+
+  inline bool hasEmailAddresses();
+  inline  ::capnp::List< ::capnp::Text>::Builder getEmailAddresses();
+  inline void setEmailAddresses( ::capnp::List< ::capnp::Text>::Reader value);
+  inline void setEmailAddresses(::kj::ArrayPtr<const  ::capnp::Text::Reader> value);
+  inline  ::capnp::List< ::capnp::Text>::Builder initEmailAddresses(unsigned int size);
+  inline void adoptEmailAddresses(::capnp::Orphan< ::capnp::List< ::capnp::Text>>&& value);
+  inline ::capnp::Orphan< ::capnp::List< ::capnp::Text>> disownEmailAddresses();
+
+  inline bool hasSchools();
+  inline  ::capnp::List< ::capnp_code::School>::Builder getSchools();
+  inline void setSchools( ::capnp::List< ::capnp_code::School>::Reader value);
+  inline  ::capnp::List< ::capnp_code::School>::Builder initSchools(unsigned int size);
+  inline void adoptSchools(::capnp::Orphan< ::capnp::List< ::capnp_code::School>>&& value);
+  inline ::capnp::Orphan< ::capnp::List< ::capnp_code::School>> disownSchools();
+
+private:
+  ::capnp::_::StructBuilder _builder;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  friend class ::capnp::Orphanage;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+};
+
+#if !CAPNP_LITE
+class Student::Pipeline {
+public:
+  typedef Student Pipelines;
+
+  inline Pipeline(decltype(nullptr)): _typeless(nullptr) {}
+  inline explicit Pipeline(::capnp::AnyPointer::Pipeline&& typeless)
+      : _typeless(kj::mv(typeless)) {}
+
+  inline  ::capnp_code::Address::Pipeline getHomeAddress();
+  inline  ::capnp_code::Address::Pipeline getBirthPlace();
+  inline  ::capnp_code::Date::Pipeline getBirth();
+private:
+  ::capnp::AnyPointer::Pipeline _typeless;
+  friend class ::capnp::PipelineHook;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+};
+#endif  // !CAPNP_LITE
 
 #if !CAPNP_LITE
 class CapnpServiceBenchmark::Client
@@ -129,9 +791,11 @@ public:
   Client& operator=(Client& other);
   Client& operator=(Client&& other);
 
-  ::capnp::Request< ::CapnpServiceBenchmark::GetAnswerParams,  ::CapnpServiceBenchmark::GetAnswerResults> getAnswerRequest(
+  ::capnp::Request< ::capnp_code::CapnpServiceBenchmark::GetAnswerParams,  ::capnp_code::CapnpServiceBenchmark::GetAnswerResults> getAnswerRequest(
       ::kj::Maybe< ::capnp::MessageSize> sizeHint = nullptr);
-  ::capnp::Request< ::CapnpServiceBenchmark::GetBlobParams,  ::CapnpServiceBenchmark::GetBlobResults> getBlobRequest(
+  ::capnp::Request< ::capnp_code::CapnpServiceBenchmark::GetBlobParams,  ::capnp_code::CapnpServiceBenchmark::GetBlobResults> getBlobRequest(
+      ::kj::Maybe< ::capnp::MessageSize> sizeHint = nullptr);
+  ::capnp::Request< ::capnp_code::CapnpServiceBenchmark::GetStructsParams,  ::capnp_code::CapnpServiceBenchmark::GetStructsResults> getStructsRequest(
       ::kj::Maybe< ::capnp::MessageSize> sizeHint = nullptr);
 
 protected:
@@ -148,14 +812,18 @@ public:
       override;
 
 protected:
-  typedef  ::CapnpServiceBenchmark::GetAnswerParams GetAnswerParams;
-  typedef  ::CapnpServiceBenchmark::GetAnswerResults GetAnswerResults;
+  typedef  ::capnp_code::CapnpServiceBenchmark::GetAnswerParams GetAnswerParams;
+  typedef  ::capnp_code::CapnpServiceBenchmark::GetAnswerResults GetAnswerResults;
   typedef ::capnp::CallContext<GetAnswerParams, GetAnswerResults> GetAnswerContext;
   virtual ::kj::Promise<void> getAnswer(GetAnswerContext context);
-  typedef  ::CapnpServiceBenchmark::GetBlobParams GetBlobParams;
-  typedef  ::CapnpServiceBenchmark::GetBlobResults GetBlobResults;
+  typedef  ::capnp_code::CapnpServiceBenchmark::GetBlobParams GetBlobParams;
+  typedef  ::capnp_code::CapnpServiceBenchmark::GetBlobResults GetBlobResults;
   typedef ::capnp::CallContext<GetBlobParams, GetBlobResults> GetBlobContext;
   virtual ::kj::Promise<void> getBlob(GetBlobContext context);
+  typedef  ::capnp_code::CapnpServiceBenchmark::GetStructsParams GetStructsParams;
+  typedef  ::capnp_code::CapnpServiceBenchmark::GetStructsResults GetStructsResults;
+  typedef ::capnp::CallContext<GetStructsParams, GetStructsResults> GetStructsContext;
+  virtual ::kj::Promise<void> getStructs(GetStructsContext context);
 
   ::kj::Promise<void> dispatchCallInternal(uint16_t methodId,
       ::capnp::CallContext< ::capnp::AnyPointer, ::capnp::AnyPointer> context);
@@ -466,7 +1134,770 @@ private:
 };
 #endif  // !CAPNP_LITE
 
+class CapnpServiceBenchmark::GetStructsParams::Reader {
+public:
+  typedef GetStructsParams Reads;
+
+  Reader() = default;
+  inline explicit Reader(::capnp::_::StructReader base): _reader(base) {}
+
+  inline ::capnp::MessageSize totalSize() const {
+    return _reader.totalSize().asPublic();
+  }
+
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const {
+    return ::capnp::_::structString(_reader, *_capnpPrivate::brand);
+  }
+#endif  // !CAPNP_LITE
+
+private:
+  ::capnp::_::StructReader _reader;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::List;
+  friend class ::capnp::MessageBuilder;
+  friend class ::capnp::Orphanage;
+};
+
+class CapnpServiceBenchmark::GetStructsParams::Builder {
+public:
+  typedef GetStructsParams Builds;
+
+  Builder() = delete;  // Deleted to discourage incorrect usage.
+                       // You can explicitly initialize to nullptr instead.
+  inline Builder(decltype(nullptr)) {}
+  inline explicit Builder(::capnp::_::StructBuilder base): _builder(base) {}
+  inline operator Reader() const { return Reader(_builder.asReader()); }
+  inline Reader asReader() const { return *this; }
+
+  inline ::capnp::MessageSize totalSize() const { return asReader().totalSize(); }
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const { return asReader().toString(); }
+#endif  // !CAPNP_LITE
+
+private:
+  ::capnp::_::StructBuilder _builder;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  friend class ::capnp::Orphanage;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+};
+
+#if !CAPNP_LITE
+class CapnpServiceBenchmark::GetStructsParams::Pipeline {
+public:
+  typedef GetStructsParams Pipelines;
+
+  inline Pipeline(decltype(nullptr)): _typeless(nullptr) {}
+  inline explicit Pipeline(::capnp::AnyPointer::Pipeline&& typeless)
+      : _typeless(kj::mv(typeless)) {}
+
+private:
+  ::capnp::AnyPointer::Pipeline _typeless;
+  friend class ::capnp::PipelineHook;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+};
+#endif  // !CAPNP_LITE
+
+class CapnpServiceBenchmark::GetStructsResults::Reader {
+public:
+  typedef GetStructsResults Reads;
+
+  Reader() = default;
+  inline explicit Reader(::capnp::_::StructReader base): _reader(base) {}
+
+  inline ::capnp::MessageSize totalSize() const {
+    return _reader.totalSize().asPublic();
+  }
+
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const {
+    return ::capnp::_::structString(_reader, *_capnpPrivate::brand);
+  }
+#endif  // !CAPNP_LITE
+
+  inline bool hasResult() const;
+  inline  ::capnp::List< ::capnp_code::Student>::Reader getResult() const;
+
+private:
+  ::capnp::_::StructReader _reader;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::List;
+  friend class ::capnp::MessageBuilder;
+  friend class ::capnp::Orphanage;
+};
+
+class CapnpServiceBenchmark::GetStructsResults::Builder {
+public:
+  typedef GetStructsResults Builds;
+
+  Builder() = delete;  // Deleted to discourage incorrect usage.
+                       // You can explicitly initialize to nullptr instead.
+  inline Builder(decltype(nullptr)) {}
+  inline explicit Builder(::capnp::_::StructBuilder base): _builder(base) {}
+  inline operator Reader() const { return Reader(_builder.asReader()); }
+  inline Reader asReader() const { return *this; }
+
+  inline ::capnp::MessageSize totalSize() const { return asReader().totalSize(); }
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const { return asReader().toString(); }
+#endif  // !CAPNP_LITE
+
+  inline bool hasResult();
+  inline  ::capnp::List< ::capnp_code::Student>::Builder getResult();
+  inline void setResult( ::capnp::List< ::capnp_code::Student>::Reader value);
+  inline  ::capnp::List< ::capnp_code::Student>::Builder initResult(unsigned int size);
+  inline void adoptResult(::capnp::Orphan< ::capnp::List< ::capnp_code::Student>>&& value);
+  inline ::capnp::Orphan< ::capnp::List< ::capnp_code::Student>> disownResult();
+
+private:
+  ::capnp::_::StructBuilder _builder;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  friend class ::capnp::Orphanage;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+};
+
+#if !CAPNP_LITE
+class CapnpServiceBenchmark::GetStructsResults::Pipeline {
+public:
+  typedef GetStructsResults Pipelines;
+
+  inline Pipeline(decltype(nullptr)): _typeless(nullptr) {}
+  inline explicit Pipeline(::capnp::AnyPointer::Pipeline&& typeless)
+      : _typeless(kj::mv(typeless)) {}
+
+private:
+  ::capnp::AnyPointer::Pipeline _typeless;
+  friend class ::capnp::PipelineHook;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+};
+#endif  // !CAPNP_LITE
+
 // =======================================================================================
+
+inline  ::int32_t Date::Reader::getYear() const {
+  return _reader.getDataField< ::int32_t>(
+      0 * ::capnp::ELEMENTS);
+}
+
+inline  ::int32_t Date::Builder::getYear() {
+  return _builder.getDataField< ::int32_t>(
+      0 * ::capnp::ELEMENTS);
+}
+inline void Date::Builder::setYear( ::int32_t value) {
+  _builder.setDataField< ::int32_t>(
+      0 * ::capnp::ELEMENTS, value);
+}
+
+inline  ::int8_t Date::Reader::getMonth() const {
+  return _reader.getDataField< ::int8_t>(
+      4 * ::capnp::ELEMENTS);
+}
+
+inline  ::int8_t Date::Builder::getMonth() {
+  return _builder.getDataField< ::int8_t>(
+      4 * ::capnp::ELEMENTS);
+}
+inline void Date::Builder::setMonth( ::int8_t value) {
+  _builder.setDataField< ::int8_t>(
+      4 * ::capnp::ELEMENTS, value);
+}
+
+inline  ::int8_t Date::Reader::getDay() const {
+  return _reader.getDataField< ::int8_t>(
+      5 * ::capnp::ELEMENTS);
+}
+
+inline  ::int8_t Date::Builder::getDay() {
+  return _builder.getDataField< ::int8_t>(
+      5 * ::capnp::ELEMENTS);
+}
+inline void Date::Builder::setDay( ::int8_t value) {
+  _builder.setDataField< ::int8_t>(
+      5 * ::capnp::ELEMENTS, value);
+}
+
+inline bool Address::Reader::hasCity() const {
+  return !_reader.getPointerField(0 * ::capnp::POINTERS).isNull();
+}
+inline bool Address::Builder::hasCity() {
+  return !_builder.getPointerField(0 * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::Text::Reader Address::Reader::getCity() const {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::get(
+      _reader.getPointerField(0 * ::capnp::POINTERS));
+}
+inline  ::capnp::Text::Builder Address::Builder::getCity() {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::get(
+      _builder.getPointerField(0 * ::capnp::POINTERS));
+}
+inline void Address::Builder::setCity( ::capnp::Text::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::Text>::set(
+      _builder.getPointerField(0 * ::capnp::POINTERS), value);
+}
+inline  ::capnp::Text::Builder Address::Builder::initCity(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::init(
+      _builder.getPointerField(0 * ::capnp::POINTERS), size);
+}
+inline void Address::Builder::adoptCity(
+    ::capnp::Orphan< ::capnp::Text>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::Text>::adopt(
+      _builder.getPointerField(0 * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::Text> Address::Builder::disownCity() {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::disown(
+      _builder.getPointerField(0 * ::capnp::POINTERS));
+}
+
+inline  ::int32_t Address::Reader::getZipcode() const {
+  return _reader.getDataField< ::int32_t>(
+      0 * ::capnp::ELEMENTS);
+}
+
+inline  ::int32_t Address::Builder::getZipcode() {
+  return _builder.getDataField< ::int32_t>(
+      0 * ::capnp::ELEMENTS);
+}
+inline void Address::Builder::setZipcode( ::int32_t value) {
+  _builder.setDataField< ::int32_t>(
+      0 * ::capnp::ELEMENTS, value);
+}
+
+inline bool Address::Reader::hasStreet() const {
+  return !_reader.getPointerField(1 * ::capnp::POINTERS).isNull();
+}
+inline bool Address::Builder::hasStreet() {
+  return !_builder.getPointerField(1 * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::Text::Reader Address::Reader::getStreet() const {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::get(
+      _reader.getPointerField(1 * ::capnp::POINTERS));
+}
+inline  ::capnp::Text::Builder Address::Builder::getStreet() {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::get(
+      _builder.getPointerField(1 * ::capnp::POINTERS));
+}
+inline void Address::Builder::setStreet( ::capnp::Text::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::Text>::set(
+      _builder.getPointerField(1 * ::capnp::POINTERS), value);
+}
+inline  ::capnp::Text::Builder Address::Builder::initStreet(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::init(
+      _builder.getPointerField(1 * ::capnp::POINTERS), size);
+}
+inline void Address::Builder::adoptStreet(
+    ::capnp::Orphan< ::capnp::Text>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::Text>::adopt(
+      _builder.getPointerField(1 * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::Text> Address::Builder::disownStreet() {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::disown(
+      _builder.getPointerField(1 * ::capnp::POINTERS));
+}
+
+inline  ::int16_t Address::Reader::getNumber() const {
+  return _reader.getDataField< ::int16_t>(
+      2 * ::capnp::ELEMENTS);
+}
+
+inline  ::int16_t Address::Builder::getNumber() {
+  return _builder.getDataField< ::int16_t>(
+      2 * ::capnp::ELEMENTS);
+}
+inline void Address::Builder::setNumber( ::int16_t value) {
+  _builder.setDataField< ::int16_t>(
+      2 * ::capnp::ELEMENTS, value);
+}
+
+inline bool School::Reader::hasName() const {
+  return !_reader.getPointerField(0 * ::capnp::POINTERS).isNull();
+}
+inline bool School::Builder::hasName() {
+  return !_builder.getPointerField(0 * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::Text::Reader School::Reader::getName() const {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::get(
+      _reader.getPointerField(0 * ::capnp::POINTERS));
+}
+inline  ::capnp::Text::Builder School::Builder::getName() {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::get(
+      _builder.getPointerField(0 * ::capnp::POINTERS));
+}
+inline void School::Builder::setName( ::capnp::Text::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::Text>::set(
+      _builder.getPointerField(0 * ::capnp::POINTERS), value);
+}
+inline  ::capnp::Text::Builder School::Builder::initName(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::init(
+      _builder.getPointerField(0 * ::capnp::POINTERS), size);
+}
+inline void School::Builder::adoptName(
+    ::capnp::Orphan< ::capnp::Text>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::Text>::adopt(
+      _builder.getPointerField(0 * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::Text> School::Builder::disownName() {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::disown(
+      _builder.getPointerField(0 * ::capnp::POINTERS));
+}
+
+inline bool School::Reader::hasAddress() const {
+  return !_reader.getPointerField(1 * ::capnp::POINTERS).isNull();
+}
+inline bool School::Builder::hasAddress() {
+  return !_builder.getPointerField(1 * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp_code::Address::Reader School::Reader::getAddress() const {
+  return ::capnp::_::PointerHelpers< ::capnp_code::Address>::get(
+      _reader.getPointerField(1 * ::capnp::POINTERS));
+}
+inline  ::capnp_code::Address::Builder School::Builder::getAddress() {
+  return ::capnp::_::PointerHelpers< ::capnp_code::Address>::get(
+      _builder.getPointerField(1 * ::capnp::POINTERS));
+}
+#if !CAPNP_LITE
+inline  ::capnp_code::Address::Pipeline School::Pipeline::getAddress() {
+  return  ::capnp_code::Address::Pipeline(_typeless.getPointerField(1));
+}
+#endif  // !CAPNP_LITE
+inline void School::Builder::setAddress( ::capnp_code::Address::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp_code::Address>::set(
+      _builder.getPointerField(1 * ::capnp::POINTERS), value);
+}
+inline  ::capnp_code::Address::Builder School::Builder::initAddress() {
+  return ::capnp::_::PointerHelpers< ::capnp_code::Address>::init(
+      _builder.getPointerField(1 * ::capnp::POINTERS));
+}
+inline void School::Builder::adoptAddress(
+    ::capnp::Orphan< ::capnp_code::Address>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp_code::Address>::adopt(
+      _builder.getPointerField(1 * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp_code::Address> School::Builder::disownAddress() {
+  return ::capnp::_::PointerHelpers< ::capnp_code::Address>::disown(
+      _builder.getPointerField(1 * ::capnp::POINTERS));
+}
+
+inline bool School::Reader::hasFoundation() const {
+  return !_reader.getPointerField(2 * ::capnp::POINTERS).isNull();
+}
+inline bool School::Builder::hasFoundation() {
+  return !_builder.getPointerField(2 * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp_code::Date::Reader School::Reader::getFoundation() const {
+  return ::capnp::_::PointerHelpers< ::capnp_code::Date>::get(
+      _reader.getPointerField(2 * ::capnp::POINTERS));
+}
+inline  ::capnp_code::Date::Builder School::Builder::getFoundation() {
+  return ::capnp::_::PointerHelpers< ::capnp_code::Date>::get(
+      _builder.getPointerField(2 * ::capnp::POINTERS));
+}
+#if !CAPNP_LITE
+inline  ::capnp_code::Date::Pipeline School::Pipeline::getFoundation() {
+  return  ::capnp_code::Date::Pipeline(_typeless.getPointerField(2));
+}
+#endif  // !CAPNP_LITE
+inline void School::Builder::setFoundation( ::capnp_code::Date::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp_code::Date>::set(
+      _builder.getPointerField(2 * ::capnp::POINTERS), value);
+}
+inline  ::capnp_code::Date::Builder School::Builder::initFoundation() {
+  return ::capnp::_::PointerHelpers< ::capnp_code::Date>::init(
+      _builder.getPointerField(2 * ::capnp::POINTERS));
+}
+inline void School::Builder::adoptFoundation(
+    ::capnp::Orphan< ::capnp_code::Date>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp_code::Date>::adopt(
+      _builder.getPointerField(2 * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp_code::Date> School::Builder::disownFoundation() {
+  return ::capnp::_::PointerHelpers< ::capnp_code::Date>::disown(
+      _builder.getPointerField(2 * ::capnp::POINTERS));
+}
+
+inline bool School::Reader::hasEmailAddresses() const {
+  return !_reader.getPointerField(3 * ::capnp::POINTERS).isNull();
+}
+inline bool School::Builder::hasEmailAddresses() {
+  return !_builder.getPointerField(3 * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::List< ::capnp::Text>::Reader School::Reader::getEmailAddresses() const {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::capnp::Text>>::get(
+      _reader.getPointerField(3 * ::capnp::POINTERS));
+}
+inline  ::capnp::List< ::capnp::Text>::Builder School::Builder::getEmailAddresses() {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::capnp::Text>>::get(
+      _builder.getPointerField(3 * ::capnp::POINTERS));
+}
+inline void School::Builder::setEmailAddresses( ::capnp::List< ::capnp::Text>::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::List< ::capnp::Text>>::set(
+      _builder.getPointerField(3 * ::capnp::POINTERS), value);
+}
+inline void School::Builder::setEmailAddresses(::kj::ArrayPtr<const  ::capnp::Text::Reader> value) {
+  ::capnp::_::PointerHelpers< ::capnp::List< ::capnp::Text>>::set(
+      _builder.getPointerField(3 * ::capnp::POINTERS), value);
+}
+inline  ::capnp::List< ::capnp::Text>::Builder School::Builder::initEmailAddresses(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::capnp::Text>>::init(
+      _builder.getPointerField(3 * ::capnp::POINTERS), size);
+}
+inline void School::Builder::adoptEmailAddresses(
+    ::capnp::Orphan< ::capnp::List< ::capnp::Text>>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::List< ::capnp::Text>>::adopt(
+      _builder.getPointerField(3 * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::List< ::capnp::Text>> School::Builder::disownEmailAddresses() {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::capnp::Text>>::disown(
+      _builder.getPointerField(3 * ::capnp::POINTERS));
+}
+
+inline  ::int32_t Subject::Reader::getId() const {
+  return _reader.getDataField< ::int32_t>(
+      0 * ::capnp::ELEMENTS);
+}
+
+inline  ::int32_t Subject::Builder::getId() {
+  return _builder.getDataField< ::int32_t>(
+      0 * ::capnp::ELEMENTS);
+}
+inline void Subject::Builder::setId( ::int32_t value) {
+  _builder.setDataField< ::int32_t>(
+      0 * ::capnp::ELEMENTS, value);
+}
+
+inline bool Subject::Reader::hasTitle() const {
+  return !_reader.getPointerField(0 * ::capnp::POINTERS).isNull();
+}
+inline bool Subject::Builder::hasTitle() {
+  return !_builder.getPointerField(0 * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::Text::Reader Subject::Reader::getTitle() const {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::get(
+      _reader.getPointerField(0 * ::capnp::POINTERS));
+}
+inline  ::capnp::Text::Builder Subject::Builder::getTitle() {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::get(
+      _builder.getPointerField(0 * ::capnp::POINTERS));
+}
+inline void Subject::Builder::setTitle( ::capnp::Text::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::Text>::set(
+      _builder.getPointerField(0 * ::capnp::POINTERS), value);
+}
+inline  ::capnp::Text::Builder Subject::Builder::initTitle(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::init(
+      _builder.getPointerField(0 * ::capnp::POINTERS), size);
+}
+inline void Subject::Builder::adoptTitle(
+    ::capnp::Orphan< ::capnp::Text>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::Text>::adopt(
+      _builder.getPointerField(0 * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::Text> Subject::Builder::disownTitle() {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::disown(
+      _builder.getPointerField(0 * ::capnp::POINTERS));
+}
+
+inline bool Subject::Reader::hasCode() const {
+  return !_reader.getPointerField(1 * ::capnp::POINTERS).isNull();
+}
+inline bool Subject::Builder::hasCode() {
+  return !_builder.getPointerField(1 * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::Text::Reader Subject::Reader::getCode() const {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::get(
+      _reader.getPointerField(1 * ::capnp::POINTERS));
+}
+inline  ::capnp::Text::Builder Subject::Builder::getCode() {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::get(
+      _builder.getPointerField(1 * ::capnp::POINTERS));
+}
+inline void Subject::Builder::setCode( ::capnp::Text::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::Text>::set(
+      _builder.getPointerField(1 * ::capnp::POINTERS), value);
+}
+inline  ::capnp::Text::Builder Subject::Builder::initCode(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::init(
+      _builder.getPointerField(1 * ::capnp::POINTERS), size);
+}
+inline void Subject::Builder::adoptCode(
+    ::capnp::Orphan< ::capnp::Text>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::Text>::adopt(
+      _builder.getPointerField(1 * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::Text> Subject::Builder::disownCode() {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::disown(
+      _builder.getPointerField(1 * ::capnp::POINTERS));
+}
+
+inline bool Student::Reader::hasName() const {
+  return !_reader.getPointerField(0 * ::capnp::POINTERS).isNull();
+}
+inline bool Student::Builder::hasName() {
+  return !_builder.getPointerField(0 * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::Text::Reader Student::Reader::getName() const {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::get(
+      _reader.getPointerField(0 * ::capnp::POINTERS));
+}
+inline  ::capnp::Text::Builder Student::Builder::getName() {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::get(
+      _builder.getPointerField(0 * ::capnp::POINTERS));
+}
+inline void Student::Builder::setName( ::capnp::Text::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::Text>::set(
+      _builder.getPointerField(0 * ::capnp::POINTERS), value);
+}
+inline  ::capnp::Text::Builder Student::Builder::initName(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::init(
+      _builder.getPointerField(0 * ::capnp::POINTERS), size);
+}
+inline void Student::Builder::adoptName(
+    ::capnp::Orphan< ::capnp::Text>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::Text>::adopt(
+      _builder.getPointerField(0 * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::Text> Student::Builder::disownName() {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::disown(
+      _builder.getPointerField(0 * ::capnp::POINTERS));
+}
+
+inline  ::int32_t Student::Reader::getFriends() const {
+  return _reader.getDataField< ::int32_t>(
+      0 * ::capnp::ELEMENTS);
+}
+
+inline  ::int32_t Student::Builder::getFriends() {
+  return _builder.getDataField< ::int32_t>(
+      0 * ::capnp::ELEMENTS);
+}
+inline void Student::Builder::setFriends( ::int32_t value) {
+  _builder.setDataField< ::int32_t>(
+      0 * ::capnp::ELEMENTS, value);
+}
+
+inline bool Student::Reader::hasHomeAddress() const {
+  return !_reader.getPointerField(1 * ::capnp::POINTERS).isNull();
+}
+inline bool Student::Builder::hasHomeAddress() {
+  return !_builder.getPointerField(1 * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp_code::Address::Reader Student::Reader::getHomeAddress() const {
+  return ::capnp::_::PointerHelpers< ::capnp_code::Address>::get(
+      _reader.getPointerField(1 * ::capnp::POINTERS));
+}
+inline  ::capnp_code::Address::Builder Student::Builder::getHomeAddress() {
+  return ::capnp::_::PointerHelpers< ::capnp_code::Address>::get(
+      _builder.getPointerField(1 * ::capnp::POINTERS));
+}
+#if !CAPNP_LITE
+inline  ::capnp_code::Address::Pipeline Student::Pipeline::getHomeAddress() {
+  return  ::capnp_code::Address::Pipeline(_typeless.getPointerField(1));
+}
+#endif  // !CAPNP_LITE
+inline void Student::Builder::setHomeAddress( ::capnp_code::Address::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp_code::Address>::set(
+      _builder.getPointerField(1 * ::capnp::POINTERS), value);
+}
+inline  ::capnp_code::Address::Builder Student::Builder::initHomeAddress() {
+  return ::capnp::_::PointerHelpers< ::capnp_code::Address>::init(
+      _builder.getPointerField(1 * ::capnp::POINTERS));
+}
+inline void Student::Builder::adoptHomeAddress(
+    ::capnp::Orphan< ::capnp_code::Address>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp_code::Address>::adopt(
+      _builder.getPointerField(1 * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp_code::Address> Student::Builder::disownHomeAddress() {
+  return ::capnp::_::PointerHelpers< ::capnp_code::Address>::disown(
+      _builder.getPointerField(1 * ::capnp::POINTERS));
+}
+
+inline bool Student::Reader::hasBirthPlace() const {
+  return !_reader.getPointerField(2 * ::capnp::POINTERS).isNull();
+}
+inline bool Student::Builder::hasBirthPlace() {
+  return !_builder.getPointerField(2 * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp_code::Address::Reader Student::Reader::getBirthPlace() const {
+  return ::capnp::_::PointerHelpers< ::capnp_code::Address>::get(
+      _reader.getPointerField(2 * ::capnp::POINTERS));
+}
+inline  ::capnp_code::Address::Builder Student::Builder::getBirthPlace() {
+  return ::capnp::_::PointerHelpers< ::capnp_code::Address>::get(
+      _builder.getPointerField(2 * ::capnp::POINTERS));
+}
+#if !CAPNP_LITE
+inline  ::capnp_code::Address::Pipeline Student::Pipeline::getBirthPlace() {
+  return  ::capnp_code::Address::Pipeline(_typeless.getPointerField(2));
+}
+#endif  // !CAPNP_LITE
+inline void Student::Builder::setBirthPlace( ::capnp_code::Address::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp_code::Address>::set(
+      _builder.getPointerField(2 * ::capnp::POINTERS), value);
+}
+inline  ::capnp_code::Address::Builder Student::Builder::initBirthPlace() {
+  return ::capnp::_::PointerHelpers< ::capnp_code::Address>::init(
+      _builder.getPointerField(2 * ::capnp::POINTERS));
+}
+inline void Student::Builder::adoptBirthPlace(
+    ::capnp::Orphan< ::capnp_code::Address>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp_code::Address>::adopt(
+      _builder.getPointerField(2 * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp_code::Address> Student::Builder::disownBirthPlace() {
+  return ::capnp::_::PointerHelpers< ::capnp_code::Address>::disown(
+      _builder.getPointerField(2 * ::capnp::POINTERS));
+}
+
+inline bool Student::Reader::hasBirth() const {
+  return !_reader.getPointerField(3 * ::capnp::POINTERS).isNull();
+}
+inline bool Student::Builder::hasBirth() {
+  return !_builder.getPointerField(3 * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp_code::Date::Reader Student::Reader::getBirth() const {
+  return ::capnp::_::PointerHelpers< ::capnp_code::Date>::get(
+      _reader.getPointerField(3 * ::capnp::POINTERS));
+}
+inline  ::capnp_code::Date::Builder Student::Builder::getBirth() {
+  return ::capnp::_::PointerHelpers< ::capnp_code::Date>::get(
+      _builder.getPointerField(3 * ::capnp::POINTERS));
+}
+#if !CAPNP_LITE
+inline  ::capnp_code::Date::Pipeline Student::Pipeline::getBirth() {
+  return  ::capnp_code::Date::Pipeline(_typeless.getPointerField(3));
+}
+#endif  // !CAPNP_LITE
+inline void Student::Builder::setBirth( ::capnp_code::Date::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp_code::Date>::set(
+      _builder.getPointerField(3 * ::capnp::POINTERS), value);
+}
+inline  ::capnp_code::Date::Builder Student::Builder::initBirth() {
+  return ::capnp::_::PointerHelpers< ::capnp_code::Date>::init(
+      _builder.getPointerField(3 * ::capnp::POINTERS));
+}
+inline void Student::Builder::adoptBirth(
+    ::capnp::Orphan< ::capnp_code::Date>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp_code::Date>::adopt(
+      _builder.getPointerField(3 * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp_code::Date> Student::Builder::disownBirth() {
+  return ::capnp::_::PointerHelpers< ::capnp_code::Date>::disown(
+      _builder.getPointerField(3 * ::capnp::POINTERS));
+}
+
+inline bool Student::Reader::hasFavoriteSubjects() const {
+  return !_reader.getPointerField(4 * ::capnp::POINTERS).isNull();
+}
+inline bool Student::Builder::hasFavoriteSubjects() {
+  return !_builder.getPointerField(4 * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::List< ::capnp_code::Subject>::Reader Student::Reader::getFavoriteSubjects() const {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::capnp_code::Subject>>::get(
+      _reader.getPointerField(4 * ::capnp::POINTERS));
+}
+inline  ::capnp::List< ::capnp_code::Subject>::Builder Student::Builder::getFavoriteSubjects() {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::capnp_code::Subject>>::get(
+      _builder.getPointerField(4 * ::capnp::POINTERS));
+}
+inline void Student::Builder::setFavoriteSubjects( ::capnp::List< ::capnp_code::Subject>::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::List< ::capnp_code::Subject>>::set(
+      _builder.getPointerField(4 * ::capnp::POINTERS), value);
+}
+inline  ::capnp::List< ::capnp_code::Subject>::Builder Student::Builder::initFavoriteSubjects(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::capnp_code::Subject>>::init(
+      _builder.getPointerField(4 * ::capnp::POINTERS), size);
+}
+inline void Student::Builder::adoptFavoriteSubjects(
+    ::capnp::Orphan< ::capnp::List< ::capnp_code::Subject>>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::List< ::capnp_code::Subject>>::adopt(
+      _builder.getPointerField(4 * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::List< ::capnp_code::Subject>> Student::Builder::disownFavoriteSubjects() {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::capnp_code::Subject>>::disown(
+      _builder.getPointerField(4 * ::capnp::POINTERS));
+}
+
+inline bool Student::Reader::hasEmailAddresses() const {
+  return !_reader.getPointerField(5 * ::capnp::POINTERS).isNull();
+}
+inline bool Student::Builder::hasEmailAddresses() {
+  return !_builder.getPointerField(5 * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::List< ::capnp::Text>::Reader Student::Reader::getEmailAddresses() const {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::capnp::Text>>::get(
+      _reader.getPointerField(5 * ::capnp::POINTERS));
+}
+inline  ::capnp::List< ::capnp::Text>::Builder Student::Builder::getEmailAddresses() {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::capnp::Text>>::get(
+      _builder.getPointerField(5 * ::capnp::POINTERS));
+}
+inline void Student::Builder::setEmailAddresses( ::capnp::List< ::capnp::Text>::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::List< ::capnp::Text>>::set(
+      _builder.getPointerField(5 * ::capnp::POINTERS), value);
+}
+inline void Student::Builder::setEmailAddresses(::kj::ArrayPtr<const  ::capnp::Text::Reader> value) {
+  ::capnp::_::PointerHelpers< ::capnp::List< ::capnp::Text>>::set(
+      _builder.getPointerField(5 * ::capnp::POINTERS), value);
+}
+inline  ::capnp::List< ::capnp::Text>::Builder Student::Builder::initEmailAddresses(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::capnp::Text>>::init(
+      _builder.getPointerField(5 * ::capnp::POINTERS), size);
+}
+inline void Student::Builder::adoptEmailAddresses(
+    ::capnp::Orphan< ::capnp::List< ::capnp::Text>>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::List< ::capnp::Text>>::adopt(
+      _builder.getPointerField(5 * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::List< ::capnp::Text>> Student::Builder::disownEmailAddresses() {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::capnp::Text>>::disown(
+      _builder.getPointerField(5 * ::capnp::POINTERS));
+}
+
+inline bool Student::Reader::hasSchools() const {
+  return !_reader.getPointerField(6 * ::capnp::POINTERS).isNull();
+}
+inline bool Student::Builder::hasSchools() {
+  return !_builder.getPointerField(6 * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::List< ::capnp_code::School>::Reader Student::Reader::getSchools() const {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::capnp_code::School>>::get(
+      _reader.getPointerField(6 * ::capnp::POINTERS));
+}
+inline  ::capnp::List< ::capnp_code::School>::Builder Student::Builder::getSchools() {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::capnp_code::School>>::get(
+      _builder.getPointerField(6 * ::capnp::POINTERS));
+}
+inline void Student::Builder::setSchools( ::capnp::List< ::capnp_code::School>::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::List< ::capnp_code::School>>::set(
+      _builder.getPointerField(6 * ::capnp::POINTERS), value);
+}
+inline  ::capnp::List< ::capnp_code::School>::Builder Student::Builder::initSchools(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::capnp_code::School>>::init(
+      _builder.getPointerField(6 * ::capnp::POINTERS), size);
+}
+inline void Student::Builder::adoptSchools(
+    ::capnp::Orphan< ::capnp::List< ::capnp_code::School>>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::List< ::capnp_code::School>>::adopt(
+      _builder.getPointerField(6 * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::List< ::capnp_code::School>> Student::Builder::disownSchools() {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::capnp_code::School>>::disown(
+      _builder.getPointerField(6 * ::capnp::POINTERS));
+}
 
 #if !CAPNP_LITE
 inline CapnpServiceBenchmark::Client::Client(decltype(nullptr))
@@ -482,11 +1913,11 @@ inline CapnpServiceBenchmark::Client::Client(::kj::Promise<_t>&& promise)
     : ::capnp::Capability::Client(::kj::mv(promise)) {}
 inline CapnpServiceBenchmark::Client::Client(::kj::Exception&& exception)
     : ::capnp::Capability::Client(::kj::mv(exception)) {}
-inline  ::CapnpServiceBenchmark::Client& CapnpServiceBenchmark::Client::operator=(Client& other) {
+inline  ::capnp_code::CapnpServiceBenchmark::Client& CapnpServiceBenchmark::Client::operator=(Client& other) {
   ::capnp::Capability::Client::operator=(other);
   return *this;
 }
-inline  ::CapnpServiceBenchmark::Client& CapnpServiceBenchmark::Client::operator=(Client&& other) {
+inline  ::capnp_code::CapnpServiceBenchmark::Client& CapnpServiceBenchmark::Client::operator=(Client&& other) {
   ::capnp::Capability::Client::operator=(kj::mv(other));
   return *this;
 }
@@ -552,5 +1983,38 @@ inline ::capnp::Orphan< ::capnp::Data> CapnpServiceBenchmark::GetBlobResults::Bu
       _builder.getPointerField(0 * ::capnp::POINTERS));
 }
 
+inline bool CapnpServiceBenchmark::GetStructsResults::Reader::hasResult() const {
+  return !_reader.getPointerField(0 * ::capnp::POINTERS).isNull();
+}
+inline bool CapnpServiceBenchmark::GetStructsResults::Builder::hasResult() {
+  return !_builder.getPointerField(0 * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::List< ::capnp_code::Student>::Reader CapnpServiceBenchmark::GetStructsResults::Reader::getResult() const {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::capnp_code::Student>>::get(
+      _reader.getPointerField(0 * ::capnp::POINTERS));
+}
+inline  ::capnp::List< ::capnp_code::Student>::Builder CapnpServiceBenchmark::GetStructsResults::Builder::getResult() {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::capnp_code::Student>>::get(
+      _builder.getPointerField(0 * ::capnp::POINTERS));
+}
+inline void CapnpServiceBenchmark::GetStructsResults::Builder::setResult( ::capnp::List< ::capnp_code::Student>::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::List< ::capnp_code::Student>>::set(
+      _builder.getPointerField(0 * ::capnp::POINTERS), value);
+}
+inline  ::capnp::List< ::capnp_code::Student>::Builder CapnpServiceBenchmark::GetStructsResults::Builder::initResult(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::capnp_code::Student>>::init(
+      _builder.getPointerField(0 * ::capnp::POINTERS), size);
+}
+inline void CapnpServiceBenchmark::GetStructsResults::Builder::adoptResult(
+    ::capnp::Orphan< ::capnp::List< ::capnp_code::Student>>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::List< ::capnp_code::Student>>::adopt(
+      _builder.getPointerField(0 * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::List< ::capnp_code::Student>> CapnpServiceBenchmark::GetStructsResults::Builder::disownResult() {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::capnp_code::Student>>::disown(
+      _builder.getPointerField(0 * ::capnp::POINTERS));
+}
+
+}  // namespace
 
 #endif  // CAPNP_INCLUDED_d4857e0f5efbe114_

@@ -22,6 +22,11 @@ mv $SCRIPT_DIR/gen-cpp/*.cpp $BENCHMARKS_ROOT/src/thrift
 rm -r $SCRIPT_DIR/gen-cpp
 
 # 3. cap'n'proto
-# TODO
+echo "> Generating cap'n'proto code"
+pushd $BENCHMARKS_ROOT/idl
+capnpc -oc++ capnp_service.capnp
+mv ./*.h $BENCHMARKS_ROOT/include/capnp
+mv ./*.c++ $BENCHMARKS_ROOT/src/capnp
+popd
 
 popd

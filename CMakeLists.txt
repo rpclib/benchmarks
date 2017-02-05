@@ -14,7 +14,7 @@ conan_basic_setup()
 add_executable(rpclib_benchmark
     src/target_code.cc
     src/benchmark.cc
-    src/capnp/capnp_service.capnp.cc
+    src/capnp/capnp_service.capnp.c++
     src/thrift/thrift_service_constants.cpp
     src/thrift/thrift_service_types.cpp
     src/thrift/ThriftServiceBenchmark.cpp
