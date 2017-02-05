@@ -6,12 +6,12 @@
  */
 #include "thrift_service_constants.h"
 
-
+namespace thrift_code {
 
 const thrift_serviceConstants g_thrift_service_constants;
 
 thrift_serviceConstants::thrift_serviceConstants() {
 }
 
-
+} // namespace
 

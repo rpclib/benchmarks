@@ -10,7 +10,6 @@ int get_answer(int num) {
 }
 
 static std::map<int, std::string> blob_cache;
-static std::vector<Student> struct_cache;
 
 std::string get_blob(int size) {
   if (blob_cache.find(size) != end(blob_cache)) {
@@ -39,12 +38,3 @@ std::string rand_str(std::size_t size) {
   return s;
 }
 
-void fill_struct_cache() {
-    for (std::size_t i = 0; i < item_count; ++i) {
-        struct_cache.push_back(Student::random());
-    }
-}
-
-std::vector<Student>& get_structs() {
-    return struct_cache;
-}

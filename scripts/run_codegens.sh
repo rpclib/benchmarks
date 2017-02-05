@@ -10,7 +10,6 @@ pushd $SCRIPT_DIR
 # 1. grpc
 echo "> Generating grpc code"
 protoc --grpc_out=. -I$BENCHMARKS_ROOT/idl --plugin=protoc-gen-grpc=`which grpc_cpp_plugin` $BENCHMARKS_ROOT/idl/grpc_service.proto
-echo "> Generating grpc code #2"
 protoc --cpp_out=. -I$BENCHMARKS_ROOT/idl --plugin=protoc-gen-grpc=`which grpc_cpp_plugin` $BENCHMARKS_ROOT/idl/grpc_service.proto
 mv $SCRIPT_DIR/*.h $BENCHMARKS_ROOT/include/grpc
 mv $SCRIPT_DIR/*.cc $BENCHMARKS_ROOT/src/grpc

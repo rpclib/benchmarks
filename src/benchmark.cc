@@ -8,8 +8,12 @@
 #include "capnp/fixture.h"
 #include "direct/fixture.h"
 #include "grpc/fixture.h"
+
 #include "rpclib/fixture.h"
+#include "rpclib/struct_helpers.h"
+
 #include "thrift/fixture.h"
+#include "thrift/struct_helpers.h"
 
 #include <sstream>
 
@@ -24,10 +28,10 @@ int capnp_bench::blob_size_ = 0;
   }                                                                            \
   BENCHMARK_REGISTER_F(FixtureName, Benchmark)
 
-#define MAKE_BENCHMARK0(FixtureName, Benchmark)                                 \
+#define MAKE_BENCHMARK0(FixtureName, Benchmark)                                \
   BENCHMARK_DEFINE_F(FixtureName, Benchmark)(benchmark::State & st) {          \
     while (st.KeepRunning()) {                                                 \
-      Benchmark(0);                                                          \
+      Benchmark(0);                                                            \
     }                                                                          \
   }                                                                            \
   BENCHMARK_REGISTER_F(FixtureName, Benchmark)
@@ -42,6 +46,7 @@ constexpr std::size_t multiplier = 4;
 //MAKE_BENCHMARK(thrift_bench, get_blob)->RangeMultiplier(multiplier)->Range(min_size, max_size);
 //MAKE_BENCHMARK(grpc_bench, get_blob)->RangeMultiplier(multiplier)->Range(min_size, max_size);
 MAKE_BENCHMARK0(rpclib_bench, get_structs);
+MAKE_BENCHMARK0(thrift_bench, get_structs);
 //MAKE_BENCHMARK(rpclib_bench, get_answer)
 //MAKE_BENCHMARK(capnp_bench, get_answer)
 //MAKE_BENCHMARK(capnp_bench, get_blob);
@@ -56,7 +61,8 @@ int main(int argc, char *argv[]) {
     s *= multiplier;
   }
   printf("Initalizing struct cache...\n");
-  fill_struct_cache();
+  rpclib_code::fill_struct_cache();
+  thrift_code::fill_struct_cache();
   benchmark::Initialize(&argc, argv);
   return benchmark::RunSpecifiedBenchmarks();
 }

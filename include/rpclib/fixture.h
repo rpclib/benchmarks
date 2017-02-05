@@ -6,6 +6,7 @@
 #include "benchmark/benchmark.h"
 
 #include "target_code.h"
+#include "rpclib/struct_helpers.h"
 
 #include "rpc/client.h"
 #include "rpc/server.h"
@@ -15,7 +16,7 @@ public:
   rpclib_bench() : server(8086), client("127.0.0.1", 8086) {
     server.bind("get_answer", &::get_answer);
     server.bind("get_blob", [this]() { return ::get_blob(blob_size_); });
-    server.bind("get_structs", &::get_structs);
+    server.bind("get_structs", &rpclib_code::get_structs);
     server.async_run(1);
   }
 
@@ -34,9 +35,10 @@ public:
   }
 
   void get_structs(int param) {
-    std::vector<Student> result;
+    std::vector<rpclib_code::Student> result;
     benchmark::DoNotOptimize(
-        result = client.call("get_structs").as<std::vector<Student>>());
+        result =
+            client.call("get_structs").as<std::vector<rpclib_code::Student>>());
   }
 
   int blob_size_;

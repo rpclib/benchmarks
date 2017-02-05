@@ -18,15 +18,24 @@
 #include "thrift/transport/TTransportUtils.h"
 
 #include "target_code.h"
+#include "thrift/struct_helpers.h"
 
 static constexpr uint16_t thrift_port = 8083;
 
-class thrift_server : virtual public ThriftServiceBenchmarkIf {
+class thrift_server : virtual public thrift_code::ThriftServiceBenchmarkIf {
 public:
   int32_t get_answer(const int32_t number) override {
     return ::get_answer(number);
   }
-  void get_blob(std::string &_return) override { _return = ::get_blob(blob_size); }
+
+  void get_blob(std::string &_return) override {
+    _return = ::get_blob(blob_size);
+  }
+
+  void get_structs(std::vector<thrift_code::Student> &_return) override {
+    _return = thrift_code::get_structs();
+  }
+
   int blob_size;
 };
 
@@ -34,7 +43,7 @@ class thrift_bench : public benchmark::Fixture {
 public:
   thrift_bench()
       : handler(new thrift_server),
-        processor(new ThriftServiceBenchmarkProcessor(handler)),
+        processor(new thrift_code::ThriftServiceBenchmarkProcessor(handler)),
         serverTransport(
             new apache::thrift::transport::TServerSocket(thrift_port)),
         transportFactory(
@@ -77,6 +86,12 @@ public:
     client.get_blob(s);
   }
 
+  void get_structs(int param) {
+    (void)param;
+    std::vector<thrift_code::Student> students;
+    client.get_structs(students);
+  }
+
   boost::shared_ptr<thrift_server> handler;
   boost::shared_ptr<apache::thrift::TProcessor> processor;
   boost::shared_ptr<apache::thrift::server::TServerTransport> serverTransport;
@@ -85,7 +100,7 @@ public:
   boost::shared_ptr<apache::thrift::protocol::TTransport> clientSocket;
   boost::shared_ptr<apache::thrift::protocol::TTransport> clientTransport;
   boost::shared_ptr<apache::thrift::protocol::TProtocol> clientProtocol;
-  ThriftServiceBenchmarkClient client;
+  thrift_code::ThriftServiceBenchmarkClient client;
   apache::thrift::server::TSimpleServer server;
   std::atomic_bool server_running;
 };
