@@ -66,9 +66,9 @@ void fill_struct_cache() {
     return s;
   };
 
-  struct_cache.initStudents(item_count);
+  auto builder = struct_cache.initStudents(item_count);
   for (std::size_t i = 0; i < item_count; ++i) {
-      struct_cache.getStudents().setWithCaveats(i, random_Student());
+      builder.setWithCaveats(i, random_Student());
   }
 }
 
