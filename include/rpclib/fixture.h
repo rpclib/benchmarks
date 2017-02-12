@@ -39,6 +39,8 @@ public:
     benchmark::DoNotOptimize(
         result =
             client.call("get_structs").as<std::vector<rpclib_code::Student>>());
+    std::size_t size;
+    benchmark::DoNotOptimize(size = result.size());
   }
 
   int blob_size_;

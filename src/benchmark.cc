@@ -36,6 +36,7 @@ int capnp_bench::blob_size_ = 0;
 
 constexpr std::size_t min_size = 4 << 10;
 constexpr std::size_t max_size = 32 << 10 << 10;
+constexpr std::size_t grpc_max_size = 1 << 10 << 10; // https://github.com/grpc/grpc/issues/9510
 constexpr std::size_t multiplier = 4;
 
 //MAKE_BENCHMARK(direct_bench, get_blob)->RangeMultiplier(multiplier)->Range(min_size, max_size);
@@ -43,6 +44,8 @@ constexpr std::size_t multiplier = 4;
 //MAKE_BENCHMARK(capnp_bench, get_blob)->RangeMultiplier(multiplier)->Range(min_size, max_size);
 //MAKE_BENCHMARK(thrift_bench, get_blob)->RangeMultiplier(multiplier)->Range(min_size, max_size);
 //MAKE_BENCHMARK(grpc_bench, get_blob)->RangeMultiplier(multiplier)->Range(min_size, max_size);
+
+MAKE_BENCHMARK0(direct_bench, get_structs);
 MAKE_BENCHMARK0(rpclib_bench, get_structs);
 MAKE_BENCHMARK0(thrift_bench, get_structs);
 MAKE_BENCHMARK0(grpc_bench, get_structs);
