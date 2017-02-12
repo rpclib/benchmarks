@@ -70,6 +70,7 @@ void fill_struct_cache() {
   for (std::size_t i = 0; i < item_count; ++i) {
       builder.setWithCaveats(i, random_Student());
   }
+  struct_cache.setStudents(builder);
 }
 
 StudentDataResponse::Builder& get_structs() { return struct_cache; }

@@ -9,6 +9,7 @@
 namespace grpc_code {
 
 std::vector<Student>& get_structs();
+StudentDataResponse* get_full_structs_response();
 void fill_struct_cache();
 
 }
