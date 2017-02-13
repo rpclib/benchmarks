@@ -20,9 +20,8 @@
 #include "grpc/struct_helpers.h"
 
 #include "target_code.h"
+#include "port_numbers.h"
 
-
-static constexpr uint16_t grpc_port = 8084;
 
 class grpc_service : public grpc_code::GrpcServiceBenchmark::Service {
 public:
@@ -54,7 +53,8 @@ public:
 class grpc_bench : public benchmark::Fixture {
 public:
   grpc_bench()
-      : channel_(grpc::CreateChannel(server_addr_,
+      : server_addr_("localhost:" + std::to_string(grpc_port)),
+        channel_(grpc::CreateChannel(server_addr_,
                                      grpc::InsecureChannelCredentials())),
         client_(channel_) {
     grpc::ServerBuilder b;
@@ -98,11 +98,11 @@ public:
 
   ~grpc_bench() noexcept { server_->Shutdown(); }
 
+  std::string server_addr_;
   std::shared_ptr<grpc::ChannelInterface> channel_;
   grpc_code::GrpcServiceBenchmark::Stub client_;
   std::unique_ptr<grpc::Server> server_;
   grpc_service service_impl_;
-  static constexpr const char *server_addr_ = "localhost:8082";
 };
 
 #endif /* end of include guard: FIXTURE_H_EQKIMOI3 */

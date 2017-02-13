@@ -34,10 +34,10 @@ int capnp_bench::blob_size_ = 0;
   }                                                                            \
   BENCHMARK_REGISTER_F(FixtureName, Benchmark)
 
-constexpr std::size_t min_size = 4 << 10;
-constexpr std::size_t max_size = 32 << 10 << 10;
+constexpr std::size_t min_size = 1 << 10;
+constexpr std::size_t max_size = 16 << 10 << 10;
 constexpr std::size_t grpc_max_size = 1 << 10 << 10; // https://github.com/grpc/grpc/issues/9510
-constexpr std::size_t multiplier = 4;
+constexpr std::size_t multiplier = 2;
 
 MAKE_BENCHMARK(direct_bench, get_blob)->RangeMultiplier(multiplier)->Range(min_size, max_size);
 MAKE_BENCHMARK(rpclib_bench, get_blob)->RangeMultiplier(multiplier)->Range(min_size, max_size);
