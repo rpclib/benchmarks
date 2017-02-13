@@ -33,22 +33,19 @@ public:
     response->set_result(::get_answer(num));
     return ::grpc::Status::OK;
   }
+
   ::grpc::Status get_blob(::grpc::ServerContext *context,
                           const grpc_code::EmptyRequest *request,
                           grpc_code::BlobResponse *response) override {
     response->set_data(::get_blob(blob_size_));
     return ::grpc::Status::OK;
   }
+
   ::grpc::Status
   get_structs(::grpc::ServerContext *context,
               const grpc_code::EmptyRequest *request,
               grpc_code::StudentDataResponse *response) override {
-    auto &students = grpc_code::get_structs();
-    for (auto &s : students) {
-      auto new_s = response->add_students();
-      // TODO: is there a more efficient way (to avoid copies?)
-      new_s->CopyFrom(s);
-    }
+    response->CopyFrom(grpc_code::get_structs());
     return ::grpc::Status::OK;
   }
   int blob_size_;
@@ -97,24 +94,6 @@ public:
     auto status = client_.get_structs(&client_context, request, &response);
     std::size_t count;
     benchmark::DoNotOptimize(count = response.students_size());
-  }
-
-  // this variant insist on getting a std::vector after the call.
-  // The only way to get it with grpc is to copy the elements.
-  // The protobuf-generated repeated field is already iterable,
-  // so most real-life user code will just use that.
-  void get_structs_strict(int param) {
-    (void)param;
-    grpc::ClientContext client_context;
-    grpc_code::EmptyRequest request;
-    grpc_code::StudentDataResponse response;
-    std::vector<grpc_code::Student> students;
-    auto status = client_.get_structs(&client_context, request, &response);
-    for (auto s : response.students()) {
-      students.push_back(s);
-    }
-    std::size_t count;
-    benchmark::DoNotOptimize(count = students.size());
   }
 
   ~grpc_bench() noexcept { server_->Shutdown(); }

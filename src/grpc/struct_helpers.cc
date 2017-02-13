@@ -58,15 +58,16 @@ static Student random_Student() {
   return s;
 }
 
-static std::vector<Student> struct_cache;
+static StudentDataResponse struct_cache;
 
 void fill_struct_cache() {
   for (std::size_t i = 0; i < item_count; ++i) {
-    struct_cache.push_back(random_Student());
+    auto new_s = struct_cache.add_students();
+    new_s->CopyFrom(random_Student());
   }
 }
 
-std::vector<Student> &get_structs() { return struct_cache; }
+StudentDataResponse& get_structs() { return struct_cache; }
 
 
 

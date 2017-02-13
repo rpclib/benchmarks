@@ -8,8 +8,7 @@
 
 namespace grpc_code {
 
-std::vector<Student>& get_structs();
-StudentDataResponse* get_full_structs_response();
+StudentDataResponse& get_structs();
 void fill_struct_cache();
 
 }
