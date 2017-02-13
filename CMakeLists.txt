@@ -26,7 +26,7 @@ add_executable(rpclib_benchmark
     src/capnp/struct_helpers.cc
     )
 
-target_link_libraries(rpclib_benchmark ${CONAN_LIBS} dw bfd)
+target_link_libraries(rpclib_benchmark ${CONAN_LIBS})
 set_target_properties(
         rpclib_benchmark
         PROPERTIES
