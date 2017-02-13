@@ -9,7 +9,7 @@
 
 #include "thrift_service_types.h"
 
-
+namespace thrift_code {
 
 class thrift_serviceConstants {
  public:
@@ -19,6 +19,6 @@ class thrift_serviceConstants {
 
 extern const thrift_serviceConstants g_thrift_service_constants;
 
-
+} // namespace
 
 #endif

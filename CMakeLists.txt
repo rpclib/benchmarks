@@ -14,12 +14,16 @@ conan_basic_setup()
 add_executable(rpclib_benchmark
     src/target_code.cc
     src/benchmark.cc
-    src/capnp/capnp_service.capnp.cc
+    src/capnp/capnp_service.capnp.c++
     src/thrift/thrift_service_constants.cpp
     src/thrift/thrift_service_types.cpp
     src/thrift/ThriftServiceBenchmark.cpp
+    src/thrift/struct_helpers.cc
     src/grpc/grpc_service.pb.cc
     src/grpc/grpc_service.grpc.pb.cc
+    src/grpc/struct_helpers.cc
+    src/rpclib/struct_helpers.cc
+    src/capnp/struct_helpers.cc
     )
 
 target_link_libraries(rpclib_benchmark ${CONAN_LIBS} dw bfd)

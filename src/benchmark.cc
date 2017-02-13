@@ -8,9 +8,12 @@
 #include "rpclib/fixture.h"
 #include "thrift/fixture.h"
 
-//#define BACKWARD_HAS_DW 1
-#define BACKWARD_HAS_BFD 1
-#include "backward/backward.hpp"
+#include "grpc/struct_helpers.h"
+#include "rpclib/struct_helpers.h"
+#include "thrift/struct_helpers.h"
+#include "capnp/struct_helpers.h"
+
+#include <sstream>
 
 int capnp_bench::blob_size_ = 0;
 
@@ -23,28 +26,36 @@ int capnp_bench::blob_size_ = 0;
   }                                                                            \
   BENCHMARK_REGISTER_F(FixtureName, Benchmark)
 
-namespace backward {
+#define MAKE_BENCHMARK0(FixtureName, Benchmark)                                \
+  BENCHMARK_DEFINE_F(FixtureName, Benchmark)(benchmark::State & st) {          \
+    while (st.KeepRunning()) {                                                 \
+      Benchmark(0);                                                            \
+    }                                                                          \
+  }                                                                            \
+  BENCHMARK_REGISTER_F(FixtureName, Benchmark)
 
-backward::SignalHandling sh;
-
-} // namespace backward
-// MAKE_BENCHMARK(direct_bench, get_answer)
-
-constexpr std::size_t min_size = 4 << 10;
-constexpr std::size_t max_size = 32 << 10 << 10;
-constexpr std::size_t multiplier = 4;
+constexpr std::size_t min_size = 1 << 10;
+constexpr std::size_t max_size = 16 << 10 << 10;
+constexpr std::size_t grpc_max_size = 1 << 10 << 10; // https://github.com/grpc/grpc/issues/9510
+constexpr std::size_t multiplier = 2;
 
 MAKE_BENCHMARK(direct_bench, get_blob)->RangeMultiplier(multiplier)->Range(min_size, max_size);
 MAKE_BENCHMARK(rpclib_bench, get_blob)->RangeMultiplier(multiplier)->Range(min_size, max_size);
 MAKE_BENCHMARK(capnp_bench, get_blob)->RangeMultiplier(multiplier)->Range(min_size, max_size);
 MAKE_BENCHMARK(thrift_bench, get_blob)->RangeMultiplier(multiplier)->Range(min_size, max_size);
-MAKE_BENCHMARK(grpc_bench, get_blob)->RangeMultiplier(multiplier)->Range(min_size, max_size);
-//MAKE_BENCHMARK(rpclib_bench, get_answer)
-//MAKE_BENCHMARK(capnp_bench, get_answer)
-//MAKE_BENCHMARK(capnp_bench, get_blob);
-// MAKE_BENCHMARK(thrift_bench, get_answer)
-//MAKE_BENCHMARK(thrift_bench, get_blob);
-// MAKE_BENCHMARK(grpc_bench, get_answer)
+MAKE_BENCHMARK(grpc_bench, get_blob)->RangeMultiplier(multiplier)->Range(min_size, grpc_max_size);
+
+MAKE_BENCHMARK0(direct_bench, get_structs);
+MAKE_BENCHMARK0(rpclib_bench, get_structs);
+MAKE_BENCHMARK0(thrift_bench, get_structs);
+MAKE_BENCHMARK0(grpc_bench, get_structs);
+MAKE_BENCHMARK0(capnp_bench, get_structs);
+
+MAKE_BENCHMARK0(direct_bench, get_answer);
+MAKE_BENCHMARK0(rpclib_bench, get_answer);
+MAKE_BENCHMARK0(capnp_bench, get_answer);
+MAKE_BENCHMARK0(thrift_bench, get_answer);
+MAKE_BENCHMARK0(grpc_bench, get_answer);
 
 int main(int argc, char *argv[]) {
   printf("Initalizing blob cache...\n");
@@ -52,6 +63,14 @@ int main(int argc, char *argv[]) {
     get_blob(s);
     s *= multiplier;
   }
+
+  printf("Initalizing struct cache...\n");
+  rpclib_code::fill_struct_cache();
+  thrift_code::fill_struct_cache();
+  grpc_code::fill_struct_cache();
+  capnp_code::fill_struct_cache();
+
+  printf("Starting benchmarks...\n");
   benchmark::Initialize(&argc, argv);
   return benchmark::RunSpecifiedBenchmarks();
 }

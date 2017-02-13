@@ -13,10 +13,12 @@
 #include <grpc++/impl/codegen/rpc_service_method.h>
 #include <grpc++/impl/codegen/service_type.h>
 #include <grpc++/impl/codegen/sync_stream.h>
+namespace grpc_code {
 
 static const char* GrpcServiceBenchmark_method_names[] = {
-  "/GrpcServiceBenchmark/get_answer",
-  "/GrpcServiceBenchmark/get_blob",
+  "/grpc_code.GrpcServiceBenchmark/get_answer",
+  "/grpc_code.GrpcServiceBenchmark/get_blob",
+  "/grpc_code.GrpcServiceBenchmark/get_structs",
 };
 
 std::unique_ptr< GrpcServiceBenchmark::Stub> GrpcServiceBenchmark::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -27,52 +29,75 @@ std::unique_ptr< GrpcServiceBenchmark::Stub> GrpcServiceBenchmark::NewStub(const
 GrpcServiceBenchmark::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
   : channel_(channel), rpcmethod_get_answer_(GrpcServiceBenchmark_method_names[0], ::grpc::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_get_blob_(GrpcServiceBenchmark_method_names[1], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_get_structs_(GrpcServiceBenchmark_method_names[2], ::grpc::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status GrpcServiceBenchmark::Stub::get_answer(::grpc::ClientContext* context, const ::AnswerRequest& request, ::AnswerReply* response) {
+::grpc::Status GrpcServiceBenchmark::Stub::get_answer(::grpc::ClientContext* context, const ::grpc_code::AnswerRequest& request, ::grpc_code::AnswerReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_get_answer_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::AnswerReply>* GrpcServiceBenchmark::Stub::Asyncget_answerRaw(::grpc::ClientContext* context, const ::AnswerRequest& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::AnswerReply>(channel_.get(), cq, rpcmethod_get_answer_, context, request);
+::grpc::ClientAsyncResponseReader< ::grpc_code::AnswerReply>* GrpcServiceBenchmark::Stub::Asyncget_answerRaw(::grpc::ClientContext* context, const ::grpc_code::AnswerRequest& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::grpc_code::AnswerReply>(channel_.get(), cq, rpcmethod_get_answer_, context, request);
 }
 
-::grpc::Status GrpcServiceBenchmark::Stub::get_blob(::grpc::ClientContext* context, const ::EmptyRequest& request, ::BlobResponse* response) {
+::grpc::Status GrpcServiceBenchmark::Stub::get_blob(::grpc::ClientContext* context, const ::grpc_code::EmptyRequest& request, ::grpc_code::BlobResponse* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_get_blob_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::BlobResponse>* GrpcServiceBenchmark::Stub::Asyncget_blobRaw(::grpc::ClientContext* context, const ::EmptyRequest& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::BlobResponse>(channel_.get(), cq, rpcmethod_get_blob_, context, request);
+::grpc::ClientAsyncResponseReader< ::grpc_code::BlobResponse>* GrpcServiceBenchmark::Stub::Asyncget_blobRaw(::grpc::ClientContext* context, const ::grpc_code::EmptyRequest& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::grpc_code::BlobResponse>(channel_.get(), cq, rpcmethod_get_blob_, context, request);
+}
+
+::grpc::Status GrpcServiceBenchmark::Stub::get_structs(::grpc::ClientContext* context, const ::grpc_code::EmptyRequest& request, ::grpc_code::StudentDataResponse* response) {
+  return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_get_structs_, context, request, response);
+}
+
+::grpc::ClientAsyncResponseReader< ::grpc_code::StudentDataResponse>* GrpcServiceBenchmark::Stub::Asyncget_structsRaw(::grpc::ClientContext* context, const ::grpc_code::EmptyRequest& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::grpc_code::StudentDataResponse>(channel_.get(), cq, rpcmethod_get_structs_, context, request);
 }
 
 GrpcServiceBenchmark::Service::Service() {
   AddMethod(new ::grpc::RpcServiceMethod(
       GrpcServiceBenchmark_method_names[0],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< GrpcServiceBenchmark::Service, ::AnswerRequest, ::AnswerReply>(
+      new ::grpc::RpcMethodHandler< GrpcServiceBenchmark::Service, ::grpc_code::AnswerRequest, ::grpc_code::AnswerReply>(
           std::mem_fn(&GrpcServiceBenchmark::Service::get_answer), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       GrpcServiceBenchmark_method_names[1],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< GrpcServiceBenchmark::Service, ::EmptyRequest, ::BlobResponse>(
+      new ::grpc::RpcMethodHandler< GrpcServiceBenchmark::Service, ::grpc_code::EmptyRequest, ::grpc_code::BlobResponse>(
           std::mem_fn(&GrpcServiceBenchmark::Service::get_blob), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      GrpcServiceBenchmark_method_names[2],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< GrpcServiceBenchmark::Service, ::grpc_code::EmptyRequest, ::grpc_code::StudentDataResponse>(
+          std::mem_fn(&GrpcServiceBenchmark::Service::get_structs), this)));
 }
 
 GrpcServiceBenchmark::Service::~Service() {
 }
 
-::grpc::Status GrpcServiceBenchmark::Service::get_answer(::grpc::ServerContext* context, const ::AnswerRequest* request, ::AnswerReply* response) {
+::grpc::Status GrpcServiceBenchmark::Service::get_answer(::grpc::ServerContext* context, const ::grpc_code::AnswerRequest* request, ::grpc_code::AnswerReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status GrpcServiceBenchmark::Service::get_blob(::grpc::ServerContext* context, const ::EmptyRequest* request, ::BlobResponse* response) {
+::grpc::Status GrpcServiceBenchmark::Service::get_blob(::grpc::ServerContext* context, const ::grpc_code::EmptyRequest* request, ::grpc_code::BlobResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
+::grpc::Status GrpcServiceBenchmark::Service::get_structs(::grpc::ServerContext* context, const ::grpc_code::EmptyRequest* request, ::grpc_code::StudentDataResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+
+}  // namespace grpc_code
 

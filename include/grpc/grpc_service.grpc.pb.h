@@ -24,41 +24,54 @@ class ServerCompletionQueue;
 class ServerContext;
 }  // namespace grpc
 
+namespace grpc_code {
+
 class GrpcServiceBenchmark final {
  public:
   class StubInterface {
    public:
     virtual ~StubInterface() {}
-    virtual ::grpc::Status get_answer(::grpc::ClientContext* context, const ::AnswerRequest& request, ::AnswerReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::AnswerReply>> Asyncget_answer(::grpc::ClientContext* context, const ::AnswerRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::AnswerReply>>(Asyncget_answerRaw(context, request, cq));
+    virtual ::grpc::Status get_answer(::grpc::ClientContext* context, const ::grpc_code::AnswerRequest& request, ::grpc_code::AnswerReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::grpc_code::AnswerReply>> Asyncget_answer(::grpc::ClientContext* context, const ::grpc_code::AnswerRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::grpc_code::AnswerReply>>(Asyncget_answerRaw(context, request, cq));
     }
-    virtual ::grpc::Status get_blob(::grpc::ClientContext* context, const ::EmptyRequest& request, ::BlobResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::BlobResponse>> Asyncget_blob(::grpc::ClientContext* context, const ::EmptyRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::BlobResponse>>(Asyncget_blobRaw(context, request, cq));
+    virtual ::grpc::Status get_blob(::grpc::ClientContext* context, const ::grpc_code::EmptyRequest& request, ::grpc_code::BlobResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::grpc_code::BlobResponse>> Asyncget_blob(::grpc::ClientContext* context, const ::grpc_code::EmptyRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::grpc_code::BlobResponse>>(Asyncget_blobRaw(context, request, cq));
+    }
+    virtual ::grpc::Status get_structs(::grpc::ClientContext* context, const ::grpc_code::EmptyRequest& request, ::grpc_code::StudentDataResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::grpc_code::StudentDataResponse>> Asyncget_structs(::grpc::ClientContext* context, const ::grpc_code::EmptyRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::grpc_code::StudentDataResponse>>(Asyncget_structsRaw(context, request, cq));
     }
   private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::AnswerReply>* Asyncget_answerRaw(::grpc::ClientContext* context, const ::AnswerRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::BlobResponse>* Asyncget_blobRaw(::grpc::ClientContext* context, const ::EmptyRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::grpc_code::AnswerReply>* Asyncget_answerRaw(::grpc::ClientContext* context, const ::grpc_code::AnswerRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::grpc_code::BlobResponse>* Asyncget_blobRaw(::grpc::ClientContext* context, const ::grpc_code::EmptyRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::grpc_code::StudentDataResponse>* Asyncget_structsRaw(::grpc::ClientContext* context, const ::grpc_code::EmptyRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel);
-    ::grpc::Status get_answer(::grpc::ClientContext* context, const ::AnswerRequest& request, ::AnswerReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::AnswerReply>> Asyncget_answer(::grpc::ClientContext* context, const ::AnswerRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::AnswerReply>>(Asyncget_answerRaw(context, request, cq));
+    ::grpc::Status get_answer(::grpc::ClientContext* context, const ::grpc_code::AnswerRequest& request, ::grpc_code::AnswerReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::grpc_code::AnswerReply>> Asyncget_answer(::grpc::ClientContext* context, const ::grpc_code::AnswerRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::grpc_code::AnswerReply>>(Asyncget_answerRaw(context, request, cq));
     }
-    ::grpc::Status get_blob(::grpc::ClientContext* context, const ::EmptyRequest& request, ::BlobResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::BlobResponse>> Asyncget_blob(::grpc::ClientContext* context, const ::EmptyRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::BlobResponse>>(Asyncget_blobRaw(context, request, cq));
+    ::grpc::Status get_blob(::grpc::ClientContext* context, const ::grpc_code::EmptyRequest& request, ::grpc_code::BlobResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::grpc_code::BlobResponse>> Asyncget_blob(::grpc::ClientContext* context, const ::grpc_code::EmptyRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::grpc_code::BlobResponse>>(Asyncget_blobRaw(context, request, cq));
+    }
+    ::grpc::Status get_structs(::grpc::ClientContext* context, const ::grpc_code::EmptyRequest& request, ::grpc_code::StudentDataResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::grpc_code::StudentDataResponse>> Asyncget_structs(::grpc::ClientContext* context, const ::grpc_code::EmptyRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::grpc_code::StudentDataResponse>>(Asyncget_structsRaw(context, request, cq));
     }
 
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
-    ::grpc::ClientAsyncResponseReader< ::AnswerReply>* Asyncget_answerRaw(::grpc::ClientContext* context, const ::AnswerRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::BlobResponse>* Asyncget_blobRaw(::grpc::ClientContext* context, const ::EmptyRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::grpc_code::AnswerReply>* Asyncget_answerRaw(::grpc::ClientContext* context, const ::grpc_code::AnswerRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::grpc_code::BlobResponse>* Asyncget_blobRaw(::grpc::ClientContext* context, const ::grpc_code::EmptyRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::grpc_code::StudentDataResponse>* Asyncget_structsRaw(::grpc::ClientContext* context, const ::grpc_code::EmptyRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::RpcMethod rpcmethod_get_answer_;
     const ::grpc::RpcMethod rpcmethod_get_blob_;
+    const ::grpc::RpcMethod rpcmethod_get_structs_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -66,8 +79,9 @@ class GrpcServiceBenchmark final {
    public:
     Service();
     virtual ~Service();
-    virtual ::grpc::Status get_answer(::grpc::ServerContext* context, const ::AnswerRequest* request, ::AnswerReply* response);
-    virtual ::grpc::Status get_blob(::grpc::ServerContext* context, const ::EmptyRequest* request, ::BlobResponse* response);
+    virtual ::grpc::Status get_answer(::grpc::ServerContext* context, const ::grpc_code::AnswerRequest* request, ::grpc_code::AnswerReply* response);
+    virtual ::grpc::Status get_blob(::grpc::ServerContext* context, const ::grpc_code::EmptyRequest* request, ::grpc_code::BlobResponse* response);
+    virtual ::grpc::Status get_structs(::grpc::ServerContext* context, const ::grpc_code::EmptyRequest* request, ::grpc_code::StudentDataResponse* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_get_answer : public BaseClass {
@@ -81,11 +95,11 @@ class GrpcServiceBenchmark final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status get_answer(::grpc::ServerContext* context, const ::AnswerRequest* request, ::AnswerReply* response) final override {
+    ::grpc::Status get_answer(::grpc::ServerContext* context, const ::grpc_code::AnswerRequest* request, ::grpc_code::AnswerReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void Requestget_answer(::grpc::ServerContext* context, ::AnswerRequest* request, ::grpc::ServerAsyncResponseWriter< ::AnswerReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void Requestget_answer(::grpc::ServerContext* context, ::grpc_code::AnswerRequest* request, ::grpc::ServerAsyncResponseWriter< ::grpc_code::AnswerReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -101,15 +115,35 @@ class GrpcServiceBenchmark final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status get_blob(::grpc::ServerContext* context, const ::EmptyRequest* request, ::BlobResponse* response) final override {
+    ::grpc::Status get_blob(::grpc::ServerContext* context, const ::grpc_code::EmptyRequest* request, ::grpc_code::BlobResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void Requestget_blob(::grpc::ServerContext* context, ::EmptyRequest* request, ::grpc::ServerAsyncResponseWriter< ::BlobResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void Requestget_blob(::grpc::ServerContext* context, ::grpc_code::EmptyRequest* request, ::grpc::ServerAsyncResponseWriter< ::grpc_code::BlobResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_get_answer<WithAsyncMethod_get_blob<Service > > AsyncService;
+  template <class BaseClass>
+  class WithAsyncMethod_get_structs : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithAsyncMethod_get_structs() {
+      ::grpc::Service::MarkMethodAsync(2);
+    }
+    ~WithAsyncMethod_get_structs() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status get_structs(::grpc::ServerContext* context, const ::grpc_code::EmptyRequest* request, ::grpc_code::StudentDataResponse* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void Requestget_structs(::grpc::ServerContext* context, ::grpc_code::EmptyRequest* request, ::grpc::ServerAsyncResponseWriter< ::grpc_code::StudentDataResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  typedef WithAsyncMethod_get_answer<WithAsyncMethod_get_blob<WithAsyncMethod_get_structs<Service > > > AsyncService;
   template <class BaseClass>
   class WithGenericMethod_get_answer : public BaseClass {
    private:
@@ -122,7 +156,7 @@ class GrpcServiceBenchmark final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status get_answer(::grpc::ServerContext* context, const ::AnswerRequest* request, ::AnswerReply* response) final override {
+    ::grpc::Status get_answer(::grpc::ServerContext* context, const ::grpc_code::AnswerRequest* request, ::grpc_code::AnswerReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -139,7 +173,24 @@ class GrpcServiceBenchmark final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status get_blob(::grpc::ServerContext* context, const ::EmptyRequest* request, ::BlobResponse* response) final override {
+    ::grpc::Status get_blob(::grpc::ServerContext* context, const ::grpc_code::EmptyRequest* request, ::grpc_code::BlobResponse* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_get_structs : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithGenericMethod_get_structs() {
+      ::grpc::Service::MarkMethodGeneric(2);
+    }
+    ~WithGenericMethod_get_structs() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status get_structs(::grpc::ServerContext* context, const ::grpc_code::EmptyRequest* request, ::grpc_code::StudentDataResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -151,18 +202,18 @@ class GrpcServiceBenchmark final {
    public:
     WithStreamedUnaryMethod_get_answer() {
       ::grpc::Service::MarkMethodStreamed(0,
-        new ::grpc::StreamedUnaryHandler< ::AnswerRequest, ::AnswerReply>(std::bind(&WithStreamedUnaryMethod_get_answer<BaseClass>::Streamedget_answer, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::grpc_code::AnswerRequest, ::grpc_code::AnswerReply>(std::bind(&WithStreamedUnaryMethod_get_answer<BaseClass>::Streamedget_answer, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_get_answer() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status get_answer(::grpc::ServerContext* context, const ::AnswerRequest* request, ::AnswerReply* response) final override {
+    ::grpc::Status get_answer(::grpc::ServerContext* context, const ::grpc_code::AnswerRequest* request, ::grpc_code::AnswerReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status Streamedget_answer(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::AnswerRequest,::AnswerReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status Streamedget_answer(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::grpc_code::AnswerRequest,::grpc_code::AnswerReply>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_get_blob : public BaseClass {
@@ -171,23 +222,45 @@ class GrpcServiceBenchmark final {
    public:
     WithStreamedUnaryMethod_get_blob() {
       ::grpc::Service::MarkMethodStreamed(1,
-        new ::grpc::StreamedUnaryHandler< ::EmptyRequest, ::BlobResponse>(std::bind(&WithStreamedUnaryMethod_get_blob<BaseClass>::Streamedget_blob, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::grpc_code::EmptyRequest, ::grpc_code::BlobResponse>(std::bind(&WithStreamedUnaryMethod_get_blob<BaseClass>::Streamedget_blob, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_get_blob() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status get_blob(::grpc::ServerContext* context, const ::EmptyRequest* request, ::BlobResponse* response) final override {
+    ::grpc::Status get_blob(::grpc::ServerContext* context, const ::grpc_code::EmptyRequest* request, ::grpc_code::BlobResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status Streamedget_blob(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::EmptyRequest,::BlobResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status Streamedget_blob(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::grpc_code::EmptyRequest,::grpc_code::BlobResponse>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_get_answer<WithStreamedUnaryMethod_get_blob<Service > > StreamedUnaryService;
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_get_structs : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_get_structs() {
+      ::grpc::Service::MarkMethodStreamed(2,
+        new ::grpc::StreamedUnaryHandler< ::grpc_code::EmptyRequest, ::grpc_code::StudentDataResponse>(std::bind(&WithStreamedUnaryMethod_get_structs<BaseClass>::Streamedget_structs, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_get_structs() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status get_structs(::grpc::ServerContext* context, const ::grpc_code::EmptyRequest* request, ::grpc_code::StudentDataResponse* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status Streamedget_structs(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::grpc_code::EmptyRequest,::grpc_code::StudentDataResponse>* server_unary_streamer) = 0;
+  };
+  typedef WithStreamedUnaryMethod_get_answer<WithStreamedUnaryMethod_get_blob<WithStreamedUnaryMethod_get_structs<Service > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_get_answer<WithStreamedUnaryMethod_get_blob<Service > > StreamedService;
+  typedef WithStreamedUnaryMethod_get_answer<WithStreamedUnaryMethod_get_blob<WithStreamedUnaryMethod_get_structs<Service > > > StreamedService;
 };
+
+}  // namespace grpc_code
 
 
 #endif  // GRPC_grpc_5fservice_2eproto__INCLUDED

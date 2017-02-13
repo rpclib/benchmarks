@@ -30,9 +30,9 @@ library from the above list.
 
   - [x] `get_answer`: Perform a function call that returns a number and deserialize
     the result (so that it's available for the user code as an `int`)
-  - [ ] `get_blob`: Perform a function call that returns a large blob and deserialize it into
+  - [x] `get_blob`: Perform a function call that returns a large blob and deserialize it into
     a byte buffer.
-  - [ ] `get_big_struct`: Perform a function call that returns a nested struct with lots of
+  - [ ] `get_composite`: Perform a function call that returns a nested struct with lots of
     fields and lots of data in it.
 
 ### What is `rpclib`?

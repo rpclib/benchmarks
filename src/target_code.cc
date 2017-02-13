@@ -25,3 +25,16 @@ std::string get_blob(int size) {
   blob_cache[size] = s;
   return s;
 }
+
+std::string rand_str(std::size_t size) {
+  static const char alphanum[] = "0123456789"
+                                 "AB CDEFGHIJKLMNOPQRSTUV WXYZ"
+                                 "abcdefghij klmnopqrstuvwxyz ";
+  std::string s;
+  s.resize(size);
+  for (std::size_t i = 0; i < size; ++i) {
+    s[i] = alphanum[rand() % (sizeof(alphanum) - 1)];
+  }
+  return s;
+}
+

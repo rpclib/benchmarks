@@ -29,20 +29,28 @@
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 
+namespace grpc_code {
+
 // Internal implementation detail -- do not call these.
 void protobuf_AddDesc_grpc_5fservice_2eproto();
 void protobuf_InitDefaults_grpc_5fservice_2eproto();
 void protobuf_AssignDesc_grpc_5fservice_2eproto();
 void protobuf_ShutdownFile_grpc_5fservice_2eproto();
 
+class Address;
 class AnswerReply;
 class AnswerRequest;
 class BlobResponse;
+class Date;
 class EmptyRequest;
+class School;
+class Student;
+class StudentDataResponse;
+class Subject;
 
 // ===================================================================
 
-class AnswerRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:AnswerRequest) */ {
+class AnswerRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:grpc_code.AnswerRequest) */ {
  public:
   AnswerRequest();
   virtual ~AnswerRequest();
@@ -111,7 +119,7 @@ class AnswerRequest : public ::google::protobuf::Message /* @@protoc_insertion_p
   ::google::protobuf::int32 number() const;
   void set_number(::google::protobuf::int32 value);
 
-  // @@protoc_insertion_point(class_scope:AnswerRequest)
+  // @@protoc_insertion_point(class_scope:grpc_code.AnswerRequest)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -128,7 +136,7 @@ extern ::google::protobuf::internal::ExplicitlyConstructed<AnswerRequest> Answer
 
 // -------------------------------------------------------------------
 
-class AnswerReply : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:AnswerReply) */ {
+class AnswerReply : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:grpc_code.AnswerReply) */ {
  public:
   AnswerReply();
   virtual ~AnswerReply();
@@ -197,7 +205,7 @@ class AnswerReply : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::google::protobuf::int32 result() const;
   void set_result(::google::protobuf::int32 value);
 
-  // @@protoc_insertion_point(class_scope:AnswerReply)
+  // @@protoc_insertion_point(class_scope:grpc_code.AnswerReply)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -214,7 +222,7 @@ extern ::google::protobuf::internal::ExplicitlyConstructed<AnswerReply> AnswerRe
 
 // -------------------------------------------------------------------
 
-class EmptyRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:EmptyRequest) */ {
+class EmptyRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:grpc_code.EmptyRequest) */ {
  public:
   EmptyRequest();
   virtual ~EmptyRequest();
@@ -277,7 +285,7 @@ class EmptyRequest : public ::google::protobuf::Message /* @@protoc_insertion_po
 
   // accessors -------------------------------------------------------
 
-  // @@protoc_insertion_point(class_scope:EmptyRequest)
+  // @@protoc_insertion_point(class_scope:grpc_code.EmptyRequest)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -293,7 +301,7 @@ extern ::google::protobuf::internal::ExplicitlyConstructed<EmptyRequest> EmptyRe
 
 // -------------------------------------------------------------------
 
-class BlobResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:BlobResponse) */ {
+class BlobResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:grpc_code.BlobResponse) */ {
  public:
   BlobResponse();
   virtual ~BlobResponse();
@@ -367,7 +375,7 @@ class BlobResponse : public ::google::protobuf::Message /* @@protoc_insertion_po
   ::std::string* release_data();
   void set_allocated_data(::std::string* data);
 
-  // @@protoc_insertion_point(class_scope:BlobResponse)
+  // @@protoc_insertion_point(class_scope:grpc_code.BlobResponse)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -382,6 +390,724 @@ class BlobResponse : public ::google::protobuf::Message /* @@protoc_insertion_po
 };
 extern ::google::protobuf::internal::ExplicitlyConstructed<BlobResponse> BlobResponse_default_instance_;
 
+// -------------------------------------------------------------------
+
+class Date : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:grpc_code.Date) */ {
+ public:
+  Date();
+  virtual ~Date();
+
+  Date(const Date& from);
+
+  inline Date& operator=(const Date& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Date& default_instance();
+
+  static const Date* internal_default_instance();
+
+  void Swap(Date* other);
+
+  // implements Message ----------------------------------------------
+
+  inline Date* New() const { return New(NULL); }
+
+  Date* New(::google::protobuf::Arena* arena) const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const Date& from);
+  void MergeFrom(const Date& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  size_t ByteSizeLong() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(Date* other);
+  void UnsafeMergeFrom(const Date& from);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional int32 year = 1;
+  void clear_year();
+  static const int kYearFieldNumber = 1;
+  ::google::protobuf::int32 year() const;
+  void set_year(::google::protobuf::int32 value);
+
+  // optional int32 month = 2;
+  void clear_month();
+  static const int kMonthFieldNumber = 2;
+  ::google::protobuf::int32 month() const;
+  void set_month(::google::protobuf::int32 value);
+
+  // optional int32 day = 3;
+  void clear_day();
+  static const int kDayFieldNumber = 3;
+  ::google::protobuf::int32 day() const;
+  void set_day(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:grpc_code.Date)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int32 year_;
+  ::google::protobuf::int32 month_;
+  ::google::protobuf::int32 day_;
+  mutable int _cached_size_;
+  friend void  protobuf_InitDefaults_grpc_5fservice_2eproto_impl();
+  friend void  protobuf_AddDesc_grpc_5fservice_2eproto_impl();
+  friend void protobuf_AssignDesc_grpc_5fservice_2eproto();
+  friend void protobuf_ShutdownFile_grpc_5fservice_2eproto();
+
+  void InitAsDefaultInstance();
+};
+extern ::google::protobuf::internal::ExplicitlyConstructed<Date> Date_default_instance_;
+
+// -------------------------------------------------------------------
+
+class Address : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:grpc_code.Address) */ {
+ public:
+  Address();
+  virtual ~Address();
+
+  Address(const Address& from);
+
+  inline Address& operator=(const Address& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Address& default_instance();
+
+  static const Address* internal_default_instance();
+
+  void Swap(Address* other);
+
+  // implements Message ----------------------------------------------
+
+  inline Address* New() const { return New(NULL); }
+
+  Address* New(::google::protobuf::Arena* arena) const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const Address& from);
+  void MergeFrom(const Address& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  size_t ByteSizeLong() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(Address* other);
+  void UnsafeMergeFrom(const Address& from);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional string city = 1;
+  void clear_city();
+  static const int kCityFieldNumber = 1;
+  const ::std::string& city() const;
+  void set_city(const ::std::string& value);
+  void set_city(const char* value);
+  void set_city(const char* value, size_t size);
+  ::std::string* mutable_city();
+  ::std::string* release_city();
+  void set_allocated_city(::std::string* city);
+
+  // optional int32 zipcode = 2;
+  void clear_zipcode();
+  static const int kZipcodeFieldNumber = 2;
+  ::google::protobuf::int32 zipcode() const;
+  void set_zipcode(::google::protobuf::int32 value);
+
+  // optional string street = 3;
+  void clear_street();
+  static const int kStreetFieldNumber = 3;
+  const ::std::string& street() const;
+  void set_street(const ::std::string& value);
+  void set_street(const char* value);
+  void set_street(const char* value, size_t size);
+  ::std::string* mutable_street();
+  ::std::string* release_street();
+  void set_allocated_street(::std::string* street);
+
+  // optional int32 number = 4;
+  void clear_number();
+  static const int kNumberFieldNumber = 4;
+  ::google::protobuf::int32 number() const;
+  void set_number(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:grpc_code.Address)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr city_;
+  ::google::protobuf::internal::ArenaStringPtr street_;
+  ::google::protobuf::int32 zipcode_;
+  ::google::protobuf::int32 number_;
+  mutable int _cached_size_;
+  friend void  protobuf_InitDefaults_grpc_5fservice_2eproto_impl();
+  friend void  protobuf_AddDesc_grpc_5fservice_2eproto_impl();
+  friend void protobuf_AssignDesc_grpc_5fservice_2eproto();
+  friend void protobuf_ShutdownFile_grpc_5fservice_2eproto();
+
+  void InitAsDefaultInstance();
+};
+extern ::google::protobuf::internal::ExplicitlyConstructed<Address> Address_default_instance_;
+
+// -------------------------------------------------------------------
+
+class School : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:grpc_code.School) */ {
+ public:
+  School();
+  virtual ~School();
+
+  School(const School& from);
+
+  inline School& operator=(const School& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const School& default_instance();
+
+  static const School* internal_default_instance();
+
+  void Swap(School* other);
+
+  // implements Message ----------------------------------------------
+
+  inline School* New() const { return New(NULL); }
+
+  School* New(::google::protobuf::Arena* arena) const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const School& from);
+  void MergeFrom(const School& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  size_t ByteSizeLong() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(School* other);
+  void UnsafeMergeFrom(const School& from);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional string name = 1;
+  void clear_name();
+  static const int kNameFieldNumber = 1;
+  const ::std::string& name() const;
+  void set_name(const ::std::string& value);
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  ::std::string* mutable_name();
+  ::std::string* release_name();
+  void set_allocated_name(::std::string* name);
+
+  // optional .grpc_code.Address address = 2;
+  bool has_address() const;
+  void clear_address();
+  static const int kAddressFieldNumber = 2;
+  const ::grpc_code::Address& address() const;
+  ::grpc_code::Address* mutable_address();
+  ::grpc_code::Address* release_address();
+  void set_allocated_address(::grpc_code::Address* address);
+
+  // optional .grpc_code.Date foundation = 3;
+  bool has_foundation() const;
+  void clear_foundation();
+  static const int kFoundationFieldNumber = 3;
+  const ::grpc_code::Date& foundation() const;
+  ::grpc_code::Date* mutable_foundation();
+  ::grpc_code::Date* release_foundation();
+  void set_allocated_foundation(::grpc_code::Date* foundation);
+
+  // repeated string email_addresses = 4;
+  int email_addresses_size() const;
+  void clear_email_addresses();
+  static const int kEmailAddressesFieldNumber = 4;
+  const ::std::string& email_addresses(int index) const;
+  ::std::string* mutable_email_addresses(int index);
+  void set_email_addresses(int index, const ::std::string& value);
+  void set_email_addresses(int index, const char* value);
+  void set_email_addresses(int index, const char* value, size_t size);
+  ::std::string* add_email_addresses();
+  void add_email_addresses(const ::std::string& value);
+  void add_email_addresses(const char* value);
+  void add_email_addresses(const char* value, size_t size);
+  const ::google::protobuf::RepeatedPtrField< ::std::string>& email_addresses() const;
+  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_email_addresses();
+
+  // @@protoc_insertion_point(class_scope:grpc_code.School)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> email_addresses_;
+  ::google::protobuf::internal::ArenaStringPtr name_;
+  ::grpc_code::Address* address_;
+  ::grpc_code::Date* foundation_;
+  mutable int _cached_size_;
+  friend void  protobuf_InitDefaults_grpc_5fservice_2eproto_impl();
+  friend void  protobuf_AddDesc_grpc_5fservice_2eproto_impl();
+  friend void protobuf_AssignDesc_grpc_5fservice_2eproto();
+  friend void protobuf_ShutdownFile_grpc_5fservice_2eproto();
+
+  void InitAsDefaultInstance();
+};
+extern ::google::protobuf::internal::ExplicitlyConstructed<School> School_default_instance_;
+
+// -------------------------------------------------------------------
+
+class Subject : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:grpc_code.Subject) */ {
+ public:
+  Subject();
+  virtual ~Subject();
+
+  Subject(const Subject& from);
+
+  inline Subject& operator=(const Subject& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Subject& default_instance();
+
+  static const Subject* internal_default_instance();
+
+  void Swap(Subject* other);
+
+  // implements Message ----------------------------------------------
+
+  inline Subject* New() const { return New(NULL); }
+
+  Subject* New(::google::protobuf::Arena* arena) const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const Subject& from);
+  void MergeFrom(const Subject& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  size_t ByteSizeLong() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(Subject* other);
+  void UnsafeMergeFrom(const Subject& from);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional int32 id = 1;
+  void clear_id();
+  static const int kIdFieldNumber = 1;
+  ::google::protobuf::int32 id() const;
+  void set_id(::google::protobuf::int32 value);
+
+  // optional string title = 2;
+  void clear_title();
+  static const int kTitleFieldNumber = 2;
+  const ::std::string& title() const;
+  void set_title(const ::std::string& value);
+  void set_title(const char* value);
+  void set_title(const char* value, size_t size);
+  ::std::string* mutable_title();
+  ::std::string* release_title();
+  void set_allocated_title(::std::string* title);
+
+  // optional string code = 3;
+  void clear_code();
+  static const int kCodeFieldNumber = 3;
+  const ::std::string& code() const;
+  void set_code(const ::std::string& value);
+  void set_code(const char* value);
+  void set_code(const char* value, size_t size);
+  ::std::string* mutable_code();
+  ::std::string* release_code();
+  void set_allocated_code(::std::string* code);
+
+  // @@protoc_insertion_point(class_scope:grpc_code.Subject)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr title_;
+  ::google::protobuf::internal::ArenaStringPtr code_;
+  ::google::protobuf::int32 id_;
+  mutable int _cached_size_;
+  friend void  protobuf_InitDefaults_grpc_5fservice_2eproto_impl();
+  friend void  protobuf_AddDesc_grpc_5fservice_2eproto_impl();
+  friend void protobuf_AssignDesc_grpc_5fservice_2eproto();
+  friend void protobuf_ShutdownFile_grpc_5fservice_2eproto();
+
+  void InitAsDefaultInstance();
+};
+extern ::google::protobuf::internal::ExplicitlyConstructed<Subject> Subject_default_instance_;
+
+// -------------------------------------------------------------------
+
+class Student : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:grpc_code.Student) */ {
+ public:
+  Student();
+  virtual ~Student();
+
+  Student(const Student& from);
+
+  inline Student& operator=(const Student& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Student& default_instance();
+
+  static const Student* internal_default_instance();
+
+  void Swap(Student* other);
+
+  // implements Message ----------------------------------------------
+
+  inline Student* New() const { return New(NULL); }
+
+  Student* New(::google::protobuf::Arena* arena) const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const Student& from);
+  void MergeFrom(const Student& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  size_t ByteSizeLong() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(Student* other);
+  void UnsafeMergeFrom(const Student& from);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional string name = 1;
+  void clear_name();
+  static const int kNameFieldNumber = 1;
+  const ::std::string& name() const;
+  void set_name(const ::std::string& value);
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  ::std::string* mutable_name();
+  ::std::string* release_name();
+  void set_allocated_name(::std::string* name);
+
+  // optional int32 friends = 2;
+  void clear_friends();
+  static const int kFriendsFieldNumber = 2;
+  ::google::protobuf::int32 friends() const;
+  void set_friends(::google::protobuf::int32 value);
+
+  // optional .grpc_code.Address home_address = 3;
+  bool has_home_address() const;
+  void clear_home_address();
+  static const int kHomeAddressFieldNumber = 3;
+  const ::grpc_code::Address& home_address() const;
+  ::grpc_code::Address* mutable_home_address();
+  ::grpc_code::Address* release_home_address();
+  void set_allocated_home_address(::grpc_code::Address* home_address);
+
+  // optional .grpc_code.Address birth_place = 4;
+  bool has_birth_place() const;
+  void clear_birth_place();
+  static const int kBirthPlaceFieldNumber = 4;
+  const ::grpc_code::Address& birth_place() const;
+  ::grpc_code::Address* mutable_birth_place();
+  ::grpc_code::Address* release_birth_place();
+  void set_allocated_birth_place(::grpc_code::Address* birth_place);
+
+  // optional .grpc_code.Date birth = 5;
+  bool has_birth() const;
+  void clear_birth();
+  static const int kBirthFieldNumber = 5;
+  const ::grpc_code::Date& birth() const;
+  ::grpc_code::Date* mutable_birth();
+  ::grpc_code::Date* release_birth();
+  void set_allocated_birth(::grpc_code::Date* birth);
+
+  // repeated .grpc_code.Subject favorite_subjects = 6;
+  int favorite_subjects_size() const;
+  void clear_favorite_subjects();
+  static const int kFavoriteSubjectsFieldNumber = 6;
+  const ::grpc_code::Subject& favorite_subjects(int index) const;
+  ::grpc_code::Subject* mutable_favorite_subjects(int index);
+  ::grpc_code::Subject* add_favorite_subjects();
+  ::google::protobuf::RepeatedPtrField< ::grpc_code::Subject >*
+      mutable_favorite_subjects();
+  const ::google::protobuf::RepeatedPtrField< ::grpc_code::Subject >&
+      favorite_subjects() const;
+
+  // repeated string email_addresses = 7;
+  int email_addresses_size() const;
+  void clear_email_addresses();
+  static const int kEmailAddressesFieldNumber = 7;
+  const ::std::string& email_addresses(int index) const;
+  ::std::string* mutable_email_addresses(int index);
+  void set_email_addresses(int index, const ::std::string& value);
+  void set_email_addresses(int index, const char* value);
+  void set_email_addresses(int index, const char* value, size_t size);
+  ::std::string* add_email_addresses();
+  void add_email_addresses(const ::std::string& value);
+  void add_email_addresses(const char* value);
+  void add_email_addresses(const char* value, size_t size);
+  const ::google::protobuf::RepeatedPtrField< ::std::string>& email_addresses() const;
+  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_email_addresses();
+
+  // repeated .grpc_code.School schools = 8;
+  int schools_size() const;
+  void clear_schools();
+  static const int kSchoolsFieldNumber = 8;
+  const ::grpc_code::School& schools(int index) const;
+  ::grpc_code::School* mutable_schools(int index);
+  ::grpc_code::School* add_schools();
+  ::google::protobuf::RepeatedPtrField< ::grpc_code::School >*
+      mutable_schools();
+  const ::google::protobuf::RepeatedPtrField< ::grpc_code::School >&
+      schools() const;
+
+  // @@protoc_insertion_point(class_scope:grpc_code.Student)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::grpc_code::Subject > favorite_subjects_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> email_addresses_;
+  ::google::protobuf::RepeatedPtrField< ::grpc_code::School > schools_;
+  ::google::protobuf::internal::ArenaStringPtr name_;
+  ::grpc_code::Address* home_address_;
+  ::grpc_code::Address* birth_place_;
+  ::grpc_code::Date* birth_;
+  ::google::protobuf::int32 friends_;
+  mutable int _cached_size_;
+  friend void  protobuf_InitDefaults_grpc_5fservice_2eproto_impl();
+  friend void  protobuf_AddDesc_grpc_5fservice_2eproto_impl();
+  friend void protobuf_AssignDesc_grpc_5fservice_2eproto();
+  friend void protobuf_ShutdownFile_grpc_5fservice_2eproto();
+
+  void InitAsDefaultInstance();
+};
+extern ::google::protobuf::internal::ExplicitlyConstructed<Student> Student_default_instance_;
+
+// -------------------------------------------------------------------
+
+class StudentDataResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:grpc_code.StudentDataResponse) */ {
+ public:
+  StudentDataResponse();
+  virtual ~StudentDataResponse();
+
+  StudentDataResponse(const StudentDataResponse& from);
+
+  inline StudentDataResponse& operator=(const StudentDataResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const StudentDataResponse& default_instance();
+
+  static const StudentDataResponse* internal_default_instance();
+
+  void Swap(StudentDataResponse* other);
+
+  // implements Message ----------------------------------------------
+
+  inline StudentDataResponse* New() const { return New(NULL); }
+
+  StudentDataResponse* New(::google::protobuf::Arena* arena) const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const StudentDataResponse& from);
+  void MergeFrom(const StudentDataResponse& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  size_t ByteSizeLong() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(StudentDataResponse* other);
+  void UnsafeMergeFrom(const StudentDataResponse& from);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated .grpc_code.Student students = 1;
+  int students_size() const;
+  void clear_students();
+  static const int kStudentsFieldNumber = 1;
+  const ::grpc_code::Student& students(int index) const;
+  ::grpc_code::Student* mutable_students(int index);
+  ::grpc_code::Student* add_students();
+  ::google::protobuf::RepeatedPtrField< ::grpc_code::Student >*
+      mutable_students();
+  const ::google::protobuf::RepeatedPtrField< ::grpc_code::Student >&
+      students() const;
+
+  // @@protoc_insertion_point(class_scope:grpc_code.StudentDataResponse)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::grpc_code::Student > students_;
+  mutable int _cached_size_;
+  friend void  protobuf_InitDefaults_grpc_5fservice_2eproto_impl();
+  friend void  protobuf_AddDesc_grpc_5fservice_2eproto_impl();
+  friend void protobuf_AssignDesc_grpc_5fservice_2eproto();
+  friend void protobuf_ShutdownFile_grpc_5fservice_2eproto();
+
+  void InitAsDefaultInstance();
+};
+extern ::google::protobuf::internal::ExplicitlyConstructed<StudentDataResponse> StudentDataResponse_default_instance_;
+
 // ===================================================================
 
 
@@ -395,13 +1121,13 @@ inline void AnswerRequest::clear_number() {
   number_ = 0;
 }
 inline ::google::protobuf::int32 AnswerRequest::number() const {
-  // @@protoc_insertion_point(field_get:AnswerRequest.number)
+  // @@protoc_insertion_point(field_get:grpc_code.AnswerRequest.number)
   return number_;
 }
 inline void AnswerRequest::set_number(::google::protobuf::int32 value) {
   
   number_ = value;
-  // @@protoc_insertion_point(field_set:AnswerRequest.number)
+  // @@protoc_insertion_point(field_set:grpc_code.AnswerRequest.number)
 }
 
 inline const AnswerRequest* AnswerRequest::internal_default_instance() {
@@ -416,13 +1142,13 @@ inline void AnswerReply::clear_result() {
   result_ = 0;
 }
 inline ::google::protobuf::int32 AnswerReply::result() const {
-  // @@protoc_insertion_point(field_get:AnswerReply.result)
+  // @@protoc_insertion_point(field_get:grpc_code.AnswerReply.result)
   return result_;
 }
 inline void AnswerReply::set_result(::google::protobuf::int32 value) {
   
   result_ = value;
-  // @@protoc_insertion_point(field_set:AnswerReply.result)
+  // @@protoc_insertion_point(field_set:grpc_code.AnswerReply.result)
 }
 
 inline const AnswerReply* AnswerReply::internal_default_instance() {
@@ -444,32 +1170,32 @@ inline void BlobResponse::clear_data() {
   data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& BlobResponse::data() const {
-  // @@protoc_insertion_point(field_get:BlobResponse.data)
+  // @@protoc_insertion_point(field_get:grpc_code.BlobResponse.data)
   return data_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void BlobResponse::set_data(const ::std::string& value) {
   
   data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:BlobResponse.data)
+  // @@protoc_insertion_point(field_set:grpc_code.BlobResponse.data)
 }
 inline void BlobResponse::set_data(const char* value) {
   
   data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:BlobResponse.data)
+  // @@protoc_insertion_point(field_set_char:grpc_code.BlobResponse.data)
 }
 inline void BlobResponse::set_data(const void* value, size_t size) {
   
   data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:BlobResponse.data)
+  // @@protoc_insertion_point(field_set_pointer:grpc_code.BlobResponse.data)
 }
 inline ::std::string* BlobResponse::mutable_data() {
   
-  // @@protoc_insertion_point(field_mutable:BlobResponse.data)
+  // @@protoc_insertion_point(field_mutable:grpc_code.BlobResponse.data)
   return data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* BlobResponse::release_data() {
-  // @@protoc_insertion_point(field_release:BlobResponse.data)
+  // @@protoc_insertion_point(field_release:grpc_code.BlobResponse.data)
   
   return data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -480,11 +1206,810 @@ inline void BlobResponse::set_allocated_data(::std::string* data) {
     
   }
   data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), data);
-  // @@protoc_insertion_point(field_set_allocated:BlobResponse.data)
+  // @@protoc_insertion_point(field_set_allocated:grpc_code.BlobResponse.data)
 }
 
 inline const BlobResponse* BlobResponse::internal_default_instance() {
   return &BlobResponse_default_instance_.get();
+}
+// -------------------------------------------------------------------
+
+// Date
+
+// optional int32 year = 1;
+inline void Date::clear_year() {
+  year_ = 0;
+}
+inline ::google::protobuf::int32 Date::year() const {
+  // @@protoc_insertion_point(field_get:grpc_code.Date.year)
+  return year_;
+}
+inline void Date::set_year(::google::protobuf::int32 value) {
+  
+  year_ = value;
+  // @@protoc_insertion_point(field_set:grpc_code.Date.year)
+}
+
+// optional int32 month = 2;
+inline void Date::clear_month() {
+  month_ = 0;
+}
+inline ::google::protobuf::int32 Date::month() const {
+  // @@protoc_insertion_point(field_get:grpc_code.Date.month)
+  return month_;
+}
+inline void Date::set_month(::google::protobuf::int32 value) {
+  
+  month_ = value;
+  // @@protoc_insertion_point(field_set:grpc_code.Date.month)
+}
+
+// optional int32 day = 3;
+inline void Date::clear_day() {
+  day_ = 0;
+}
+inline ::google::protobuf::int32 Date::day() const {
+  // @@protoc_insertion_point(field_get:grpc_code.Date.day)
+  return day_;
+}
+inline void Date::set_day(::google::protobuf::int32 value) {
+  
+  day_ = value;
+  // @@protoc_insertion_point(field_set:grpc_code.Date.day)
+}
+
+inline const Date* Date::internal_default_instance() {
+  return &Date_default_instance_.get();
+}
+// -------------------------------------------------------------------
+
+// Address
+
+// optional string city = 1;
+inline void Address::clear_city() {
+  city_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Address::city() const {
+  // @@protoc_insertion_point(field_get:grpc_code.Address.city)
+  return city_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Address::set_city(const ::std::string& value) {
+  
+  city_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:grpc_code.Address.city)
+}
+inline void Address::set_city(const char* value) {
+  
+  city_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:grpc_code.Address.city)
+}
+inline void Address::set_city(const char* value, size_t size) {
+  
+  city_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:grpc_code.Address.city)
+}
+inline ::std::string* Address::mutable_city() {
+  
+  // @@protoc_insertion_point(field_mutable:grpc_code.Address.city)
+  return city_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Address::release_city() {
+  // @@protoc_insertion_point(field_release:grpc_code.Address.city)
+  
+  return city_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Address::set_allocated_city(::std::string* city) {
+  if (city != NULL) {
+    
+  } else {
+    
+  }
+  city_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), city);
+  // @@protoc_insertion_point(field_set_allocated:grpc_code.Address.city)
+}
+
+// optional int32 zipcode = 2;
+inline void Address::clear_zipcode() {
+  zipcode_ = 0;
+}
+inline ::google::protobuf::int32 Address::zipcode() const {
+  // @@protoc_insertion_point(field_get:grpc_code.Address.zipcode)
+  return zipcode_;
+}
+inline void Address::set_zipcode(::google::protobuf::int32 value) {
+  
+  zipcode_ = value;
+  // @@protoc_insertion_point(field_set:grpc_code.Address.zipcode)
+}
+
+// optional string street = 3;
+inline void Address::clear_street() {
+  street_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Address::street() const {
+  // @@protoc_insertion_point(field_get:grpc_code.Address.street)
+  return street_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Address::set_street(const ::std::string& value) {
+  
+  street_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:grpc_code.Address.street)
+}
+inline void Address::set_street(const char* value) {
+  
+  street_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:grpc_code.Address.street)
+}
+inline void Address::set_street(const char* value, size_t size) {
+  
+  street_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:grpc_code.Address.street)
+}
+inline ::std::string* Address::mutable_street() {
+  
+  // @@protoc_insertion_point(field_mutable:grpc_code.Address.street)
+  return street_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Address::release_street() {
+  // @@protoc_insertion_point(field_release:grpc_code.Address.street)
+  
+  return street_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Address::set_allocated_street(::std::string* street) {
+  if (street != NULL) {
+    
+  } else {
+    
+  }
+  street_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), street);
+  // @@protoc_insertion_point(field_set_allocated:grpc_code.Address.street)
+}
+
+// optional int32 number = 4;
+inline void Address::clear_number() {
+  number_ = 0;
+}
+inline ::google::protobuf::int32 Address::number() const {
+  // @@protoc_insertion_point(field_get:grpc_code.Address.number)
+  return number_;
+}
+inline void Address::set_number(::google::protobuf::int32 value) {
+  
+  number_ = value;
+  // @@protoc_insertion_point(field_set:grpc_code.Address.number)
+}
+
+inline const Address* Address::internal_default_instance() {
+  return &Address_default_instance_.get();
+}
+// -------------------------------------------------------------------
+
+// School
+
+// optional string name = 1;
+inline void School::clear_name() {
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& School::name() const {
+  // @@protoc_insertion_point(field_get:grpc_code.School.name)
+  return name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void School::set_name(const ::std::string& value) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:grpc_code.School.name)
+}
+inline void School::set_name(const char* value) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:grpc_code.School.name)
+}
+inline void School::set_name(const char* value, size_t size) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:grpc_code.School.name)
+}
+inline ::std::string* School::mutable_name() {
+  
+  // @@protoc_insertion_point(field_mutable:grpc_code.School.name)
+  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* School::release_name() {
+  // @@protoc_insertion_point(field_release:grpc_code.School.name)
+  
+  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void School::set_allocated_name(::std::string* name) {
+  if (name != NULL) {
+    
+  } else {
+    
+  }
+  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:grpc_code.School.name)
+}
+
+// optional .grpc_code.Address address = 2;
+inline bool School::has_address() const {
+  return this != internal_default_instance() && address_ != NULL;
+}
+inline void School::clear_address() {
+  if (GetArenaNoVirtual() == NULL && address_ != NULL) delete address_;
+  address_ = NULL;
+}
+inline const ::grpc_code::Address& School::address() const {
+  // @@protoc_insertion_point(field_get:grpc_code.School.address)
+  return address_ != NULL ? *address_
+                         : *::grpc_code::Address::internal_default_instance();
+}
+inline ::grpc_code::Address* School::mutable_address() {
+  
+  if (address_ == NULL) {
+    address_ = new ::grpc_code::Address;
+  }
+  // @@protoc_insertion_point(field_mutable:grpc_code.School.address)
+  return address_;
+}
+inline ::grpc_code::Address* School::release_address() {
+  // @@protoc_insertion_point(field_release:grpc_code.School.address)
+  
+  ::grpc_code::Address* temp = address_;
+  address_ = NULL;
+  return temp;
+}
+inline void School::set_allocated_address(::grpc_code::Address* address) {
+  delete address_;
+  address_ = address;
+  if (address) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:grpc_code.School.address)
+}
+
+// optional .grpc_code.Date foundation = 3;
+inline bool School::has_foundation() const {
+  return this != internal_default_instance() && foundation_ != NULL;
+}
+inline void School::clear_foundation() {
+  if (GetArenaNoVirtual() == NULL && foundation_ != NULL) delete foundation_;
+  foundation_ = NULL;
+}
+inline const ::grpc_code::Date& School::foundation() const {
+  // @@protoc_insertion_point(field_get:grpc_code.School.foundation)
+  return foundation_ != NULL ? *foundation_
+                         : *::grpc_code::Date::internal_default_instance();
+}
+inline ::grpc_code::Date* School::mutable_foundation() {
+  
+  if (foundation_ == NULL) {
+    foundation_ = new ::grpc_code::Date;
+  }
+  // @@protoc_insertion_point(field_mutable:grpc_code.School.foundation)
+  return foundation_;
+}
+inline ::grpc_code::Date* School::release_foundation() {
+  // @@protoc_insertion_point(field_release:grpc_code.School.foundation)
+  
+  ::grpc_code::Date* temp = foundation_;
+  foundation_ = NULL;
+  return temp;
+}
+inline void School::set_allocated_foundation(::grpc_code::Date* foundation) {
+  delete foundation_;
+  foundation_ = foundation;
+  if (foundation) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:grpc_code.School.foundation)
+}
+
+// repeated string email_addresses = 4;
+inline int School::email_addresses_size() const {
+  return email_addresses_.size();
+}
+inline void School::clear_email_addresses() {
+  email_addresses_.Clear();
+}
+inline const ::std::string& School::email_addresses(int index) const {
+  // @@protoc_insertion_point(field_get:grpc_code.School.email_addresses)
+  return email_addresses_.Get(index);
+}
+inline ::std::string* School::mutable_email_addresses(int index) {
+  // @@protoc_insertion_point(field_mutable:grpc_code.School.email_addresses)
+  return email_addresses_.Mutable(index);
+}
+inline void School::set_email_addresses(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:grpc_code.School.email_addresses)
+  email_addresses_.Mutable(index)->assign(value);
+}
+inline void School::set_email_addresses(int index, const char* value) {
+  email_addresses_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:grpc_code.School.email_addresses)
+}
+inline void School::set_email_addresses(int index, const char* value, size_t size) {
+  email_addresses_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:grpc_code.School.email_addresses)
+}
+inline ::std::string* School::add_email_addresses() {
+  // @@protoc_insertion_point(field_add_mutable:grpc_code.School.email_addresses)
+  return email_addresses_.Add();
+}
+inline void School::add_email_addresses(const ::std::string& value) {
+  email_addresses_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:grpc_code.School.email_addresses)
+}
+inline void School::add_email_addresses(const char* value) {
+  email_addresses_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:grpc_code.School.email_addresses)
+}
+inline void School::add_email_addresses(const char* value, size_t size) {
+  email_addresses_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:grpc_code.School.email_addresses)
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+School::email_addresses() const {
+  // @@protoc_insertion_point(field_list:grpc_code.School.email_addresses)
+  return email_addresses_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+School::mutable_email_addresses() {
+  // @@protoc_insertion_point(field_mutable_list:grpc_code.School.email_addresses)
+  return &email_addresses_;
+}
+
+inline const School* School::internal_default_instance() {
+  return &School_default_instance_.get();
+}
+// -------------------------------------------------------------------
+
+// Subject
+
+// optional int32 id = 1;
+inline void Subject::clear_id() {
+  id_ = 0;
+}
+inline ::google::protobuf::int32 Subject::id() const {
+  // @@protoc_insertion_point(field_get:grpc_code.Subject.id)
+  return id_;
+}
+inline void Subject::set_id(::google::protobuf::int32 value) {
+  
+  id_ = value;
+  // @@protoc_insertion_point(field_set:grpc_code.Subject.id)
+}
+
+// optional string title = 2;
+inline void Subject::clear_title() {
+  title_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Subject::title() const {
+  // @@protoc_insertion_point(field_get:grpc_code.Subject.title)
+  return title_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Subject::set_title(const ::std::string& value) {
+  
+  title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:grpc_code.Subject.title)
+}
+inline void Subject::set_title(const char* value) {
+  
+  title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:grpc_code.Subject.title)
+}
+inline void Subject::set_title(const char* value, size_t size) {
+  
+  title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:grpc_code.Subject.title)
+}
+inline ::std::string* Subject::mutable_title() {
+  
+  // @@protoc_insertion_point(field_mutable:grpc_code.Subject.title)
+  return title_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Subject::release_title() {
+  // @@protoc_insertion_point(field_release:grpc_code.Subject.title)
+  
+  return title_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Subject::set_allocated_title(::std::string* title) {
+  if (title != NULL) {
+    
+  } else {
+    
+  }
+  title_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), title);
+  // @@protoc_insertion_point(field_set_allocated:grpc_code.Subject.title)
+}
+
+// optional string code = 3;
+inline void Subject::clear_code() {
+  code_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Subject::code() const {
+  // @@protoc_insertion_point(field_get:grpc_code.Subject.code)
+  return code_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Subject::set_code(const ::std::string& value) {
+  
+  code_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:grpc_code.Subject.code)
+}
+inline void Subject::set_code(const char* value) {
+  
+  code_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:grpc_code.Subject.code)
+}
+inline void Subject::set_code(const char* value, size_t size) {
+  
+  code_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:grpc_code.Subject.code)
+}
+inline ::std::string* Subject::mutable_code() {
+  
+  // @@protoc_insertion_point(field_mutable:grpc_code.Subject.code)
+  return code_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Subject::release_code() {
+  // @@protoc_insertion_point(field_release:grpc_code.Subject.code)
+  
+  return code_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Subject::set_allocated_code(::std::string* code) {
+  if (code != NULL) {
+    
+  } else {
+    
+  }
+  code_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), code);
+  // @@protoc_insertion_point(field_set_allocated:grpc_code.Subject.code)
+}
+
+inline const Subject* Subject::internal_default_instance() {
+  return &Subject_default_instance_.get();
+}
+// -------------------------------------------------------------------
+
+// Student
+
+// optional string name = 1;
+inline void Student::clear_name() {
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Student::name() const {
+  // @@protoc_insertion_point(field_get:grpc_code.Student.name)
+  return name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Student::set_name(const ::std::string& value) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:grpc_code.Student.name)
+}
+inline void Student::set_name(const char* value) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:grpc_code.Student.name)
+}
+inline void Student::set_name(const char* value, size_t size) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:grpc_code.Student.name)
+}
+inline ::std::string* Student::mutable_name() {
+  
+  // @@protoc_insertion_point(field_mutable:grpc_code.Student.name)
+  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Student::release_name() {
+  // @@protoc_insertion_point(field_release:grpc_code.Student.name)
+  
+  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Student::set_allocated_name(::std::string* name) {
+  if (name != NULL) {
+    
+  } else {
+    
+  }
+  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:grpc_code.Student.name)
+}
+
+// optional int32 friends = 2;
+inline void Student::clear_friends() {
+  friends_ = 0;
+}
+inline ::google::protobuf::int32 Student::friends() const {
+  // @@protoc_insertion_point(field_get:grpc_code.Student.friends)
+  return friends_;
+}
+inline void Student::set_friends(::google::protobuf::int32 value) {
+  
+  friends_ = value;
+  // @@protoc_insertion_point(field_set:grpc_code.Student.friends)
+}
+
+// optional .grpc_code.Address home_address = 3;
+inline bool Student::has_home_address() const {
+  return this != internal_default_instance() && home_address_ != NULL;
+}
+inline void Student::clear_home_address() {
+  if (GetArenaNoVirtual() == NULL && home_address_ != NULL) delete home_address_;
+  home_address_ = NULL;
+}
+inline const ::grpc_code::Address& Student::home_address() const {
+  // @@protoc_insertion_point(field_get:grpc_code.Student.home_address)
+  return home_address_ != NULL ? *home_address_
+                         : *::grpc_code::Address::internal_default_instance();
+}
+inline ::grpc_code::Address* Student::mutable_home_address() {
+  
+  if (home_address_ == NULL) {
+    home_address_ = new ::grpc_code::Address;
+  }
+  // @@protoc_insertion_point(field_mutable:grpc_code.Student.home_address)
+  return home_address_;
+}
+inline ::grpc_code::Address* Student::release_home_address() {
+  // @@protoc_insertion_point(field_release:grpc_code.Student.home_address)
+  
+  ::grpc_code::Address* temp = home_address_;
+  home_address_ = NULL;
+  return temp;
+}
+inline void Student::set_allocated_home_address(::grpc_code::Address* home_address) {
+  delete home_address_;
+  home_address_ = home_address;
+  if (home_address) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:grpc_code.Student.home_address)
+}
+
+// optional .grpc_code.Address birth_place = 4;
+inline bool Student::has_birth_place() const {
+  return this != internal_default_instance() && birth_place_ != NULL;
+}
+inline void Student::clear_birth_place() {
+  if (GetArenaNoVirtual() == NULL && birth_place_ != NULL) delete birth_place_;
+  birth_place_ = NULL;
+}
+inline const ::grpc_code::Address& Student::birth_place() const {
+  // @@protoc_insertion_point(field_get:grpc_code.Student.birth_place)
+  return birth_place_ != NULL ? *birth_place_
+                         : *::grpc_code::Address::internal_default_instance();
+}
+inline ::grpc_code::Address* Student::mutable_birth_place() {
+  
+  if (birth_place_ == NULL) {
+    birth_place_ = new ::grpc_code::Address;
+  }
+  // @@protoc_insertion_point(field_mutable:grpc_code.Student.birth_place)
+  return birth_place_;
+}
+inline ::grpc_code::Address* Student::release_birth_place() {
+  // @@protoc_insertion_point(field_release:grpc_code.Student.birth_place)
+  
+  ::grpc_code::Address* temp = birth_place_;
+  birth_place_ = NULL;
+  return temp;
+}
+inline void Student::set_allocated_birth_place(::grpc_code::Address* birth_place) {
+  delete birth_place_;
+  birth_place_ = birth_place;
+  if (birth_place) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:grpc_code.Student.birth_place)
+}
+
+// optional .grpc_code.Date birth = 5;
+inline bool Student::has_birth() const {
+  return this != internal_default_instance() && birth_ != NULL;
+}
+inline void Student::clear_birth() {
+  if (GetArenaNoVirtual() == NULL && birth_ != NULL) delete birth_;
+  birth_ = NULL;
+}
+inline const ::grpc_code::Date& Student::birth() const {
+  // @@protoc_insertion_point(field_get:grpc_code.Student.birth)
+  return birth_ != NULL ? *birth_
+                         : *::grpc_code::Date::internal_default_instance();
+}
+inline ::grpc_code::Date* Student::mutable_birth() {
+  
+  if (birth_ == NULL) {
+    birth_ = new ::grpc_code::Date;
+  }
+  // @@protoc_insertion_point(field_mutable:grpc_code.Student.birth)
+  return birth_;
+}
+inline ::grpc_code::Date* Student::release_birth() {
+  // @@protoc_insertion_point(field_release:grpc_code.Student.birth)
+  
+  ::grpc_code::Date* temp = birth_;
+  birth_ = NULL;
+  return temp;
+}
+inline void Student::set_allocated_birth(::grpc_code::Date* birth) {
+  delete birth_;
+  birth_ = birth;
+  if (birth) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:grpc_code.Student.birth)
+}
+
+// repeated .grpc_code.Subject favorite_subjects = 6;
+inline int Student::favorite_subjects_size() const {
+  return favorite_subjects_.size();
+}
+inline void Student::clear_favorite_subjects() {
+  favorite_subjects_.Clear();
+}
+inline const ::grpc_code::Subject& Student::favorite_subjects(int index) const {
+  // @@protoc_insertion_point(field_get:grpc_code.Student.favorite_subjects)
+  return favorite_subjects_.Get(index);
+}
+inline ::grpc_code::Subject* Student::mutable_favorite_subjects(int index) {
+  // @@protoc_insertion_point(field_mutable:grpc_code.Student.favorite_subjects)
+  return favorite_subjects_.Mutable(index);
+}
+inline ::grpc_code::Subject* Student::add_favorite_subjects() {
+  // @@protoc_insertion_point(field_add:grpc_code.Student.favorite_subjects)
+  return favorite_subjects_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::grpc_code::Subject >*
+Student::mutable_favorite_subjects() {
+  // @@protoc_insertion_point(field_mutable_list:grpc_code.Student.favorite_subjects)
+  return &favorite_subjects_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::grpc_code::Subject >&
+Student::favorite_subjects() const {
+  // @@protoc_insertion_point(field_list:grpc_code.Student.favorite_subjects)
+  return favorite_subjects_;
+}
+
+// repeated string email_addresses = 7;
+inline int Student::email_addresses_size() const {
+  return email_addresses_.size();
+}
+inline void Student::clear_email_addresses() {
+  email_addresses_.Clear();
+}
+inline const ::std::string& Student::email_addresses(int index) const {
+  // @@protoc_insertion_point(field_get:grpc_code.Student.email_addresses)
+  return email_addresses_.Get(index);
+}
+inline ::std::string* Student::mutable_email_addresses(int index) {
+  // @@protoc_insertion_point(field_mutable:grpc_code.Student.email_addresses)
+  return email_addresses_.Mutable(index);
+}
+inline void Student::set_email_addresses(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:grpc_code.Student.email_addresses)
+  email_addresses_.Mutable(index)->assign(value);
+}
+inline void Student::set_email_addresses(int index, const char* value) {
+  email_addresses_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:grpc_code.Student.email_addresses)
+}
+inline void Student::set_email_addresses(int index, const char* value, size_t size) {
+  email_addresses_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:grpc_code.Student.email_addresses)
+}
+inline ::std::string* Student::add_email_addresses() {
+  // @@protoc_insertion_point(field_add_mutable:grpc_code.Student.email_addresses)
+  return email_addresses_.Add();
+}
+inline void Student::add_email_addresses(const ::std::string& value) {
+  email_addresses_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:grpc_code.Student.email_addresses)
+}
+inline void Student::add_email_addresses(const char* value) {
+  email_addresses_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:grpc_code.Student.email_addresses)
+}
+inline void Student::add_email_addresses(const char* value, size_t size) {
+  email_addresses_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:grpc_code.Student.email_addresses)
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+Student::email_addresses() const {
+  // @@protoc_insertion_point(field_list:grpc_code.Student.email_addresses)
+  return email_addresses_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+Student::mutable_email_addresses() {
+  // @@protoc_insertion_point(field_mutable_list:grpc_code.Student.email_addresses)
+  return &email_addresses_;
+}
+
+// repeated .grpc_code.School schools = 8;
+inline int Student::schools_size() const {
+  return schools_.size();
+}
+inline void Student::clear_schools() {
+  schools_.Clear();
+}
+inline const ::grpc_code::School& Student::schools(int index) const {
+  // @@protoc_insertion_point(field_get:grpc_code.Student.schools)
+  return schools_.Get(index);
+}
+inline ::grpc_code::School* Student::mutable_schools(int index) {
+  // @@protoc_insertion_point(field_mutable:grpc_code.Student.schools)
+  return schools_.Mutable(index);
+}
+inline ::grpc_code::School* Student::add_schools() {
+  // @@protoc_insertion_point(field_add:grpc_code.Student.schools)
+  return schools_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::grpc_code::School >*
+Student::mutable_schools() {
+  // @@protoc_insertion_point(field_mutable_list:grpc_code.Student.schools)
+  return &schools_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::grpc_code::School >&
+Student::schools() const {
+  // @@protoc_insertion_point(field_list:grpc_code.Student.schools)
+  return schools_;
+}
+
+inline const Student* Student::internal_default_instance() {
+  return &Student_default_instance_.get();
+}
+// -------------------------------------------------------------------
+
+// StudentDataResponse
+
+// repeated .grpc_code.Student students = 1;
+inline int StudentDataResponse::students_size() const {
+  return students_.size();
+}
+inline void StudentDataResponse::clear_students() {
+  students_.Clear();
+}
+inline const ::grpc_code::Student& StudentDataResponse::students(int index) const {
+  // @@protoc_insertion_point(field_get:grpc_code.StudentDataResponse.students)
+  return students_.Get(index);
+}
+inline ::grpc_code::Student* StudentDataResponse::mutable_students(int index) {
+  // @@protoc_insertion_point(field_mutable:grpc_code.StudentDataResponse.students)
+  return students_.Mutable(index);
+}
+inline ::grpc_code::Student* StudentDataResponse::add_students() {
+  // @@protoc_insertion_point(field_add:grpc_code.StudentDataResponse.students)
+  return students_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::grpc_code::Student >*
+StudentDataResponse::mutable_students() {
+  // @@protoc_insertion_point(field_mutable_list:grpc_code.StudentDataResponse.students)
+  return &students_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::grpc_code::Student >&
+StudentDataResponse::students() const {
+  // @@protoc_insertion_point(field_list:grpc_code.StudentDataResponse.students)
+  return students_;
+}
+
+inline const StudentDataResponse* StudentDataResponse::internal_default_instance() {
+  return &StudentDataResponse_default_instance_.get();
 }
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
 // -------------------------------------------------------------------
@@ -493,8 +2018,22 @@ inline const BlobResponse* BlobResponse::internal_default_instance() {
 
 // -------------------------------------------------------------------
 
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
+
+}  // namespace grpc_code
 
 // @@protoc_insertion_point(global_scope)
 

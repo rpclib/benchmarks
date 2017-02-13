@@ -11,6 +11,856 @@
 
 #include <thrift/TToString.h>
 
+namespace thrift_code {
 
 
+Date::~Date() throw() {
+}
 
+
+void Date::__set_year(const int32_t val) {
+  this->year = val;
+}
+
+void Date::__set_month(const int8_t val) {
+  this->month = val;
+}
+
+void Date::__set_day(const int8_t val) {
+  this->day = val;
+}
+
+uint32_t Date::read(::apache::thrift::protocol::TProtocol* iprot) {
+
+  apache::thrift::protocol::TInputRecursionTracker tracker(*iprot);
+  uint32_t xfer = 0;
+  std::string fname;
+  ::apache::thrift::protocol::TType ftype;
+  int16_t fid;
+
+  xfer += iprot->readStructBegin(fname);
+
+  using ::apache::thrift::protocol::TProtocolException;
+
+
+  while (true)
+  {
+    xfer += iprot->readFieldBegin(fname, ftype, fid);
+    if (ftype == ::apache::thrift::protocol::T_STOP) {
+      break;
+    }
+    switch (fid)
+    {
+      case 1:
+        if (ftype == ::apache::thrift::protocol::T_I32) {
+          xfer += iprot->readI32(this->year);
+          this->__isset.year = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 2:
+        if (ftype == ::apache::thrift::protocol::T_BYTE) {
+          xfer += iprot->readByte(this->month);
+          this->__isset.month = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 3:
+        if (ftype == ::apache::thrift::protocol::T_BYTE) {
+          xfer += iprot->readByte(this->day);
+          this->__isset.day = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      default:
+        xfer += iprot->skip(ftype);
+        break;
+    }
+    xfer += iprot->readFieldEnd();
+  }
+
+  xfer += iprot->readStructEnd();
+
+  return xfer;
+}
+
+uint32_t Date::write(::apache::thrift::protocol::TProtocol* oprot) const {
+  uint32_t xfer = 0;
+  apache::thrift::protocol::TOutputRecursionTracker tracker(*oprot);
+  xfer += oprot->writeStructBegin("Date");
+
+  xfer += oprot->writeFieldBegin("year", ::apache::thrift::protocol::T_I32, 1);
+  xfer += oprot->writeI32(this->year);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("month", ::apache::thrift::protocol::T_BYTE, 2);
+  xfer += oprot->writeByte(this->month);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("day", ::apache::thrift::protocol::T_BYTE, 3);
+  xfer += oprot->writeByte(this->day);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldStop();
+  xfer += oprot->writeStructEnd();
+  return xfer;
+}
+
+void swap(Date &a, Date &b) {
+  using ::std::swap;
+  swap(a.year, b.year);
+  swap(a.month, b.month);
+  swap(a.day, b.day);
+  swap(a.__isset, b.__isset);
+}
+
+Date::Date(const Date& other0) {
+  year = other0.year;
+  month = other0.month;
+  day = other0.day;
+  __isset = other0.__isset;
+}
+Date& Date::operator=(const Date& other1) {
+  year = other1.year;
+  month = other1.month;
+  day = other1.day;
+  __isset = other1.__isset;
+  return *this;
+}
+void Date::printTo(std::ostream& out) const {
+  using ::apache::thrift::to_string;
+  out << "Date(";
+  out << "year=" << to_string(year);
+  out << ", " << "month=" << to_string(month);
+  out << ", " << "day=" << to_string(day);
+  out << ")";
+}
+
+
+Address::~Address() throw() {
+}
+
+
+void Address::__set_city(const std::string& val) {
+  this->city = val;
+}
+
+void Address::__set_zipcode(const int32_t val) {
+  this->zipcode = val;
+}
+
+void Address::__set_street(const std::string& val) {
+  this->street = val;
+}
+
+void Address::__set_number(const int16_t val) {
+  this->number = val;
+}
+
+uint32_t Address::read(::apache::thrift::protocol::TProtocol* iprot) {
+
+  apache::thrift::protocol::TInputRecursionTracker tracker(*iprot);
+  uint32_t xfer = 0;
+  std::string fname;
+  ::apache::thrift::protocol::TType ftype;
+  int16_t fid;
+
+  xfer += iprot->readStructBegin(fname);
+
+  using ::apache::thrift::protocol::TProtocolException;
+
+
+  while (true)
+  {
+    xfer += iprot->readFieldBegin(fname, ftype, fid);
+    if (ftype == ::apache::thrift::protocol::T_STOP) {
+      break;
+    }
+    switch (fid)
+    {
+      case 1:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->city);
+          this->__isset.city = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 2:
+        if (ftype == ::apache::thrift::protocol::T_I32) {
+          xfer += iprot->readI32(this->zipcode);
+          this->__isset.zipcode = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 3:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->street);
+          this->__isset.street = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 4:
+        if (ftype == ::apache::thrift::protocol::T_I16) {
+          xfer += iprot->readI16(this->number);
+          this->__isset.number = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      default:
+        xfer += iprot->skip(ftype);
+        break;
+    }
+    xfer += iprot->readFieldEnd();
+  }
+
+  xfer += iprot->readStructEnd();
+
+  return xfer;
+}
+
+uint32_t Address::write(::apache::thrift::protocol::TProtocol* oprot) const {
+  uint32_t xfer = 0;
+  apache::thrift::protocol::TOutputRecursionTracker tracker(*oprot);
+  xfer += oprot->writeStructBegin("Address");
+
+  xfer += oprot->writeFieldBegin("city", ::apache::thrift::protocol::T_STRING, 1);
+  xfer += oprot->writeString(this->city);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("zipcode", ::apache::thrift::protocol::T_I32, 2);
+  xfer += oprot->writeI32(this->zipcode);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("street", ::apache::thrift::protocol::T_STRING, 3);
+  xfer += oprot->writeString(this->street);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("number", ::apache::thrift::protocol::T_I16, 4);
+  xfer += oprot->writeI16(this->number);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldStop();
+  xfer += oprot->writeStructEnd();
+  return xfer;
+}
+
+void swap(Address &a, Address &b) {
+  using ::std::swap;
+  swap(a.city, b.city);
+  swap(a.zipcode, b.zipcode);
+  swap(a.street, b.street);
+  swap(a.number, b.number);
+  swap(a.__isset, b.__isset);
+}
+
+Address::Address(const Address& other2) {
+  city = other2.city;
+  zipcode = other2.zipcode;
+  street = other2.street;
+  number = other2.number;
+  __isset = other2.__isset;
+}
+Address& Address::operator=(const Address& other3) {
+  city = other3.city;
+  zipcode = other3.zipcode;
+  street = other3.street;
+  number = other3.number;
+  __isset = other3.__isset;
+  return *this;
+}
+void Address::printTo(std::ostream& out) const {
+  using ::apache::thrift::to_string;
+  out << "Address(";
+  out << "city=" << to_string(city);
+  out << ", " << "zipcode=" << to_string(zipcode);
+  out << ", " << "street=" << to_string(street);
+  out << ", " << "number=" << to_string(number);
+  out << ")";
+}
+
+
+School::~School() throw() {
+}
+
+
+void School::__set_name(const std::string& val) {
+  this->name = val;
+}
+
+void School::__set_address(const Address& val) {
+  this->address = val;
+}
+
+void School::__set_foundation(const Date& val) {
+  this->foundation = val;
+}
+
+void School::__set_email_addresses(const std::vector<std::string> & val) {
+  this->email_addresses = val;
+}
+
+uint32_t School::read(::apache::thrift::protocol::TProtocol* iprot) {
+
+  apache::thrift::protocol::TInputRecursionTracker tracker(*iprot);
+  uint32_t xfer = 0;
+  std::string fname;
+  ::apache::thrift::protocol::TType ftype;
+  int16_t fid;
+
+  xfer += iprot->readStructBegin(fname);
+
+  using ::apache::thrift::protocol::TProtocolException;
+
+
+  while (true)
+  {
+    xfer += iprot->readFieldBegin(fname, ftype, fid);
+    if (ftype == ::apache::thrift::protocol::T_STOP) {
+      break;
+    }
+    switch (fid)
+    {
+      case 1:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->name);
+          this->__isset.name = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 2:
+        if (ftype == ::apache::thrift::protocol::T_STRUCT) {
+          xfer += this->address.read(iprot);
+          this->__isset.address = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 3:
+        if (ftype == ::apache::thrift::protocol::T_STRUCT) {
+          xfer += this->foundation.read(iprot);
+          this->__isset.foundation = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 4:
+        if (ftype == ::apache::thrift::protocol::T_LIST) {
+          {
+            this->email_addresses.clear();
+            uint32_t _size4;
+            ::apache::thrift::protocol::TType _etype7;
+            xfer += iprot->readListBegin(_etype7, _size4);
+            this->email_addresses.resize(_size4);
+            uint32_t _i8;
+            for (_i8 = 0; _i8 < _size4; ++_i8)
+            {
+              xfer += iprot->readString(this->email_addresses[_i8]);
+            }
+            xfer += iprot->readListEnd();
+          }
+          this->__isset.email_addresses = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      default:
+        xfer += iprot->skip(ftype);
+        break;
+    }
+    xfer += iprot->readFieldEnd();
+  }
+
+  xfer += iprot->readStructEnd();
+
+  return xfer;
+}
+
+uint32_t School::write(::apache::thrift::protocol::TProtocol* oprot) const {
+  uint32_t xfer = 0;
+  apache::thrift::protocol::TOutputRecursionTracker tracker(*oprot);
+  xfer += oprot->writeStructBegin("School");
+
+  xfer += oprot->writeFieldBegin("name", ::apache::thrift::protocol::T_STRING, 1);
+  xfer += oprot->writeString(this->name);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("address", ::apache::thrift::protocol::T_STRUCT, 2);
+  xfer += this->address.write(oprot);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("foundation", ::apache::thrift::protocol::T_STRUCT, 3);
+  xfer += this->foundation.write(oprot);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("email_addresses", ::apache::thrift::protocol::T_LIST, 4);
+  {
+    xfer += oprot->writeListBegin(::apache::thrift::protocol::T_STRING, static_cast<uint32_t>(this->email_addresses.size()));
+    std::vector<std::string> ::const_iterator _iter9;
+    for (_iter9 = this->email_addresses.begin(); _iter9 != this->email_addresses.end(); ++_iter9)
+    {
+      xfer += oprot->writeString((*_iter9));
+    }
+    xfer += oprot->writeListEnd();
+  }
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldStop();
+  xfer += oprot->writeStructEnd();
+  return xfer;
+}
+
+void swap(School &a, School &b) {
+  using ::std::swap;
+  swap(a.name, b.name);
+  swap(a.address, b.address);
+  swap(a.foundation, b.foundation);
+  swap(a.email_addresses, b.email_addresses);
+  swap(a.__isset, b.__isset);
+}
+
+School::School(const School& other10) {
+  name = other10.name;
+  address = other10.address;
+  foundation = other10.foundation;
+  email_addresses = other10.email_addresses;
+  __isset = other10.__isset;
+}
+School& School::operator=(const School& other11) {
+  name = other11.name;
+  address = other11.address;
+  foundation = other11.foundation;
+  email_addresses = other11.email_addresses;
+  __isset = other11.__isset;
+  return *this;
+}
+void School::printTo(std::ostream& out) const {
+  using ::apache::thrift::to_string;
+  out << "School(";
+  out << "name=" << to_string(name);
+  out << ", " << "address=" << to_string(address);
+  out << ", " << "foundation=" << to_string(foundation);
+  out << ", " << "email_addresses=" << to_string(email_addresses);
+  out << ")";
+}
+
+
+Subject::~Subject() throw() {
+}
+
+
+void Subject::__set_id(const int32_t val) {
+  this->id = val;
+}
+
+void Subject::__set_title(const std::string& val) {
+  this->title = val;
+}
+
+void Subject::__set_code(const std::string& val) {
+  this->code = val;
+}
+
+uint32_t Subject::read(::apache::thrift::protocol::TProtocol* iprot) {
+
+  apache::thrift::protocol::TInputRecursionTracker tracker(*iprot);
+  uint32_t xfer = 0;
+  std::string fname;
+  ::apache::thrift::protocol::TType ftype;
+  int16_t fid;
+
+  xfer += iprot->readStructBegin(fname);
+
+  using ::apache::thrift::protocol::TProtocolException;
+
+
+  while (true)
+  {
+    xfer += iprot->readFieldBegin(fname, ftype, fid);
+    if (ftype == ::apache::thrift::protocol::T_STOP) {
+      break;
+    }
+    switch (fid)
+    {
+      case 1:
+        if (ftype == ::apache::thrift::protocol::T_I32) {
+          xfer += iprot->readI32(this->id);
+          this->__isset.id = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 2:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->title);
+          this->__isset.title = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 3:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->code);
+          this->__isset.code = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      default:
+        xfer += iprot->skip(ftype);
+        break;
+    }
+    xfer += iprot->readFieldEnd();
+  }
+
+  xfer += iprot->readStructEnd();
+
+  return xfer;
+}
+
+uint32_t Subject::write(::apache::thrift::protocol::TProtocol* oprot) const {
+  uint32_t xfer = 0;
+  apache::thrift::protocol::TOutputRecursionTracker tracker(*oprot);
+  xfer += oprot->writeStructBegin("Subject");
+
+  xfer += oprot->writeFieldBegin("id", ::apache::thrift::protocol::T_I32, 1);
+  xfer += oprot->writeI32(this->id);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("title", ::apache::thrift::protocol::T_STRING, 2);
+  xfer += oprot->writeString(this->title);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("code", ::apache::thrift::protocol::T_STRING, 3);
+  xfer += oprot->writeString(this->code);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldStop();
+  xfer += oprot->writeStructEnd();
+  return xfer;
+}
+
+void swap(Subject &a, Subject &b) {
+  using ::std::swap;
+  swap(a.id, b.id);
+  swap(a.title, b.title);
+  swap(a.code, b.code);
+  swap(a.__isset, b.__isset);
+}
+
+Subject::Subject(const Subject& other12) {
+  id = other12.id;
+  title = other12.title;
+  code = other12.code;
+  __isset = other12.__isset;
+}
+Subject& Subject::operator=(const Subject& other13) {
+  id = other13.id;
+  title = other13.title;
+  code = other13.code;
+  __isset = other13.__isset;
+  return *this;
+}
+void Subject::printTo(std::ostream& out) const {
+  using ::apache::thrift::to_string;
+  out << "Subject(";
+  out << "id=" << to_string(id);
+  out << ", " << "title=" << to_string(title);
+  out << ", " << "code=" << to_string(code);
+  out << ")";
+}
+
+
+Student::~Student() throw() {
+}
+
+
+void Student::__set_name(const std::string& val) {
+  this->name = val;
+}
+
+void Student::__set_friends(const int32_t val) {
+  this->friends = val;
+}
+
+void Student::__set_home_address(const Address& val) {
+  this->home_address = val;
+}
+
+void Student::__set_birth_place(const Address& val) {
+  this->birth_place = val;
+}
+
+void Student::__set_birth(const Date& val) {
+  this->birth = val;
+}
+
+void Student::__set_favorite_subjects(const std::vector<Subject> & val) {
+  this->favorite_subjects = val;
+}
+
+void Student::__set_email_addresses(const std::vector<std::string> & val) {
+  this->email_addresses = val;
+}
+
+void Student::__set_schools(const std::vector<School> & val) {
+  this->schools = val;
+}
+
+uint32_t Student::read(::apache::thrift::protocol::TProtocol* iprot) {
+
+  apache::thrift::protocol::TInputRecursionTracker tracker(*iprot);
+  uint32_t xfer = 0;
+  std::string fname;
+  ::apache::thrift::protocol::TType ftype;
+  int16_t fid;
+
+  xfer += iprot->readStructBegin(fname);
+
+  using ::apache::thrift::protocol::TProtocolException;
+
+
+  while (true)
+  {
+    xfer += iprot->readFieldBegin(fname, ftype, fid);
+    if (ftype == ::apache::thrift::protocol::T_STOP) {
+      break;
+    }
+    switch (fid)
+    {
+      case 1:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->name);
+          this->__isset.name = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 2:
+        if (ftype == ::apache::thrift::protocol::T_I32) {
+          xfer += iprot->readI32(this->friends);
+          this->__isset.friends = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 3:
+        if (ftype == ::apache::thrift::protocol::T_STRUCT) {
+          xfer += this->home_address.read(iprot);
+          this->__isset.home_address = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 4:
+        if (ftype == ::apache::thrift::protocol::T_STRUCT) {
+          xfer += this->birth_place.read(iprot);
+          this->__isset.birth_place = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 5:
+        if (ftype == ::apache::thrift::protocol::T_STRUCT) {
+          xfer += this->birth.read(iprot);
+          this->__isset.birth = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 6:
+        if (ftype == ::apache::thrift::protocol::T_LIST) {
+          {
+            this->favorite_subjects.clear();
+            uint32_t _size14;
+            ::apache::thrift::protocol::TType _etype17;
+            xfer += iprot->readListBegin(_etype17, _size14);
+            this->favorite_subjects.resize(_size14);
+            uint32_t _i18;
+            for (_i18 = 0; _i18 < _size14; ++_i18)
+            {
+              xfer += this->favorite_subjects[_i18].read(iprot);
+            }
+            xfer += iprot->readListEnd();
+          }
+          this->__isset.favorite_subjects = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 7:
+        if (ftype == ::apache::thrift::protocol::T_LIST) {
+          {
+            this->email_addresses.clear();
+            uint32_t _size19;
+            ::apache::thrift::protocol::TType _etype22;
+            xfer += iprot->readListBegin(_etype22, _size19);
+            this->email_addresses.resize(_size19);
+            uint32_t _i23;
+            for (_i23 = 0; _i23 < _size19; ++_i23)
+            {
+              xfer += iprot->readString(this->email_addresses[_i23]);
+            }
+            xfer += iprot->readListEnd();
+          }
+          this->__isset.email_addresses = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 8:
+        if (ftype == ::apache::thrift::protocol::T_LIST) {
+          {
+            this->schools.clear();
+            uint32_t _size24;
+            ::apache::thrift::protocol::TType _etype27;
+            xfer += iprot->readListBegin(_etype27, _size24);
+            this->schools.resize(_size24);
+            uint32_t _i28;
+            for (_i28 = 0; _i28 < _size24; ++_i28)
+            {
+              xfer += this->schools[_i28].read(iprot);
+            }
+            xfer += iprot->readListEnd();
+          }
+          this->__isset.schools = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      default:
+        xfer += iprot->skip(ftype);
+        break;
+    }
+    xfer += iprot->readFieldEnd();
+  }
+
+  xfer += iprot->readStructEnd();
+
+  return xfer;
+}
+
+uint32_t Student::write(::apache::thrift::protocol::TProtocol* oprot) const {
+  uint32_t xfer = 0;
+  apache::thrift::protocol::TOutputRecursionTracker tracker(*oprot);
+  xfer += oprot->writeStructBegin("Student");
+
+  xfer += oprot->writeFieldBegin("name", ::apache::thrift::protocol::T_STRING, 1);
+  xfer += oprot->writeString(this->name);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("friends", ::apache::thrift::protocol::T_I32, 2);
+  xfer += oprot->writeI32(this->friends);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("home_address", ::apache::thrift::protocol::T_STRUCT, 3);
+  xfer += this->home_address.write(oprot);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("birth_place", ::apache::thrift::protocol::T_STRUCT, 4);
+  xfer += this->birth_place.write(oprot);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("birth", ::apache::thrift::protocol::T_STRUCT, 5);
+  xfer += this->birth.write(oprot);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("favorite_subjects", ::apache::thrift::protocol::T_LIST, 6);
+  {
+    xfer += oprot->writeListBegin(::apache::thrift::protocol::T_STRUCT, static_cast<uint32_t>(this->favorite_subjects.size()));
+    std::vector<Subject> ::const_iterator _iter29;
+    for (_iter29 = this->favorite_subjects.begin(); _iter29 != this->favorite_subjects.end(); ++_iter29)
+    {
+      xfer += (*_iter29).write(oprot);
+    }
+    xfer += oprot->writeListEnd();
+  }
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("email_addresses", ::apache::thrift::protocol::T_LIST, 7);
+  {
+    xfer += oprot->writeListBegin(::apache::thrift::protocol::T_STRING, static_cast<uint32_t>(this->email_addresses.size()));
+    std::vector<std::string> ::const_iterator _iter30;
+    for (_iter30 = this->email_addresses.begin(); _iter30 != this->email_addresses.end(); ++_iter30)
+    {
+      xfer += oprot->writeString((*_iter30));
+    }
+    xfer += oprot->writeListEnd();
+  }
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("schools", ::apache::thrift::protocol::T_LIST, 8);
+  {
+    xfer += oprot->writeListBegin(::apache::thrift::protocol::T_STRUCT, static_cast<uint32_t>(this->schools.size()));
+    std::vector<School> ::const_iterator _iter31;
+    for (_iter31 = this->schools.begin(); _iter31 != this->schools.end(); ++_iter31)
+    {
+      xfer += (*_iter31).write(oprot);
+    }
+    xfer += oprot->writeListEnd();
+  }
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldStop();
+  xfer += oprot->writeStructEnd();
+  return xfer;
+}
+
+void swap(Student &a, Student &b) {
+  using ::std::swap;
+  swap(a.name, b.name);
+  swap(a.friends, b.friends);
+  swap(a.home_address, b.home_address);
+  swap(a.birth_place, b.birth_place);
+  swap(a.birth, b.birth);
+  swap(a.favorite_subjects, b.favorite_subjects);
+  swap(a.email_addresses, b.email_addresses);
+  swap(a.schools, b.schools);
+  swap(a.__isset, b.__isset);
+}
+
+Student::Student(const Student& other32) {
+  name = other32.name;
+  friends = other32.friends;
+  home_address = other32.home_address;
+  birth_place = other32.birth_place;
+  birth = other32.birth;
+  favorite_subjects = other32.favorite_subjects;
+  email_addresses = other32.email_addresses;
+  schools = other32.schools;
+  __isset = other32.__isset;
+}
+Student& Student::operator=(const Student& other33) {
+  name = other33.name;
+  friends = other33.friends;
+  home_address = other33.home_address;
+  birth_place = other33.birth_place;
+  birth = other33.birth;
+  favorite_subjects = other33.favorite_subjects;
+  email_addresses = other33.email_addresses;
+  schools = other33.schools;
+  __isset = other33.__isset;
+  return *this;
+}
+void Student::printTo(std::ostream& out) const {
+  using ::apache::thrift::to_string;
+  out << "Student(";
+  out << "name=" << to_string(name);
+  out << ", " << "friends=" << to_string(friends);
+  out << ", " << "home_address=" << to_string(home_address);
+  out << ", " << "birth_place=" << to_string(birth_place);
+  out << ", " << "birth=" << to_string(birth);
+  out << ", " << "favorite_subjects=" << to_string(favorite_subjects);
+  out << ", " << "email_addresses=" << to_string(email_addresses);
+  out << ", " << "schools=" << to_string(schools);
+  out << ")";
+}
+
+} // namespace

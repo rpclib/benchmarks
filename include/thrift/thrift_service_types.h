@@ -17,8 +17,350 @@
 #include <thrift/cxxfunctional.h>
 
 
+namespace thrift_code {
 
+class Date;
 
+class Address;
 
+class School;
+
+class Subject;
+
+class Student;
+
+typedef struct _Date__isset {
+  _Date__isset() : year(false), month(false), day(false) {}
+  bool year :1;
+  bool month :1;
+  bool day :1;
+} _Date__isset;
+
+class Date {
+ public:
+
+  Date(const Date&);
+  Date& operator=(const Date&);
+  Date() : year(0), month(0), day(0) {
+  }
+
+  virtual ~Date() throw();
+  int32_t year;
+  int8_t month;
+  int8_t day;
+
+  _Date__isset __isset;
+
+  void __set_year(const int32_t val);
+
+  void __set_month(const int8_t val);
+
+  void __set_day(const int8_t val);
+
+  bool operator == (const Date & rhs) const
+  {
+    if (!(year == rhs.year))
+      return false;
+    if (!(month == rhs.month))
+      return false;
+    if (!(day == rhs.day))
+      return false;
+    return true;
+  }
+  bool operator != (const Date &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const Date & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+  virtual void printTo(std::ostream& out) const;
+};
+
+void swap(Date &a, Date &b);
+
+inline std::ostream& operator<<(std::ostream& out, const Date& obj)
+{
+  obj.printTo(out);
+  return out;
+}
+
+typedef struct _Address__isset {
+  _Address__isset() : city(false), zipcode(false), street(false), number(false) {}
+  bool city :1;
+  bool zipcode :1;
+  bool street :1;
+  bool number :1;
+} _Address__isset;
+
+class Address {
+ public:
+
+  Address(const Address&);
+  Address& operator=(const Address&);
+  Address() : city(), zipcode(0), street(), number(0) {
+  }
+
+  virtual ~Address() throw();
+  std::string city;
+  int32_t zipcode;
+  std::string street;
+  int16_t number;
+
+  _Address__isset __isset;
+
+  void __set_city(const std::string& val);
+
+  void __set_zipcode(const int32_t val);
+
+  void __set_street(const std::string& val);
+
+  void __set_number(const int16_t val);
+
+  bool operator == (const Address & rhs) const
+  {
+    if (!(city == rhs.city))
+      return false;
+    if (!(zipcode == rhs.zipcode))
+      return false;
+    if (!(street == rhs.street))
+      return false;
+    if (!(number == rhs.number))
+      return false;
+    return true;
+  }
+  bool operator != (const Address &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const Address & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+  virtual void printTo(std::ostream& out) const;
+};
+
+void swap(Address &a, Address &b);
+
+inline std::ostream& operator<<(std::ostream& out, const Address& obj)
+{
+  obj.printTo(out);
+  return out;
+}
+
+typedef struct _School__isset {
+  _School__isset() : name(false), address(false), foundation(false), email_addresses(false) {}
+  bool name :1;
+  bool address :1;
+  bool foundation :1;
+  bool email_addresses :1;
+} _School__isset;
+
+class School {
+ public:
+
+  School(const School&);
+  School& operator=(const School&);
+  School() : name() {
+  }
+
+  virtual ~School() throw();
+  std::string name;
+  Address address;
+  Date foundation;
+  std::vector<std::string>  email_addresses;
+
+  _School__isset __isset;
+
+  void __set_name(const std::string& val);
+
+  void __set_address(const Address& val);
+
+  void __set_foundation(const Date& val);
+
+  void __set_email_addresses(const std::vector<std::string> & val);
+
+  bool operator == (const School & rhs) const
+  {
+    if (!(name == rhs.name))
+      return false;
+    if (!(address == rhs.address))
+      return false;
+    if (!(foundation == rhs.foundation))
+      return false;
+    if (!(email_addresses == rhs.email_addresses))
+      return false;
+    return true;
+  }
+  bool operator != (const School &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const School & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+  virtual void printTo(std::ostream& out) const;
+};
+
+void swap(School &a, School &b);
+
+inline std::ostream& operator<<(std::ostream& out, const School& obj)
+{
+  obj.printTo(out);
+  return out;
+}
+
+typedef struct _Subject__isset {
+  _Subject__isset() : id(false), title(false), code(false) {}
+  bool id :1;
+  bool title :1;
+  bool code :1;
+} _Subject__isset;
+
+class Subject {
+ public:
+
+  Subject(const Subject&);
+  Subject& operator=(const Subject&);
+  Subject() : id(0), title(), code() {
+  }
+
+  virtual ~Subject() throw();
+  int32_t id;
+  std::string title;
+  std::string code;
+
+  _Subject__isset __isset;
+
+  void __set_id(const int32_t val);
+
+  void __set_title(const std::string& val);
+
+  void __set_code(const std::string& val);
+
+  bool operator == (const Subject & rhs) const
+  {
+    if (!(id == rhs.id))
+      return false;
+    if (!(title == rhs.title))
+      return false;
+    if (!(code == rhs.code))
+      return false;
+    return true;
+  }
+  bool operator != (const Subject &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const Subject & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+  virtual void printTo(std::ostream& out) const;
+};
+
+void swap(Subject &a, Subject &b);
+
+inline std::ostream& operator<<(std::ostream& out, const Subject& obj)
+{
+  obj.printTo(out);
+  return out;
+}
+
+typedef struct _Student__isset {
+  _Student__isset() : name(false), friends(false), home_address(false), birth_place(false), birth(false), favorite_subjects(false), email_addresses(false), schools(false) {}
+  bool name :1;
+  bool friends :1;
+  bool home_address :1;
+  bool birth_place :1;
+  bool birth :1;
+  bool favorite_subjects :1;
+  bool email_addresses :1;
+  bool schools :1;
+} _Student__isset;
+
+class Student {
+ public:
+
+  Student(const Student&);
+  Student& operator=(const Student&);
+  Student() : name(), friends(0) {
+  }
+
+  virtual ~Student() throw();
+  std::string name;
+  int32_t friends;
+  Address home_address;
+  Address birth_place;
+  Date birth;
+  std::vector<Subject>  favorite_subjects;
+  std::vector<std::string>  email_addresses;
+  std::vector<School>  schools;
+
+  _Student__isset __isset;
+
+  void __set_name(const std::string& val);
+
+  void __set_friends(const int32_t val);
+
+  void __set_home_address(const Address& val);
+
+  void __set_birth_place(const Address& val);
+
+  void __set_birth(const Date& val);
+
+  void __set_favorite_subjects(const std::vector<Subject> & val);
+
+  void __set_email_addresses(const std::vector<std::string> & val);
+
+  void __set_schools(const std::vector<School> & val);
+
+  bool operator == (const Student & rhs) const
+  {
+    if (!(name == rhs.name))
+      return false;
+    if (!(friends == rhs.friends))
+      return false;
+    if (!(home_address == rhs.home_address))
+      return false;
+    if (!(birth_place == rhs.birth_place))
+      return false;
+    if (!(birth == rhs.birth))
+      return false;
+    if (!(favorite_subjects == rhs.favorite_subjects))
+      return false;
+    if (!(email_addresses == rhs.email_addresses))
+      return false;
+    if (!(schools == rhs.schools))
+      return false;
+    return true;
+  }
+  bool operator != (const Student &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const Student & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+  virtual void printTo(std::ostream& out) const;
+};
+
+void swap(Student &a, Student &b);
+
+inline std::ostream& operator<<(std::ostream& out, const Student& obj)
+{
+  obj.printTo(out);
+  return out;
+}
+
+} // namespace
 
 #endif

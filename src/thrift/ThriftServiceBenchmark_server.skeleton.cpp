@@ -14,6 +14,8 @@ using namespace ::apache::thrift::server;
 
 using boost::shared_ptr;
 
+using namespace  ::thrift_code;
+
 class ThriftServiceBenchmarkHandler : virtual public ThriftServiceBenchmarkIf {
  public:
   ThriftServiceBenchmarkHandler() {
@@ -28,6 +30,11 @@ class ThriftServiceBenchmarkHandler : virtual public ThriftServiceBenchmarkIf {
   void get_blob(std::string& _return) {
     // Your implementation goes here
     printf("get_blob\n");
+  }
+
+  void get_structs(std::vector<Student> & _return) {
+    // Your implementation goes here
+    printf("get_structs\n");
   }
 
 };

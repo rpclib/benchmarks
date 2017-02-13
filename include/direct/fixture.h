@@ -6,6 +6,7 @@
 #include "benchmark/benchmark.h"
 
 #include "target_code.h"
+#include "rpclib/struct_helpers.h"
 
 // direct function call
 class direct_bench : public benchmark::Fixture {
@@ -21,6 +22,11 @@ public:
     benchmark::DoNotOptimize(s = ::get_blob(param));
     std::size_t size;
     benchmark::DoNotOptimize(size = s.size());
+  }
+
+  void get_structs(int param) {
+    std::vector<rpclib_code::Student> result;
+    benchmark::DoNotOptimize(result = rpclib_code::get_structs());
   }
 };
 

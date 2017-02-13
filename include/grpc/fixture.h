@@ -17,26 +17,35 @@
 #include "benchmark/benchmark.h"
 
 #include "grpc/grpc_service.grpc.pb.h"
+#include "grpc/struct_helpers.h"
 
 #include "target_code.h"
+#include "port_numbers.h"
 
 
-static constexpr uint16_t grpc_port = 8084;
-
-class grpc_service : public GrpcServiceBenchmark::Service {
+class grpc_service : public grpc_code::GrpcServiceBenchmark::Service {
 public:
   ::grpc::Status get_answer(::grpc::ServerContext *context,
-                            const ::AnswerRequest *request,
-                            ::AnswerReply *response) override {
-      auto num = request->number();
-      response->set_result(::get_answer(num));
-      return ::grpc::Status::OK;
+                            const grpc_code::AnswerRequest *request,
+                            grpc_code::AnswerReply *response) override {
+    auto num = request->number();
+    response->set_result(::get_answer(num));
+    return ::grpc::Status::OK;
   }
+
   ::grpc::Status get_blob(::grpc::ServerContext *context,
-                            const ::EmptyRequest *request,
-                            ::BlobResponse *response) override {
-      response->set_data(::get_blob(blob_size_));
-      return ::grpc::Status::OK;
+                          const grpc_code::EmptyRequest *request,
+                          grpc_code::BlobResponse *response) override {
+    response->set_data(::get_blob(blob_size_));
+    return ::grpc::Status::OK;
+  }
+
+  ::grpc::Status
+  get_structs(::grpc::ServerContext *context,
+              const grpc_code::EmptyRequest *request,
+              grpc_code::StudentDataResponse *response) override {
+    response->CopyFrom(grpc_code::get_structs());
+    return ::grpc::Status::OK;
   }
   int blob_size_;
 };
@@ -44,7 +53,8 @@ public:
 class grpc_bench : public benchmark::Fixture {
 public:
   grpc_bench()
-      : channel_(grpc::CreateChannel(server_addr_,
+      : server_addr_("localhost:" + std::to_string(grpc_port)),
+        channel_(grpc::CreateChannel(server_addr_,
                                      grpc::InsecureChannelCredentials())),
         client_(channel_) {
     grpc::ServerBuilder b;
@@ -56,8 +66,8 @@ public:
   void get_answer(int param) {
     (void)param;
     grpc::ClientContext client_context;
-    AnswerRequest request;
-    AnswerReply response;
+    grpc_code::AnswerRequest request;
+    grpc_code::AnswerReply response;
     request.set_number(23);
     auto status = client_.get_answer(&client_context, request, &response);
     int a;
@@ -67,8 +77,8 @@ public:
   void get_blob(int param) {
     service_impl_.blob_size_ = param;
     grpc::ClientContext client_context;
-    EmptyRequest request;
-    BlobResponse response;
+    grpc_code::EmptyRequest request;
+    grpc_code::BlobResponse response;
     auto status = client_.get_blob(&client_context, request, &response);
     std::string s;
     benchmark::DoNotOptimize(s = response.data());
@@ -76,13 +86,23 @@ public:
     benchmark::DoNotOptimize(size = s.size());
   }
 
+  void get_structs(int param) {
+    (void)param;
+    grpc::ClientContext client_context;
+    grpc_code::EmptyRequest request;
+    grpc_code::StudentDataResponse response;
+    auto status = client_.get_structs(&client_context, request, &response);
+    std::size_t count;
+    benchmark::DoNotOptimize(count = response.students_size());
+  }
+
   ~grpc_bench() noexcept { server_->Shutdown(); }
 
+  std::string server_addr_;
   std::shared_ptr<grpc::ChannelInterface> channel_;
-  GrpcServiceBenchmark::Stub client_;
+  grpc_code::GrpcServiceBenchmark::Stub client_;
   std::unique_ptr<grpc::Server> server_;
   grpc_service service_impl_;
-  static constexpr const char *server_addr_ = "localhost:8082";
 };
 
 #endif /* end of include guard: FIXTURE_H_EQKIMOI3 */
