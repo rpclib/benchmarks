@@ -1,11 +1,8 @@
 #include "target_code.h"
-#include <chrono>
 #include <map>
 #include <stdlib.h>
-#include <thread>
 
 int get_answer(int num) {
-  std::this_thread::sleep_for(std::chrono::milliseconds(20));
   return 41 + num;
 }
 
