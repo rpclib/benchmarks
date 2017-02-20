@@ -30,6 +30,7 @@ public:
   }
 
   void TearDown(benchmark::State&) override {
+    server->stop();
     server.reset();
     client.reset();
   }

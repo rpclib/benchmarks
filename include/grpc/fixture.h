@@ -80,8 +80,7 @@ public:
     grpc_code::EmptyRequest request;
     grpc_code::BlobResponse response;
     auto status = client_.get_blob(&client_context, request, &response);
-    std::string s;
-    benchmark::DoNotOptimize(s = response.data());
+    std::string const& s = response.data();
     std::size_t size;
     benchmark::DoNotOptimize(size = s.size());
   }
