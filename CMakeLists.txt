@@ -1,6 +1,23 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(rpclib_benchmark)
 
+macro(remove_cxx_flag flag)
+    string(REPLACE "${flag}" "" CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE}")
+endmacro()
+
+option(USE_O2 "Use -O2 instead of the default -O3" OFF)
+
+if (NOT CMAKE_BUILD_TYPE STREQUAL "Release")
+    message(WARNING "Not building in release mode!")
+else()
+    if (USE_O2)
+        remove_cxx_flag("-O3")
+        set(CMAKE_CXX_FLAGS_RELEASE "-O2 ${CMAKE_CXX_FLAGS_RELEASE}")
+    endif()
+    message(STATUS "Release flags: ${CMAKE_CXX_FLAGS_RELEASE}")
+endif()
+
+
 set(CMAKE_EXPORT_COMPILE_COMMANDS "ON") # for YCM
 
 if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/build/conanbuildinfo.cmake) #Clion, with conanbuildinfo.cmake in build folder
