@@ -1,73 +1,52 @@
 {
   "context": {
-    "date": "2017-02-18 13:46:50",
+    "date": "2017-02-20 20:42:49",
     "num_cpus": 4,
-    "mhz_per_cpu": 2771,
+    "mhz_per_cpu": 2807,
     "cpu_scaling_enabled": true,
     "library_build_type": "release"
   },
   "benchmarks": [
     {
       "name": "direct_bench/get_blob/1024",
-      "iterations": 44250761,
-      "real_time": 95,
-      "cpu_time": 95,
+      "iterations": 44665986,
+      "real_time": 94,
+      "cpu_time": 94,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/1024",
-      "iterations": 44250761,
-      "real_time": 95,
-      "cpu_time": 95,
+      "iterations": 44665986,
+      "real_time": 94,
+      "cpu_time": 94,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/1024",
-      "iterations": 44250761,
-      "real_time": 95,
-      "cpu_time": 95,
+      "iterations": 44665986,
+      "real_time": 94,
+      "cpu_time": 94,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/1024",
-      "iterations": 44250761,
-      "real_time": 95,
-      "cpu_time": 95,
+      "iterations": 44665986,
+      "real_time": 94,
+      "cpu_time": 94,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/1024",
-      "iterations": 44250761,
-      "real_time": 95,
-      "cpu_time": 95,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/1024",
-      "iterations": 44250761,
-      "real_time": 95,
-      "cpu_time": 95,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/1024",
-      "iterations": 44250761,
-      "real_time": 95,
-      "cpu_time": 95,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/1024",
-      "iterations": 44250761,
-      "real_time": 95,
-      "cpu_time": 95,
+      "iterations": 44665986,
+      "real_time": 94,
+      "cpu_time": 94,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/1024_mean",
-      "iterations": 44250761,
-      "real_time": 95,
-      "cpu_time": 95,
+      "iterations": 44665986,
+      "real_time": 94,
+      "cpu_time": 94,
       "time_unit": "ns"
     },
     {
@@ -79,133 +58,91 @@
     },
     {
       "name": "direct_bench/get_blob/2k",
-      "iterations": 38078151,
+      "iterations": 38137145,
       "real_time": 110,
       "cpu_time": 110,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/2k",
-      "iterations": 38078151,
+      "iterations": 38137145,
       "real_time": 110,
       "cpu_time": 110,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/2k",
-      "iterations": 38078151,
+      "iterations": 38137145,
       "real_time": 110,
       "cpu_time": 110,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/2k",
-      "iterations": 38078151,
+      "iterations": 38137145,
       "real_time": 110,
       "cpu_time": 110,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/2k",
-      "iterations": 38078151,
+      "iterations": 38137145,
       "real_time": 110,
       "cpu_time": 110,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/2k",
-      "iterations": 38078151,
-      "real_time": 113,
-      "cpu_time": 113,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/2k",
-      "iterations": 38078151,
-      "real_time": 113,
-      "cpu_time": 113,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/2k",
-      "iterations": 38078151,
-      "real_time": 113,
-      "cpu_time": 113,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/2k_mean",
-      "iterations": 38078151,
-      "real_time": 111,
-      "cpu_time": 111,
+      "iterations": 38137145,
+      "real_time": 110,
+      "cpu_time": 110,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/2k_stddev",
       "iterations": 0,
-      "real_time": 1,
-      "cpu_time": 1,
+      "real_time": 0,
+      "cpu_time": 0,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/4k",
-      "iterations": 34127707,
+      "iterations": 34357347,
       "real_time": 122,
       "cpu_time": 122,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/4k",
-      "iterations": 34127707,
+      "iterations": 34357347,
       "real_time": 122,
       "cpu_time": 122,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/4k",
-      "iterations": 34127707,
+      "iterations": 34357347,
       "real_time": 122,
       "cpu_time": 122,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/4k",
-      "iterations": 34127707,
+      "iterations": 34357347,
       "real_time": 122,
       "cpu_time": 122,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/4k",
-      "iterations": 34127707,
-      "real_time": 122,
-      "cpu_time": 122,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/4k",
-      "iterations": 34127707,
-      "real_time": 122,
-      "cpu_time": 122,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/4k",
-      "iterations": 34127707,
-      "real_time": 122,
-      "cpu_time": 122,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/4k",
-      "iterations": 34127707,
+      "iterations": 34357347,
       "real_time": 122,
       "cpu_time": 122,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/4k_mean",
-      "iterations": 34127707,
+      "iterations": 34357347,
       "real_time": 122,
       "cpu_time": 122,
       "time_unit": "ns"
@@ -219,65 +156,44 @@
     },
     {
       "name": "direct_bench/get_blob/8k",
-      "iterations": 17850492,
-      "real_time": 235,
-      "cpu_time": 235,
+      "iterations": 17669037,
+      "real_time": 239,
+      "cpu_time": 239,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/8k",
-      "iterations": 17850492,
-      "real_time": 235,
-      "cpu_time": 235,
+      "iterations": 17669037,
+      "real_time": 238,
+      "cpu_time": 238,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/8k",
-      "iterations": 17850492,
-      "real_time": 235,
-      "cpu_time": 235,
+      "iterations": 17669037,
+      "real_time": 238,
+      "cpu_time": 238,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/8k",
-      "iterations": 17850492,
-      "real_time": 235,
-      "cpu_time": 235,
+      "iterations": 17669037,
+      "real_time": 238,
+      "cpu_time": 238,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/8k",
-      "iterations": 17850492,
-      "real_time": 235,
-      "cpu_time": 235,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/8k",
-      "iterations": 17850492,
-      "real_time": 236,
-      "cpu_time": 236,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/8k",
-      "iterations": 17850492,
-      "real_time": 235,
-      "cpu_time": 235,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/8k",
-      "iterations": 17850492,
-      "real_time": 235,
-      "cpu_time": 235,
+      "iterations": 17669037,
+      "real_time": 238,
+      "cpu_time": 238,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/8k_mean",
-      "iterations": 17850492,
-      "real_time": 235,
-      "cpu_time": 235,
+      "iterations": 17669037,
+      "real_time": 238,
+      "cpu_time": 238,
       "time_unit": "ns"
     },
     {
@@ -289,65 +205,44 @@
     },
     {
       "name": "direct_bench/get_blob/16k",
-      "iterations": 8519181,
-      "real_time": 494,
-      "cpu_time": 494,
+      "iterations": 8342779,
+      "real_time": 501,
+      "cpu_time": 501,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/16k",
-      "iterations": 8519181,
-      "real_time": 494,
-      "cpu_time": 494,
+      "iterations": 8342779,
+      "real_time": 501,
+      "cpu_time": 501,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/16k",
-      "iterations": 8519181,
-      "real_time": 493,
-      "cpu_time": 493,
+      "iterations": 8342779,
+      "real_time": 502,
+      "cpu_time": 502,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/16k",
-      "iterations": 8519181,
-      "real_time": 494,
-      "cpu_time": 494,
+      "iterations": 8342779,
+      "real_time": 501,
+      "cpu_time": 501,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/16k",
-      "iterations": 8519181,
-      "real_time": 494,
-      "cpu_time": 494,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/16k",
-      "iterations": 8519181,
-      "real_time": 493,
-      "cpu_time": 493,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/16k",
-      "iterations": 8519181,
-      "real_time": 493,
-      "cpu_time": 493,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/16k",
-      "iterations": 8519181,
-      "real_time": 493,
-      "cpu_time": 493,
+      "iterations": 8342779,
+      "real_time": 501,
+      "cpu_time": 501,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/16k_mean",
-      "iterations": 8519181,
-      "real_time": 493,
-      "cpu_time": 493,
+      "iterations": 8342779,
+      "real_time": 501,
+      "cpu_time": 501,
       "time_unit": "ns"
     },
     {
@@ -359,135 +254,93 @@
     },
     {
       "name": "direct_bench/get_blob/32k",
-      "iterations": 3728202,
-      "real_time": 1128,
-      "cpu_time": 1128,
+      "iterations": 3746935,
+      "real_time": 1112,
+      "cpu_time": 1112,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/32k",
-      "iterations": 3728202,
-      "real_time": 1128,
-      "cpu_time": 1128,
+      "iterations": 3746935,
+      "real_time": 1112,
+      "cpu_time": 1112,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/32k",
-      "iterations": 3728202,
-      "real_time": 1127,
-      "cpu_time": 1127,
+      "iterations": 3746935,
+      "real_time": 1112,
+      "cpu_time": 1112,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/32k",
-      "iterations": 3728202,
-      "real_time": 1130,
-      "cpu_time": 1130,
+      "iterations": 3746935,
+      "real_time": 1112,
+      "cpu_time": 1112,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/32k",
-      "iterations": 3728202,
-      "real_time": 1128,
-      "cpu_time": 1128,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/32k",
-      "iterations": 3728202,
-      "real_time": 1128,
-      "cpu_time": 1128,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/32k",
-      "iterations": 3728202,
-      "real_time": 1127,
-      "cpu_time": 1127,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/32k",
-      "iterations": 3728202,
-      "real_time": 1128,
-      "cpu_time": 1128,
+      "iterations": 3746935,
+      "real_time": 1117,
+      "cpu_time": 1116,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/32k_mean",
-      "iterations": 3728202,
-      "real_time": 1128,
-      "cpu_time": 1128,
+      "iterations": 3746935,
+      "real_time": 1113,
+      "cpu_time": 1113,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/32k_stddev",
       "iterations": 0,
-      "real_time": 1,
-      "cpu_time": 1,
+      "real_time": 2,
+      "cpu_time": 2,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/64k",
-      "iterations": 1960732,
-      "real_time": 2143,
-      "cpu_time": 2142,
+      "iterations": 1977641,
+      "real_time": 2126,
+      "cpu_time": 2126,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/64k",
-      "iterations": 1960732,
-      "real_time": 2142,
-      "cpu_time": 2142,
+      "iterations": 1977641,
+      "real_time": 2125,
+      "cpu_time": 2125,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/64k",
-      "iterations": 1960732,
-      "real_time": 2142,
-      "cpu_time": 2142,
+      "iterations": 1977641,
+      "real_time": 2125,
+      "cpu_time": 2125,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/64k",
-      "iterations": 1960732,
-      "real_time": 2143,
-      "cpu_time": 2143,
+      "iterations": 1977641,
+      "real_time": 2125,
+      "cpu_time": 2125,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/64k",
-      "iterations": 1960732,
-      "real_time": 2142,
-      "cpu_time": 2142,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/64k",
-      "iterations": 1960732,
-      "real_time": 2142,
-      "cpu_time": 2142,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/64k",
-      "iterations": 1960732,
-      "real_time": 2140,
-      "cpu_time": 2140,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/64k",
-      "iterations": 1960732,
-      "real_time": 2142,
-      "cpu_time": 2142,
+      "iterations": 1977641,
+      "real_time": 2127,
+      "cpu_time": 2127,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/64k_mean",
-      "iterations": 1960732,
-      "real_time": 2142,
-      "cpu_time": 2142,
+      "iterations": 1977641,
+      "real_time": 2126,
+      "cpu_time": 2126,
       "time_unit": "ns"
     },
     {
@@ -499,5182 +352,3089 @@
     },
     {
       "name": "direct_bench/get_blob/128k",
-      "iterations": 929491,
-      "real_time": 4515,
-      "cpu_time": 4515,
+      "iterations": 967483,
+      "real_time": 4335,
+      "cpu_time": 4335,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/128k",
-      "iterations": 929491,
-      "real_time": 4526,
-      "cpu_time": 4526,
+      "iterations": 967483,
+      "real_time": 4335,
+      "cpu_time": 4335,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/128k",
-      "iterations": 929491,
-      "real_time": 4518,
-      "cpu_time": 4518,
+      "iterations": 967483,
+      "real_time": 4334,
+      "cpu_time": 4334,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/128k",
-      "iterations": 929491,
-      "real_time": 4515,
-      "cpu_time": 4515,
+      "iterations": 967483,
+      "real_time": 4337,
+      "cpu_time": 4337,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/128k",
-      "iterations": 929491,
-      "real_time": 4515,
-      "cpu_time": 4515,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/128k",
-      "iterations": 929491,
-      "real_time": 4522,
-      "cpu_time": 4522,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/128k",
-      "iterations": 929491,
-      "real_time": 4519,
-      "cpu_time": 4519,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/128k",
-      "iterations": 929491,
-      "real_time": 4528,
-      "cpu_time": 4528,
+      "iterations": 967483,
+      "real_time": 4337,
+      "cpu_time": 4337,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/128k_mean",
-      "iterations": 929491,
-      "real_time": 4520,
-      "cpu_time": 4520,
+      "iterations": 967483,
+      "real_time": 4335,
+      "cpu_time": 4335,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/128k_stddev",
       "iterations": 0,
-      "real_time": 5,
-      "cpu_time": 5,
+      "real_time": 1,
+      "cpu_time": 1,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/256k",
-      "iterations": 433666,
-      "real_time": 9718,
-      "cpu_time": 9718,
+      "iterations": 431289,
+      "real_time": 9769,
+      "cpu_time": 9769,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/256k",
-      "iterations": 433666,
-      "real_time": 9714,
-      "cpu_time": 9714,
+      "iterations": 431289,
+      "real_time": 9755,
+      "cpu_time": 9755,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/256k",
-      "iterations": 433666,
-      "real_time": 9709,
-      "cpu_time": 9709,
+      "iterations": 431289,
+      "real_time": 9778,
+      "cpu_time": 9778,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/256k",
-      "iterations": 433666,
-      "real_time": 9704,
-      "cpu_time": 9704,
+      "iterations": 431289,
+      "real_time": 9801,
+      "cpu_time": 9801,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/256k",
-      "iterations": 433666,
-      "real_time": 9703,
-      "cpu_time": 9703,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/256k",
-      "iterations": 433666,
-      "real_time": 9702,
-      "cpu_time": 9702,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/256k",
-      "iterations": 433666,
-      "real_time": 9707,
-      "cpu_time": 9707,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/256k",
-      "iterations": 433666,
-      "real_time": 9727,
-      "cpu_time": 9727,
+      "iterations": 431289,
+      "real_time": 9796,
+      "cpu_time": 9796,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/256k_mean",
-      "iterations": 433666,
-      "real_time": 9711,
-      "cpu_time": 9711,
+      "iterations": 431289,
+      "real_time": 9780,
+      "cpu_time": 9780,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/256k_stddev",
       "iterations": 0,
-      "real_time": 8,
-      "cpu_time": 8,
+      "real_time": 17,
+      "cpu_time": 17,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/512k",
-      "iterations": 194102,
-      "real_time": 21639,
-      "cpu_time": 21639,
+      "iterations": 197855,
+      "real_time": 21253,
+      "cpu_time": 21253,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/512k",
-      "iterations": 194102,
-      "real_time": 21633,
-      "cpu_time": 21633,
+      "iterations": 197855,
+      "real_time": 21235,
+      "cpu_time": 21235,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/512k",
-      "iterations": 194102,
-      "real_time": 21615,
-      "cpu_time": 21615,
+      "iterations": 197855,
+      "real_time": 21242,
+      "cpu_time": 21242,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/512k",
-      "iterations": 194102,
-      "real_time": 21612,
-      "cpu_time": 21612,
+      "iterations": 197855,
+      "real_time": 21223,
+      "cpu_time": 21223,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/512k",
-      "iterations": 194102,
-      "real_time": 21615,
-      "cpu_time": 21615,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/512k",
-      "iterations": 194102,
-      "real_time": 21616,
-      "cpu_time": 21616,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/512k",
-      "iterations": 194102,
-      "real_time": 21605,
-      "cpu_time": 21605,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/512k",
-      "iterations": 194102,
-      "real_time": 21642,
-      "cpu_time": 21641,
+      "iterations": 197855,
+      "real_time": 21244,
+      "cpu_time": 21244,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/512k_mean",
-      "iterations": 194102,
-      "real_time": 21622,
-      "cpu_time": 21622,
+      "iterations": 197855,
+      "real_time": 21239,
+      "cpu_time": 21239,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/512k_stddev",
       "iterations": 0,
-      "real_time": 13,
-      "cpu_time": 13,
+      "real_time": 10,
+      "cpu_time": 10,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/1024k",
-      "iterations": 90691,
-      "real_time": 46053,
-      "cpu_time": 46052,
+      "iterations": 91148,
+      "real_time": 46019,
+      "cpu_time": 46019,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/1024k",
-      "iterations": 90691,
-      "real_time": 46045,
-      "cpu_time": 46044,
+      "iterations": 91148,
+      "real_time": 46004,
+      "cpu_time": 46004,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/1024k",
-      "iterations": 90691,
-      "real_time": 46079,
-      "cpu_time": 46078,
+      "iterations": 91148,
+      "real_time": 46000,
+      "cpu_time": 46000,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/1024k",
-      "iterations": 90691,
-      "real_time": 46051,
-      "cpu_time": 46051,
+      "iterations": 91148,
+      "real_time": 46039,
+      "cpu_time": 46039,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/1024k",
-      "iterations": 90691,
-      "real_time": 46594,
-      "cpu_time": 46593,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/1024k",
-      "iterations": 90691,
-      "real_time": 45940,
-      "cpu_time": 45939,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/1024k",
-      "iterations": 90691,
-      "real_time": 45973,
-      "cpu_time": 45972,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/1024k",
-      "iterations": 90691,
-      "real_time": 45973,
-      "cpu_time": 45973,
+      "iterations": 91148,
+      "real_time": 45998,
+      "cpu_time": 45998,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/1024k_mean",
-      "iterations": 90691,
-      "real_time": 46089,
-      "cpu_time": 46088,
+      "iterations": 91148,
+      "real_time": 46012,
+      "cpu_time": 46012,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/1024k_stddev",
       "iterations": 0,
-      "real_time": 197,
-      "cpu_time": 197,
+      "real_time": 15,
+      "cpu_time": 15,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/2M",
-      "iterations": 23459,
-      "real_time": 179608,
-      "cpu_time": 179600,
+      "iterations": 23026,
+      "real_time": 183074,
+      "cpu_time": 183073,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/2M",
-      "iterations": 23459,
-      "real_time": 179115,
-      "cpu_time": 179111,
+      "iterations": 23026,
+      "real_time": 185560,
+      "cpu_time": 185559,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/2M",
-      "iterations": 23459,
-      "real_time": 180618,
-      "cpu_time": 180614,
+      "iterations": 23026,
+      "real_time": 183469,
+      "cpu_time": 183468,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/2M",
-      "iterations": 23459,
-      "real_time": 179272,
-      "cpu_time": 179267,
+      "iterations": 23026,
+      "real_time": 183129,
+      "cpu_time": 183128,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/2M",
-      "iterations": 23459,
-      "real_time": 179147,
-      "cpu_time": 179141,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/2M",
-      "iterations": 23459,
-      "real_time": 179075,
-      "cpu_time": 179067,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/2M",
-      "iterations": 23459,
-      "real_time": 179157,
-      "cpu_time": 179153,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/2M",
-      "iterations": 23459,
-      "real_time": 179153,
-      "cpu_time": 179148,
+      "iterations": 23026,
+      "real_time": 182812,
+      "cpu_time": 182810,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/2M_mean",
-      "iterations": 23459,
-      "real_time": 179393,
-      "cpu_time": 179388,
+      "iterations": 23026,
+      "real_time": 183609,
+      "cpu_time": 183608,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/2M_stddev",
       "iterations": 0,
-      "real_time": 489,
-      "cpu_time": 489,
+      "real_time": 998,
+      "cpu_time": 998,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/4M",
-      "iterations": 6467,
-      "real_time": 648784,
-      "cpu_time": 648762,
+      "iterations": 6805,
+      "real_time": 620121,
+      "cpu_time": 620116,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/4M",
-      "iterations": 6467,
-      "real_time": 648570,
-      "cpu_time": 648542,
+      "iterations": 6805,
+      "real_time": 625114,
+      "cpu_time": 625111,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/4M",
-      "iterations": 6467,
-      "real_time": 653420,
-      "cpu_time": 653397,
+      "iterations": 6805,
+      "real_time": 627923,
+      "cpu_time": 627920,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/4M",
-      "iterations": 6467,
-      "real_time": 648955,
-      "cpu_time": 648928,
+      "iterations": 6805,
+      "real_time": 628610,
+      "cpu_time": 628605,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/4M",
-      "iterations": 6467,
-      "real_time": 648753,
-      "cpu_time": 648736,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/4M",
-      "iterations": 6467,
-      "real_time": 648740,
-      "cpu_time": 648725,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/4M",
-      "iterations": 6467,
-      "real_time": 649022,
-      "cpu_time": 649002,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/4M",
-      "iterations": 6467,
-      "real_time": 649154,
-      "cpu_time": 649136,
+      "iterations": 6805,
+      "real_time": 628059,
+      "cpu_time": 628055,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/4M_mean",
-      "iterations": 6467,
-      "real_time": 649425,
-      "cpu_time": 649403,
+      "iterations": 6805,
+      "real_time": 625965,
+      "cpu_time": 625961,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/4M_stddev",
       "iterations": 0,
-      "real_time": 1520,
-      "cpu_time": 1519,
+      "real_time": 3165,
+      "cpu_time": 3165,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/8M",
-      "iterations": 4588,
-      "real_time": 816441,
-      "cpu_time": 816418,
+      "iterations": 5306,
+      "real_time": 793701,
+      "cpu_time": 793694,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/8M",
-      "iterations": 4588,
-      "real_time": 815968,
-      "cpu_time": 815949,
+      "iterations": 5306,
+      "real_time": 792083,
+      "cpu_time": 792080,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/8M",
-      "iterations": 4588,
-      "real_time": 823543,
-      "cpu_time": 823524,
+      "iterations": 5306,
+      "real_time": 792392,
+      "cpu_time": 792388,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/8M",
-      "iterations": 4588,
-      "real_time": 816037,
-      "cpu_time": 816006,
+      "iterations": 5306,
+      "real_time": 792131,
+      "cpu_time": 792128,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/8M",
-      "iterations": 4588,
-      "real_time": 816725,
-      "cpu_time": 816708,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/8M",
-      "iterations": 4588,
-      "real_time": 817635,
-      "cpu_time": 817617,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/8M",
-      "iterations": 4588,
-      "real_time": 818375,
-      "cpu_time": 818357,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/8M",
-      "iterations": 4588,
-      "real_time": 815121,
-      "cpu_time": 815095,
+      "iterations": 5306,
+      "real_time": 801492,
+      "cpu_time": 801489,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/8M_mean",
-      "iterations": 4588,
-      "real_time": 817481,
-      "cpu_time": 817459,
+      "iterations": 5306,
+      "real_time": 794360,
+      "cpu_time": 794356,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/8M_stddev",
       "iterations": 0,
-      "real_time": 2479,
-      "cpu_time": 2481,
+      "real_time": 3615,
+      "cpu_time": 3615,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/16M",
-      "iterations": 2659,
-      "real_time": 1590922,
-      "cpu_time": 1590881,
+      "iterations": 2627,
+      "real_time": 1601574,
+      "cpu_time": 1601565,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/16M",
-      "iterations": 2659,
-      "real_time": 1579436,
-      "cpu_time": 1579385,
+      "iterations": 2627,
+      "real_time": 1597766,
+      "cpu_time": 1597759,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/16M",
-      "iterations": 2659,
-      "real_time": 1579687,
-      "cpu_time": 1579656,
+      "iterations": 2627,
+      "real_time": 1597824,
+      "cpu_time": 1597817,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/16M",
-      "iterations": 2659,
-      "real_time": 1579471,
-      "cpu_time": 1579442,
+      "iterations": 2627,
+      "real_time": 1597708,
+      "cpu_time": 1597700,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/16M",
-      "iterations": 2659,
-      "real_time": 1581884,
-      "cpu_time": 1581844,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/16M",
-      "iterations": 2659,
-      "real_time": 1582335,
-      "cpu_time": 1582294,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/16M",
-      "iterations": 2659,
-      "real_time": 1585569,
-      "cpu_time": 1585520,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_blob/16M",
-      "iterations": 2659,
-      "real_time": 1580360,
-      "cpu_time": 1580289,
+      "iterations": 2627,
+      "real_time": 1597382,
+      "cpu_time": 1597372,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/16M_mean",
-      "iterations": 2659,
-      "real_time": 1582458,
-      "cpu_time": 1582414,
+      "iterations": 2627,
+      "real_time": 1598451,
+      "cpu_time": 1598442,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_blob/16M_stddev",
       "iterations": 0,
-      "real_time": 3738,
-      "cpu_time": 3739,
+      "real_time": 1569,
+      "cpu_time": 1569,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/1024",
-      "iterations": 727142,
-      "real_time": 24143,
-      "cpu_time": 5620,
+      "iterations": 779176,
+      "real_time": 23377,
+      "cpu_time": 5245,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/1024",
-      "iterations": 727142,
-      "real_time": 24044,
-      "cpu_time": 5593,
+      "iterations": 779176,
+      "real_time": 23849,
+      "cpu_time": 5409,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/1024",
-      "iterations": 727142,
-      "real_time": 23752,
-      "cpu_time": 5387,
+      "iterations": 779176,
+      "real_time": 23653,
+      "cpu_time": 5294,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/1024",
-      "iterations": 727142,
-      "real_time": 24077,
-      "cpu_time": 5637,
+      "iterations": 779176,
+      "real_time": 23483,
+      "cpu_time": 5306,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/1024",
-      "iterations": 727142,
-      "real_time": 27869,
-      "cpu_time": 6219,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/1024",
-      "iterations": 727142,
-      "real_time": 24061,
-      "cpu_time": 5582,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/1024",
-      "iterations": 727142,
-      "real_time": 23721,
-      "cpu_time": 5465,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/1024",
-      "iterations": 727142,
-      "real_time": 23880,
-      "cpu_time": 5506,
+      "iterations": 779176,
+      "real_time": 23679,
+      "cpu_time": 5344,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/1024_mean",
-      "iterations": 727142,
-      "real_time": 24444,
-      "cpu_time": 5626,
+      "iterations": 779176,
+      "real_time": 23608,
+      "cpu_time": 5320,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/1024_stddev",
       "iterations": 0,
-      "real_time": 1303,
-      "cpu_time": 238,
+      "real_time": 164,
+      "cpu_time": 55,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/2k",
-      "iterations": 726207,
-      "real_time": 25191,
-      "cpu_time": 5869,
+      "iterations": 787585,
+      "real_time": 24003,
+      "cpu_time": 5376,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/2k",
-      "iterations": 726207,
-      "real_time": 24842,
-      "cpu_time": 5731,
+      "iterations": 787585,
+      "real_time": 24623,
+      "cpu_time": 5559,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/2k",
-      "iterations": 726207,
-      "real_time": 24946,
-      "cpu_time": 5824,
+      "iterations": 787585,
+      "real_time": 24053,
+      "cpu_time": 5345,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/2k",
-      "iterations": 726207,
-      "real_time": 25078,
-      "cpu_time": 5725,
+      "iterations": 787585,
+      "real_time": 24414,
+      "cpu_time": 5431,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/2k",
-      "iterations": 726207,
-      "real_time": 25178,
-      "cpu_time": 5906,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/2k",
-      "iterations": 726207,
-      "real_time": 25058,
-      "cpu_time": 5785,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/2k",
-      "iterations": 726207,
-      "real_time": 24625,
-      "cpu_time": 5605,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/2k",
-      "iterations": 726207,
-      "real_time": 24758,
-      "cpu_time": 5684,
+      "iterations": 787585,
+      "real_time": 24300,
+      "cpu_time": 5429,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/2k_mean",
-      "iterations": 726207,
-      "real_time": 24959,
-      "cpu_time": 5766,
+      "iterations": 787585,
+      "real_time": 24278,
+      "cpu_time": 5428,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/2k_stddev",
       "iterations": 0,
-      "real_time": 191,
-      "cpu_time": 93,
+      "real_time": 230,
+      "cpu_time": 73,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/4k",
-      "iterations": 702504,
-      "real_time": 25901,
-      "cpu_time": 6116,
+      "iterations": 740224,
+      "real_time": 24937,
+      "cpu_time": 5590,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/4k",
-      "iterations": 702504,
-      "real_time": 26252,
-      "cpu_time": 6149,
+      "iterations": 740224,
+      "real_time": 25362,
+      "cpu_time": 5689,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/4k",
-      "iterations": 702504,
-      "real_time": 25585,
-      "cpu_time": 5965,
+      "iterations": 740224,
+      "real_time": 25012,
+      "cpu_time": 5567,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/4k",
-      "iterations": 702504,
-      "real_time": 26141,
-      "cpu_time": 6155,
+      "iterations": 740224,
+      "real_time": 29460,
+      "cpu_time": 6403,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/4k",
-      "iterations": 702504,
-      "real_time": 25940,
-      "cpu_time": 6050,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/4k",
-      "iterations": 702504,
-      "real_time": 26448,
-      "cpu_time": 6150,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/4k",
-      "iterations": 702504,
-      "real_time": 26113,
-      "cpu_time": 6105,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/4k",
-      "iterations": 702504,
-      "real_time": 25764,
-      "cpu_time": 5996,
+      "iterations": 740224,
+      "real_time": 25481,
+      "cpu_time": 5684,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/4k_mean",
-      "iterations": 702504,
-      "real_time": 26018,
-      "cpu_time": 6086,
+      "iterations": 740224,
+      "real_time": 26050,
+      "cpu_time": 5787,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/4k_stddev",
       "iterations": 0,
-      "real_time": 259,
-      "cpu_time": 69,
+      "real_time": 1717,
+      "cpu_time": 312,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/8k",
-      "iterations": 670608,
-      "real_time": 27779,
-      "cpu_time": 6318,
+      "iterations": 701979,
+      "real_time": 26966,
+      "cpu_time": 5861,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/8k",
-      "iterations": 670608,
-      "real_time": 28469,
-      "cpu_time": 6502,
+      "iterations": 701979,
+      "real_time": 26950,
+      "cpu_time": 5951,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/8k",
-      "iterations": 670608,
-      "real_time": 27729,
-      "cpu_time": 6285,
+      "iterations": 701979,
+      "real_time": 26954,
+      "cpu_time": 5893,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/8k",
-      "iterations": 670608,
-      "real_time": 27959,
-      "cpu_time": 6271,
+      "iterations": 701979,
+      "real_time": 26577,
+      "cpu_time": 5716,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/8k",
-      "iterations": 670608,
-      "real_time": 27843,
-      "cpu_time": 6301,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/8k",
-      "iterations": 670608,
-      "real_time": 27650,
-      "cpu_time": 6238,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/8k",
-      "iterations": 670608,
-      "real_time": 28177,
-      "cpu_time": 6370,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/8k",
-      "iterations": 670608,
-      "real_time": 27712,
-      "cpu_time": 6317,
+      "iterations": 701979,
+      "real_time": 27085,
+      "cpu_time": 5896,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/8k_mean",
-      "iterations": 670608,
-      "real_time": 27915,
-      "cpu_time": 6325,
+      "iterations": 701979,
+      "real_time": 26906,
+      "cpu_time": 5863,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/8k_stddev",
       "iterations": 0,
-      "real_time": 262,
-      "cpu_time": 76,
+      "real_time": 172,
+      "cpu_time": 79,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/16k",
-      "iterations": 565275,
-      "real_time": 33218,
-      "cpu_time": 7564,
+      "iterations": 586667,
+      "real_time": 32131,
+      "cpu_time": 7433,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/16k",
-      "iterations": 565275,
-      "real_time": 33104,
-      "cpu_time": 7457,
+      "iterations": 586667,
+      "real_time": 32433,
+      "cpu_time": 7345,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/16k",
-      "iterations": 565275,
-      "real_time": 33118,
-      "cpu_time": 7648,
+      "iterations": 586667,
+      "real_time": 32023,
+      "cpu_time": 7156,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/16k",
-      "iterations": 565275,
-      "real_time": 33012,
-      "cpu_time": 7514,
+      "iterations": 586667,
+      "real_time": 32121,
+      "cpu_time": 7255,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/16k",
-      "iterations": 565275,
-      "real_time": 32823,
-      "cpu_time": 7471,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/16k",
-      "iterations": 565275,
-      "real_time": 32778,
-      "cpu_time": 7473,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/16k",
-      "iterations": 565275,
-      "real_time": 33104,
-      "cpu_time": 7550,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/16k",
-      "iterations": 565275,
-      "real_time": 32477,
-      "cpu_time": 7407,
+      "iterations": 586667,
+      "real_time": 31975,
+      "cpu_time": 7321,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/16k_mean",
-      "iterations": 565275,
-      "real_time": 32954,
-      "cpu_time": 7510,
+      "iterations": 586667,
+      "real_time": 32137,
+      "cpu_time": 7302,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/16k_stddev",
       "iterations": 0,
-      "real_time": 229,
-      "cpu_time": 71,
+      "real_time": 159,
+      "cpu_time": 93,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/32k",
-      "iterations": 441517,
-      "real_time": 44680,
-      "cpu_time": 9627,
+      "iterations": 448427,
+      "real_time": 42518,
+      "cpu_time": 9009,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/32k",
-      "iterations": 441517,
-      "real_time": 44442,
-      "cpu_time": 9238,
+      "iterations": 448427,
+      "real_time": 42032,
+      "cpu_time": 8889,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/32k",
-      "iterations": 441517,
-      "real_time": 44882,
-      "cpu_time": 9581,
+      "iterations": 448427,
+      "real_time": 42968,
+      "cpu_time": 8999,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/32k",
-      "iterations": 441517,
-      "real_time": 43776,
-      "cpu_time": 9216,
+      "iterations": 448427,
+      "real_time": 43176,
+      "cpu_time": 9129,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/32k",
-      "iterations": 441517,
-      "real_time": 44582,
-      "cpu_time": 9312,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/32k",
-      "iterations": 441517,
-      "real_time": 44339,
-      "cpu_time": 9320,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/32k",
-      "iterations": 441517,
-      "real_time": 44859,
-      "cpu_time": 9598,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/32k",
-      "iterations": 441517,
-      "real_time": 43815,
-      "cpu_time": 9272,
+      "iterations": 448427,
+      "real_time": 43239,
+      "cpu_time": 9210,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/32k_mean",
-      "iterations": 441517,
-      "real_time": 44422,
-      "cpu_time": 9396,
+      "iterations": 448427,
+      "real_time": 42787,
+      "cpu_time": 9047,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/32k_stddev",
       "iterations": 0,
-      "real_time": 401,
-      "cpu_time": 163,
+      "real_time": 454,
+      "cpu_time": 111,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/64k",
-      "iterations": 383784,
-      "real_time": 61850,
-      "cpu_time": 11295,
+      "iterations": 371410,
+      "real_time": 61110,
+      "cpu_time": 11070,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/64k",
-      "iterations": 383784,
-      "real_time": 61654,
+      "iterations": 371410,
+      "real_time": 62130,
       "cpu_time": 11262,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/64k",
-      "iterations": 383784,
-      "real_time": 61608,
-      "cpu_time": 11242,
+      "iterations": 371410,
+      "real_time": 61971,
+      "cpu_time": 11270,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/64k",
-      "iterations": 383784,
-      "real_time": 60646,
-      "cpu_time": 11049,
+      "iterations": 371410,
+      "real_time": 61277,
+      "cpu_time": 11150,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/64k",
-      "iterations": 383784,
-      "real_time": 61320,
-      "cpu_time": 11181,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/64k",
-      "iterations": 383784,
-      "real_time": 61886,
-      "cpu_time": 11397,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/64k",
-      "iterations": 383784,
-      "real_time": 61474,
-      "cpu_time": 11317,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/64k",
-      "iterations": 383784,
-      "real_time": 61576,
-      "cpu_time": 11211,
+      "iterations": 371410,
+      "real_time": 60974,
+      "cpu_time": 10911,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/64k_mean",
-      "iterations": 383784,
-      "real_time": 61502,
-      "cpu_time": 11244,
+      "iterations": 371410,
+      "real_time": 61492,
+      "cpu_time": 11133,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/64k_stddev",
       "iterations": 0,
-      "real_time": 367,
-      "cpu_time": 97,
+      "real_time": 469,
+      "cpu_time": 133,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/128k",
-      "iterations": 286705,
-      "real_time": 87998,
-      "cpu_time": 14634,
+      "iterations": 288963,
+      "real_time": 87760,
+      "cpu_time": 14472,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/128k",
-      "iterations": 286705,
-      "real_time": 87638,
-      "cpu_time": 14481,
+      "iterations": 288963,
+      "real_time": 86482,
+      "cpu_time": 14133,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/128k",
-      "iterations": 286705,
-      "real_time": 87586,
-      "cpu_time": 14512,
+      "iterations": 288963,
+      "real_time": 87035,
+      "cpu_time": 14269,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/128k",
-      "iterations": 286705,
-      "real_time": 88170,
-      "cpu_time": 14542,
+      "iterations": 288963,
+      "real_time": 86671,
+      "cpu_time": 14265,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/128k",
-      "iterations": 286705,
-      "real_time": 87436,
-      "cpu_time": 14484,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/128k",
-      "iterations": 286705,
-      "real_time": 87014,
-      "cpu_time": 14400,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/128k",
-      "iterations": 286705,
-      "real_time": 88263,
-      "cpu_time": 14635,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/128k",
-      "iterations": 286705,
-      "real_time": 86898,
-      "cpu_time": 14397,
+      "iterations": 288963,
+      "real_time": 87574,
+      "cpu_time": 14408,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/128k_mean",
-      "iterations": 286705,
-      "real_time": 87625,
-      "cpu_time": 14511,
+      "iterations": 288963,
+      "real_time": 87105,
+      "cpu_time": 14309,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/128k_stddev",
       "iterations": 0,
-      "real_time": 472,
-      "cpu_time": 85,
+      "real_time": 496,
+      "cpu_time": 119,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/256k",
-      "iterations": 86973,
-      "real_time": 620908,
-      "cpu_time": 45180,
+      "iterations": 100000,
+      "real_time": 598471,
+      "cpu_time": 45667,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/256k",
-      "iterations": 86973,
-      "real_time": 912570,
-      "cpu_time": 62626,
+      "iterations": 100000,
+      "real_time": 829981,
+      "cpu_time": 58109,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/256k",
-      "iterations": 86973,
-      "real_time": 910384,
-      "cpu_time": 61164,
+      "iterations": 100000,
+      "real_time": 452159,
+      "cpu_time": 36919,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/256k",
-      "iterations": 86973,
-      "real_time": 823809,
-      "cpu_time": 58842,
+      "iterations": 100000,
+      "real_time": 527324,
+      "cpu_time": 42357,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/256k",
-      "iterations": 86973,
-      "real_time": 904899,
-      "cpu_time": 62315,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/256k",
-      "iterations": 86973,
-      "real_time": 798079,
-      "cpu_time": 57780,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/256k",
-      "iterations": 86973,
-      "real_time": 842256,
-      "cpu_time": 59084,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/256k",
-      "iterations": 86973,
-      "real_time": 788854,
-      "cpu_time": 55987,
+      "iterations": 100000,
+      "real_time": 558854,
+      "cpu_time": 44959,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/256k_mean",
-      "iterations": 86973,
-      "real_time": 825220,
-      "cpu_time": 57872,
+      "iterations": 100000,
+      "real_time": 593358,
+      "cpu_time": 45602,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/256k_stddev",
       "iterations": 0,
-      "real_time": 90365,
-      "cpu_time": 5247,
+      "real_time": 127675,
+      "cpu_time": 6968,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/512k",
       "iterations": 10000,
-      "real_time": 3139994,
-      "cpu_time": 155937,
+      "real_time": 2653963,
+      "cpu_time": 164523,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/512k",
       "iterations": 10000,
-      "real_time": 3780004,
-      "cpu_time": 188056,
+      "real_time": 1662179,
+      "cpu_time": 113977,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/512k",
       "iterations": 10000,
-      "real_time": 2696726,
-      "cpu_time": 150446,
+      "real_time": 3184897,
+      "cpu_time": 172466,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/512k",
       "iterations": 10000,
-      "real_time": 2515635,
-      "cpu_time": 134419,
+      "real_time": 2914955,
+      "cpu_time": 172347,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/512k",
       "iterations": 10000,
-      "real_time": 3252234,
-      "cpu_time": 153576,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/512k",
-      "iterations": 10000,
-      "real_time": 2000111,
-      "cpu_time": 122629,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/512k",
-      "iterations": 10000,
-      "real_time": 3277439,
-      "cpu_time": 183201,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/512k",
-      "iterations": 10000,
-      "real_time": 3325194,
-      "cpu_time": 181485,
+      "real_time": 1591055,
+      "cpu_time": 104502,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/512k_mean",
       "iterations": 10000,
-      "real_time": 2998417,
-      "cpu_time": 158719,
+      "real_time": 2401410,
+      "cpu_time": 145563,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/512k_stddev",
       "iterations": 0,
-      "real_time": 524487,
-      "cpu_time": 22288,
+      "real_time": 654905,
+      "cpu_time": 29948,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/1024k",
       "iterations": 10000,
-      "real_time": 4022082,
-      "cpu_time": 234695,
+      "real_time": 2619742,
+      "cpu_time": 182326,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/1024k",
       "iterations": 10000,
-      "real_time": 2315136,
-      "cpu_time": 170865,
+      "real_time": 2309281,
+      "cpu_time": 165470,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/1024k",
       "iterations": 10000,
-      "real_time": 3070579,
-      "cpu_time": 258240,
+      "real_time": 2435503,
+      "cpu_time": 175096,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/1024k",
       "iterations": 10000,
-      "real_time": 3102980,
-      "cpu_time": 204688,
+      "real_time": 2999998,
+      "cpu_time": 199734,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/1024k",
       "iterations": 10000,
-      "real_time": 2949204,
-      "cpu_time": 193638,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/1024k",
-      "iterations": 10000,
-      "real_time": 2578290,
-      "cpu_time": 179806,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/1024k",
-      "iterations": 10000,
-      "real_time": 3185797,
-      "cpu_time": 204648,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/1024k",
-      "iterations": 10000,
-      "real_time": 2826032,
-      "cpu_time": 191432,
+      "real_time": 2072165,
+      "cpu_time": 162032,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/1024k_mean",
       "iterations": 10000,
-      "real_time": 3006263,
-      "cpu_time": 204751,
+      "real_time": 2487338,
+      "cpu_time": 176932,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/1024k_stddev",
       "iterations": 0,
-      "real_time": 470926,
-      "cpu_time": 26993,
+      "real_time": 312125,
+      "cpu_time": 13459,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/2M",
       "iterations": 10000,
-      "real_time": 2039083,
-      "cpu_time": 272102,
+      "real_time": 2044997,
+      "cpu_time": 278966,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/2M",
       "iterations": 10000,
-      "real_time": 2313694,
-      "cpu_time": 286406,
+      "real_time": 2072004,
+      "cpu_time": 289368,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/2M",
       "iterations": 10000,
-      "real_time": 2127247,
-      "cpu_time": 275423,
+      "real_time": 2064773,
+      "cpu_time": 278316,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/2M",
       "iterations": 10000,
-      "real_time": 2197449,
-      "cpu_time": 283311,
+      "real_time": 2185705,
+      "cpu_time": 283270,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/2M",
       "iterations": 10000,
-      "real_time": 2079392,
-      "cpu_time": 273403,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/2M",
-      "iterations": 10000,
-      "real_time": 2275641,
-      "cpu_time": 297165,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/2M",
-      "iterations": 10000,
-      "real_time": 2035437,
-      "cpu_time": 270435,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/2M",
-      "iterations": 10000,
-      "real_time": 2244750,
-      "cpu_time": 279542,
+      "real_time": 2027425,
+      "cpu_time": 282887,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/2M_mean",
       "iterations": 10000,
-      "real_time": 2164087,
-      "cpu_time": 279723,
+      "real_time": 2078981,
+      "cpu_time": 282561,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/2M_stddev",
       "iterations": 0,
-      "real_time": 101952,
-      "cpu_time": 8401,
+      "real_time": 55594,
+      "cpu_time": 3947,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/4M",
-      "iterations": 6523,
-      "real_time": 4057063,
-      "cpu_time": 628595,
+      "iterations": 6569,
+      "real_time": 4015463,
+      "cpu_time": 648950,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/4M",
-      "iterations": 6523,
-      "real_time": 4031122,
-      "cpu_time": 627699,
+      "iterations": 6569,
+      "real_time": 4040873,
+      "cpu_time": 639919,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/4M",
-      "iterations": 6523,
-      "real_time": 4075342,
-      "cpu_time": 635250,
+      "iterations": 6569,
+      "real_time": 4033313,
+      "cpu_time": 651461,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/4M",
-      "iterations": 6523,
-      "real_time": 4051515,
-      "cpu_time": 628783,
+      "iterations": 6569,
+      "real_time": 4001456,
+      "cpu_time": 641297,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/4M",
-      "iterations": 6523,
-      "real_time": 4045349,
-      "cpu_time": 628179,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/4M",
-      "iterations": 6523,
-      "real_time": 4049230,
-      "cpu_time": 626118,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/4M",
-      "iterations": 6523,
-      "real_time": 4065696,
-      "cpu_time": 629659,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/4M",
-      "iterations": 6523,
-      "real_time": 4082104,
-      "cpu_time": 632407,
+      "iterations": 6569,
+      "real_time": 4013254,
+      "cpu_time": 627882,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/4M_mean",
-      "iterations": 6523,
-      "real_time": 4057178,
-      "cpu_time": 629586,
+      "iterations": 6569,
+      "real_time": 4020872,
+      "cpu_time": 641902,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/4M_stddev",
       "iterations": 0,
-      "real_time": 15564,
-      "cpu_time": 2721,
+      "real_time": 14277,
+      "cpu_time": 8269,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/8M",
-      "iterations": 4747,
-      "real_time": 11559149,
-      "cpu_time": 893727,
+      "iterations": 4703,
+      "real_time": 11513800,
+      "cpu_time": 895799,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/8M",
-      "iterations": 4747,
-      "real_time": 11569304,
-      "cpu_time": 895054,
+      "iterations": 4703,
+      "real_time": 11556136,
+      "cpu_time": 892894,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/8M",
-      "iterations": 4747,
-      "real_time": 11597138,
-      "cpu_time": 895259,
+      "iterations": 4703,
+      "real_time": 11539976,
+      "cpu_time": 899931,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/8M",
-      "iterations": 4747,
-      "real_time": 11558685,
-      "cpu_time": 893288,
+      "iterations": 4703,
+      "real_time": 11605495,
+      "cpu_time": 890728,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/8M",
-      "iterations": 4747,
-      "real_time": 11576418,
-      "cpu_time": 893053,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/8M",
-      "iterations": 4747,
-      "real_time": 11637047,
-      "cpu_time": 892308,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/8M",
-      "iterations": 4747,
-      "real_time": 10572041,
-      "cpu_time": 882905,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/8M",
-      "iterations": 4747,
-      "real_time": 11524492,
-      "cpu_time": 894925,
+      "iterations": 4703,
+      "real_time": 11571958,
+      "cpu_time": 894411,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/8M_mean",
-      "iterations": 4747,
-      "real_time": 11449284,
-      "cpu_time": 892565,
+      "iterations": 4703,
+      "real_time": 11557473,
+      "cpu_time": 894753,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/8M_stddev",
       "iterations": 0,
-      "real_time": 332967,
-      "cpu_time": 3784,
+      "real_time": 30761,
+      "cpu_time": 3088,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/16M",
       "iterations": 1000,
-      "real_time": 16766640,
-      "cpu_time": 1670838,
+      "real_time": 16377136,
+      "cpu_time": 1675660,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/16M",
       "iterations": 1000,
-      "real_time": 16548888,
-      "cpu_time": 1643839,
+      "real_time": 16439608,
+      "cpu_time": 1686292,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/16M",
       "iterations": 1000,
-      "real_time": 16686214,
-      "cpu_time": 1661496,
+      "real_time": 16582176,
+      "cpu_time": 1700143,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/16M",
       "iterations": 1000,
-      "real_time": 16469338,
-      "cpu_time": 1641942,
+      "real_time": 16589563,
+      "cpu_time": 1711853,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/16M",
       "iterations": 1000,
-      "real_time": 16471745,
-      "cpu_time": 1644775,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/16M",
-      "iterations": 1000,
-      "real_time": 16511109,
-      "cpu_time": 1638700,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/16M",
-      "iterations": 1000,
-      "real_time": 16526678,
-      "cpu_time": 1648735,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_blob/16M",
-      "iterations": 1000,
-      "real_time": 16478282,
-      "cpu_time": 1641711,
+      "real_time": 16423845,
+      "cpu_time": 1687037,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/16M_mean",
       "iterations": 1000,
-      "real_time": 16557362,
-      "cpu_time": 1649004,
+      "real_time": 16482465,
+      "cpu_time": 1692197,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_blob/16M_stddev",
       "iterations": 0,
-      "real_time": 103008,
-      "cpu_time": 10528,
+      "real_time": 86924,
+      "cpu_time": 12526,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/1024",
-      "iterations": 114266,
-      "real_time": 36666,
-      "cpu_time": 36664,
+      "iterations": 110662,
+      "real_time": 37657,
+      "cpu_time": 37655,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/1024",
-      "iterations": 114266,
-      "real_time": 36675,
-      "cpu_time": 36673,
+      "iterations": 110662,
+      "real_time": 38089,
+      "cpu_time": 38086,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/1024",
-      "iterations": 114266,
-      "real_time": 36514,
-      "cpu_time": 36511,
+      "iterations": 110662,
+      "real_time": 37738,
+      "cpu_time": 37736,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/1024",
-      "iterations": 114266,
-      "real_time": 36472,
-      "cpu_time": 36470,
+      "iterations": 110662,
+      "real_time": 37794,
+      "cpu_time": 37792,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/1024",
-      "iterations": 114266,
-      "real_time": 36491,
-      "cpu_time": 36489,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/1024",
-      "iterations": 114266,
-      "real_time": 36742,
-      "cpu_time": 36740,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/1024",
-      "iterations": 114266,
-      "real_time": 36396,
-      "cpu_time": 36394,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/1024",
-      "iterations": 114266,
-      "real_time": 36705,
-      "cpu_time": 36703,
+      "iterations": 110662,
+      "real_time": 37677,
+      "cpu_time": 37675,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/1024_mean",
-      "iterations": 114266,
-      "real_time": 36583,
-      "cpu_time": 36581,
+      "iterations": 110662,
+      "real_time": 37791,
+      "cpu_time": 37789,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/1024_stddev",
       "iterations": 0,
-      "real_time": 120,
-      "cpu_time": 120,
+      "real_time": 156,
+      "cpu_time": 156,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/2k",
-      "iterations": 113244,
-      "real_time": 36834,
-      "cpu_time": 36831,
+      "iterations": 109734,
+      "real_time": 38018,
+      "cpu_time": 38016,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/2k",
-      "iterations": 113244,
-      "real_time": 36992,
-      "cpu_time": 36989,
+      "iterations": 109734,
+      "real_time": 38184,
+      "cpu_time": 38182,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/2k",
-      "iterations": 113244,
-      "real_time": 36858,
-      "cpu_time": 36856,
+      "iterations": 109734,
+      "real_time": 37916,
+      "cpu_time": 37914,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/2k",
-      "iterations": 113244,
-      "real_time": 36808,
-      "cpu_time": 36806,
+      "iterations": 109734,
+      "real_time": 37880,
+      "cpu_time": 37878,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/2k",
-      "iterations": 113244,
-      "real_time": 36858,
-      "cpu_time": 36856,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/2k",
-      "iterations": 113244,
-      "real_time": 36922,
-      "cpu_time": 36920,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/2k",
-      "iterations": 113244,
-      "real_time": 36886,
-      "cpu_time": 36885,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/2k",
-      "iterations": 113244,
-      "real_time": 36928,
-      "cpu_time": 36926,
+      "iterations": 109734,
+      "real_time": 38088,
+      "cpu_time": 38086,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/2k_mean",
-      "iterations": 113244,
-      "real_time": 36886,
-      "cpu_time": 36884,
+      "iterations": 109734,
+      "real_time": 38017,
+      "cpu_time": 38015,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/2k_stddev",
       "iterations": 0,
-      "real_time": 55,
-      "cpu_time": 55,
+      "real_time": 111,
+      "cpu_time": 111,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/4k",
-      "iterations": 111866,
-      "real_time": 37419,
-      "cpu_time": 37413,
+      "iterations": 108490,
+      "real_time": 38292,
+      "cpu_time": 38290,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/4k",
-      "iterations": 111866,
-      "real_time": 36707,
-      "cpu_time": 36705,
+      "iterations": 108490,
+      "real_time": 38355,
+      "cpu_time": 38353,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/4k",
-      "iterations": 111866,
-      "real_time": 37050,
-      "cpu_time": 37048,
+      "iterations": 108490,
+      "real_time": 38310,
+      "cpu_time": 38307,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/4k",
-      "iterations": 111866,
-      "real_time": 37138,
-      "cpu_time": 37136,
+      "iterations": 108490,
+      "real_time": 38499,
+      "cpu_time": 38496,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/4k",
-      "iterations": 111866,
-      "real_time": 37103,
-      "cpu_time": 37101,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/4k",
-      "iterations": 111866,
-      "real_time": 37347,
-      "cpu_time": 37345,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/4k",
-      "iterations": 111866,
-      "real_time": 37077,
-      "cpu_time": 37076,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/4k",
-      "iterations": 111866,
-      "real_time": 37150,
-      "cpu_time": 37146,
+      "iterations": 108490,
+      "real_time": 38398,
+      "cpu_time": 38396,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/4k_mean",
-      "iterations": 111866,
-      "real_time": 37124,
-      "cpu_time": 37121,
+      "iterations": 108490,
+      "real_time": 38371,
+      "cpu_time": 38369,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/4k_stddev",
       "iterations": 0,
-      "real_time": 200,
-      "cpu_time": 199,
+      "real_time": 74,
+      "cpu_time": 74,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/8k",
-      "iterations": 99289,
-      "real_time": 42255,
-      "cpu_time": 42253,
+      "iterations": 96887,
+      "real_time": 43620,
+      "cpu_time": 43618,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/8k",
-      "iterations": 99289,
-      "real_time": 42193,
-      "cpu_time": 42191,
+      "iterations": 96887,
+      "real_time": 43298,
+      "cpu_time": 43296,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/8k",
-      "iterations": 99289,
-      "real_time": 42392,
-      "cpu_time": 42390,
+      "iterations": 96887,
+      "real_time": 43349,
+      "cpu_time": 43346,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/8k",
-      "iterations": 99289,
-      "real_time": 42435,
-      "cpu_time": 42433,
+      "iterations": 96887,
+      "real_time": 43418,
+      "cpu_time": 43416,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/8k",
-      "iterations": 99289,
-      "real_time": 42329,
-      "cpu_time": 42327,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/8k",
-      "iterations": 99289,
-      "real_time": 42069,
-      "cpu_time": 42066,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/8k",
-      "iterations": 99289,
-      "real_time": 42133,
-      "cpu_time": 42129,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/8k",
-      "iterations": 99289,
-      "real_time": 42059,
-      "cpu_time": 42057,
+      "iterations": 96887,
+      "real_time": 43277,
+      "cpu_time": 43275,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/8k_mean",
-      "iterations": 99289,
-      "real_time": 42233,
-      "cpu_time": 42231,
+      "iterations": 96887,
+      "real_time": 43392,
+      "cpu_time": 43390,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/8k_stddev",
       "iterations": 0,
-      "real_time": 134,
-      "cpu_time": 134,
+      "real_time": 124,
+      "cpu_time": 124,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/16k",
-      "iterations": 95239,
-      "real_time": 44109,
-      "cpu_time": 44105,
+      "iterations": 93612,
+      "real_time": 45256,
+      "cpu_time": 45254,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/16k",
-      "iterations": 95239,
-      "real_time": 43909,
-      "cpu_time": 43906,
+      "iterations": 93612,
+      "real_time": 45027,
+      "cpu_time": 45024,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/16k",
-      "iterations": 95239,
-      "real_time": 44175,
-      "cpu_time": 44172,
+      "iterations": 93612,
+      "real_time": 45162,
+      "cpu_time": 45159,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/16k",
-      "iterations": 95239,
-      "real_time": 43998,
-      "cpu_time": 43994,
+      "iterations": 93612,
+      "real_time": 45084,
+      "cpu_time": 45082,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/16k",
-      "iterations": 95239,
-      "real_time": 44109,
-      "cpu_time": 44106,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/16k",
-      "iterations": 95239,
-      "real_time": 44182,
-      "cpu_time": 44177,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/16k",
-      "iterations": 95239,
-      "real_time": 43850,
-      "cpu_time": 43846,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/16k",
-      "iterations": 95239,
-      "real_time": 44022,
-      "cpu_time": 44019,
+      "iterations": 93612,
+      "real_time": 44992,
+      "cpu_time": 44990,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/16k_mean",
-      "iterations": 95239,
-      "real_time": 44044,
-      "cpu_time": 44041,
+      "iterations": 93612,
+      "real_time": 45104,
+      "cpu_time": 45102,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/16k_stddev",
       "iterations": 0,
-      "real_time": 114,
-      "cpu_time": 113,
+      "real_time": 95,
+      "cpu_time": 95,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/32k",
-      "iterations": 87359,
-      "real_time": 48012,
-      "cpu_time": 48009,
+      "iterations": 85319,
+      "real_time": 49244,
+      "cpu_time": 49241,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/32k",
-      "iterations": 87359,
-      "real_time": 48139,
-      "cpu_time": 48136,
+      "iterations": 85319,
+      "real_time": 49399,
+      "cpu_time": 49396,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/32k",
-      "iterations": 87359,
-      "real_time": 47888,
-      "cpu_time": 47885,
+      "iterations": 85319,
+      "real_time": 49306,
+      "cpu_time": 49303,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/32k",
-      "iterations": 87359,
-      "real_time": 48380,
-      "cpu_time": 48377,
+      "iterations": 85319,
+      "real_time": 49256,
+      "cpu_time": 49254,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/32k",
-      "iterations": 87359,
-      "real_time": 48158,
-      "cpu_time": 48155,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/32k",
-      "iterations": 87359,
-      "real_time": 48005,
-      "cpu_time": 48002,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/32k",
-      "iterations": 87359,
-      "real_time": 47960,
-      "cpu_time": 47957,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/32k",
-      "iterations": 87359,
-      "real_time": 48171,
-      "cpu_time": 48168,
+      "iterations": 85319,
+      "real_time": 49510,
+      "cpu_time": 49508,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/32k_mean",
-      "iterations": 87359,
-      "real_time": 48089,
-      "cpu_time": 48086,
+      "iterations": 85319,
+      "real_time": 49343,
+      "cpu_time": 49340,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/32k_stddev",
       "iterations": 0,
-      "real_time": 145,
-      "cpu_time": 145,
+      "real_time": 100,
+      "cpu_time": 100,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/64k",
-      "iterations": 70774,
-      "real_time": 59510,
-      "cpu_time": 59506,
+      "iterations": 68801,
+      "real_time": 60630,
+      "cpu_time": 60626,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/64k",
-      "iterations": 70774,
-      "real_time": 59051,
-      "cpu_time": 59047,
+      "iterations": 68801,
+      "real_time": 60790,
+      "cpu_time": 60786,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/64k",
-      "iterations": 70774,
-      "real_time": 59324,
-      "cpu_time": 59319,
+      "iterations": 68801,
+      "real_time": 60741,
+      "cpu_time": 60737,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/64k",
-      "iterations": 70774,
-      "real_time": 59583,
-      "cpu_time": 59578,
+      "iterations": 68801,
+      "real_time": 60817,
+      "cpu_time": 60813,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/64k",
-      "iterations": 70774,
-      "real_time": 59322,
-      "cpu_time": 59317,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/64k",
-      "iterations": 70774,
-      "real_time": 59342,
-      "cpu_time": 59338,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/64k",
-      "iterations": 70774,
-      "real_time": 59403,
-      "cpu_time": 59399,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/64k",
-      "iterations": 70774,
-      "real_time": 59553,
-      "cpu_time": 59549,
+      "iterations": 68801,
+      "real_time": 60518,
+      "cpu_time": 60514,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/64k_mean",
-      "iterations": 70774,
-      "real_time": 59386,
-      "cpu_time": 59381,
+      "iterations": 68801,
+      "real_time": 60699,
+      "cpu_time": 60695,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/64k_stddev",
       "iterations": 0,
-      "real_time": 160,
-      "cpu_time": 160,
+      "real_time": 111,
+      "cpu_time": 111,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/128k",
-      "iterations": 56146,
-      "real_time": 74837,
-      "cpu_time": 74831,
+      "iterations": 54924,
+      "real_time": 76368,
+      "cpu_time": 76363,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/128k",
-      "iterations": 56146,
-      "real_time": 75028,
-      "cpu_time": 75022,
+      "iterations": 54924,
+      "real_time": 77007,
+      "cpu_time": 77003,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/128k",
-      "iterations": 56146,
-      "real_time": 75174,
-      "cpu_time": 75168,
+      "iterations": 54924,
+      "real_time": 76332,
+      "cpu_time": 76328,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/128k",
-      "iterations": 56146,
-      "real_time": 74721,
-      "cpu_time": 74716,
+      "iterations": 54924,
+      "real_time": 76267,
+      "cpu_time": 76262,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/128k",
-      "iterations": 56146,
-      "real_time": 74766,
-      "cpu_time": 74760,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/128k",
-      "iterations": 56146,
-      "real_time": 74723,
-      "cpu_time": 74719,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/128k",
-      "iterations": 56146,
-      "real_time": 74872,
-      "cpu_time": 74866,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/128k",
-      "iterations": 56146,
-      "real_time": 74789,
-      "cpu_time": 74785,
+      "iterations": 54924,
+      "real_time": 76317,
+      "cpu_time": 76312,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/128k_mean",
-      "iterations": 56146,
-      "real_time": 74864,
-      "cpu_time": 74858,
+      "iterations": 54924,
+      "real_time": 76458,
+      "cpu_time": 76454,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/128k_stddev",
       "iterations": 0,
-      "real_time": 150,
-      "cpu_time": 149,
+      "real_time": 276,
+      "cpu_time": 276,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/256k",
-      "iterations": 38984,
-      "real_time": 107868,
-      "cpu_time": 107860,
+      "iterations": 38558,
+      "real_time": 109259,
+      "cpu_time": 109251,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/256k",
-      "iterations": 38984,
-      "real_time": 107759,
-      "cpu_time": 107751,
+      "iterations": 38558,
+      "real_time": 109030,
+      "cpu_time": 109023,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/256k",
-      "iterations": 38984,
-      "real_time": 107571,
-      "cpu_time": 107564,
+      "iterations": 38558,
+      "real_time": 109288,
+      "cpu_time": 109282,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/256k",
-      "iterations": 38984,
-      "real_time": 107819,
-      "cpu_time": 107811,
+      "iterations": 38558,
+      "real_time": 109304,
+      "cpu_time": 109297,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/256k",
-      "iterations": 38984,
-      "real_time": 107933,
-      "cpu_time": 107927,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/256k",
-      "iterations": 38984,
-      "real_time": 107821,
-      "cpu_time": 107814,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/256k",
-      "iterations": 38984,
-      "real_time": 107906,
-      "cpu_time": 107900,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/256k",
-      "iterations": 38984,
-      "real_time": 108749,
-      "cpu_time": 108742,
+      "iterations": 38558,
+      "real_time": 108597,
+      "cpu_time": 108591,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/256k_mean",
-      "iterations": 38984,
-      "real_time": 107928,
-      "cpu_time": 107921,
+      "iterations": 38558,
+      "real_time": 109096,
+      "cpu_time": 109089,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/256k_stddev",
       "iterations": 0,
-      "real_time": 328,
-      "cpu_time": 327,
+      "real_time": 268,
+      "cpu_time": 268,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/512k",
-      "iterations": 16314,
-      "real_time": 255088,
-      "cpu_time": 255070,
+      "iterations": 16271,
+      "real_time": 258771,
+      "cpu_time": 258758,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/512k",
-      "iterations": 16314,
-      "real_time": 255112,
-      "cpu_time": 255095,
+      "iterations": 16271,
+      "real_time": 260155,
+      "cpu_time": 260139,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/512k",
-      "iterations": 16314,
-      "real_time": 254814,
-      "cpu_time": 254799,
+      "iterations": 16271,
+      "real_time": 259817,
+      "cpu_time": 259802,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/512k",
-      "iterations": 16314,
-      "real_time": 255515,
-      "cpu_time": 255500,
+      "iterations": 16271,
+      "real_time": 257078,
+      "cpu_time": 257060,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/512k",
-      "iterations": 16314,
-      "real_time": 257244,
-      "cpu_time": 257222,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/512k",
-      "iterations": 16314,
-      "real_time": 254828,
-      "cpu_time": 254812,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/512k",
-      "iterations": 16314,
-      "real_time": 258197,
-      "cpu_time": 258176,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/512k",
-      "iterations": 16314,
-      "real_time": 257723,
-      "cpu_time": 257703,
+      "iterations": 16271,
+      "real_time": 256503,
+      "cpu_time": 256491,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/512k_mean",
-      "iterations": 16314,
-      "real_time": 256065,
-      "cpu_time": 256047,
+      "iterations": 16271,
+      "real_time": 258465,
+      "cpu_time": 258450,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/512k_stddev",
       "iterations": 0,
-      "real_time": 1320,
-      "cpu_time": 1318,
+      "real_time": 1452,
+      "cpu_time": 1452,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/1024k",
-      "iterations": 6641,
-      "real_time": 633548,
-      "cpu_time": 633512,
+      "iterations": 6602,
+      "real_time": 635596,
+      "cpu_time": 635570,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/1024k",
-      "iterations": 6641,
-      "real_time": 634443,
-      "cpu_time": 634390,
+      "iterations": 6602,
+      "real_time": 636237,
+      "cpu_time": 636203,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/1024k",
-      "iterations": 6641,
-      "real_time": 638167,
-      "cpu_time": 638115,
+      "iterations": 6602,
+      "real_time": 635660,
+      "cpu_time": 635621,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/1024k",
-      "iterations": 6641,
-      "real_time": 635670,
-      "cpu_time": 635625,
+      "iterations": 6602,
+      "real_time": 638022,
+      "cpu_time": 637975,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/1024k",
-      "iterations": 6641,
-      "real_time": 635189,
-      "cpu_time": 635145,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/1024k",
-      "iterations": 6641,
-      "real_time": 638602,
-      "cpu_time": 638536,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/1024k",
-      "iterations": 6641,
-      "real_time": 636511,
-      "cpu_time": 636465,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/1024k",
-      "iterations": 6641,
-      "real_time": 635291,
-      "cpu_time": 635247,
+      "iterations": 6602,
+      "real_time": 637706,
+      "cpu_time": 637675,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/1024k_mean",
-      "iterations": 6641,
-      "real_time": 635928,
-      "cpu_time": 635879,
+      "iterations": 6602,
+      "real_time": 636644,
+      "cpu_time": 636609,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/1024k_stddev",
       "iterations": 0,
-      "real_time": 1635,
-      "cpu_time": 1629,
+      "real_time": 1026,
+      "cpu_time": 1022,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/2M",
-      "iterations": 2759,
-      "real_time": 1521914,
-      "cpu_time": 1521797,
+      "iterations": 2743,
+      "real_time": 1536510,
+      "cpu_time": 1536431,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/2M",
-      "iterations": 2759,
-      "real_time": 1535941,
-      "cpu_time": 1535838,
+      "iterations": 2743,
+      "real_time": 1550044,
+      "cpu_time": 1549963,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/2M",
-      "iterations": 2759,
-      "real_time": 1524223,
-      "cpu_time": 1524129,
+      "iterations": 2743,
+      "real_time": 1532768,
+      "cpu_time": 1532675,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/2M",
-      "iterations": 2759,
-      "real_time": 1527339,
-      "cpu_time": 1527195,
+      "iterations": 2743,
+      "real_time": 1536779,
+      "cpu_time": 1536692,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/2M",
-      "iterations": 2759,
-      "real_time": 1528338,
-      "cpu_time": 1528021,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/2M",
-      "iterations": 2759,
-      "real_time": 1524594,
-      "cpu_time": 1524463,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/2M",
-      "iterations": 2759,
-      "real_time": 1524628,
-      "cpu_time": 1524527,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/2M",
-      "iterations": 2759,
-      "real_time": 1524567,
-      "cpu_time": 1524455,
+      "iterations": 2743,
+      "real_time": 1536601,
+      "cpu_time": 1536523,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/2M_mean",
-      "iterations": 2759,
-      "real_time": 1526443,
-      "cpu_time": 1526303,
+      "iterations": 2743,
+      "real_time": 1538540,
+      "cpu_time": 1538457,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/2M_stddev",
       "iterations": 0,
-      "real_time": 4036,
-      "cpu_time": 4026,
+      "real_time": 5944,
+      "cpu_time": 5946,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/4M",
-      "iterations": 1249,
-      "real_time": 3333195,
-      "cpu_time": 3332984,
+      "iterations": 1240,
+      "real_time": 3375091,
+      "cpu_time": 3374936,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/4M",
-      "iterations": 1249,
-      "real_time": 3334179,
-      "cpu_time": 3333983,
+      "iterations": 1240,
+      "real_time": 3367405,
+      "cpu_time": 3367261,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/4M",
-      "iterations": 1249,
-      "real_time": 3334883,
-      "cpu_time": 3334727,
+      "iterations": 1240,
+      "real_time": 3364455,
+      "cpu_time": 3364324,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/4M",
-      "iterations": 1249,
-      "real_time": 3347685,
-      "cpu_time": 3347132,
+      "iterations": 1240,
+      "real_time": 3361102,
+      "cpu_time": 3361015,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/4M",
-      "iterations": 1249,
-      "real_time": 3333144,
-      "cpu_time": 3333027,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/4M",
-      "iterations": 1249,
-      "real_time": 3333285,
-      "cpu_time": 3333175,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/4M",
-      "iterations": 1249,
-      "real_time": 3333171,
-      "cpu_time": 3333089,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/4M",
-      "iterations": 1249,
-      "real_time": 3335688,
-      "cpu_time": 3335555,
+      "iterations": 1240,
+      "real_time": 3358654,
+      "cpu_time": 3358518,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/4M_mean",
-      "iterations": 1249,
-      "real_time": 3335654,
-      "cpu_time": 3335459,
+      "iterations": 1240,
+      "real_time": 3365341,
+      "cpu_time": 3365211,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/4M_stddev",
       "iterations": 0,
-      "real_time": 4632,
-      "cpu_time": 4498,
+      "real_time": 5706,
+      "cpu_time": 5692,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/8M",
-      "iterations": 778,
-      "real_time": 5365314,
-      "cpu_time": 5364709,
+      "iterations": 781,
+      "real_time": 5378547,
+      "cpu_time": 5378192,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/8M",
-      "iterations": 778,
-      "real_time": 5342586,
-      "cpu_time": 5342025,
+      "iterations": 781,
+      "real_time": 5382072,
+      "cpu_time": 5381676,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/8M",
-      "iterations": 778,
-      "real_time": 5358857,
-      "cpu_time": 5358306,
+      "iterations": 781,
+      "real_time": 5408360,
+      "cpu_time": 5407913,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/8M",
-      "iterations": 778,
-      "real_time": 5348174,
-      "cpu_time": 5347646,
+      "iterations": 781,
+      "real_time": 5385005,
+      "cpu_time": 5384617,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/8M",
-      "iterations": 778,
-      "real_time": 5353939,
-      "cpu_time": 5353556,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/8M",
-      "iterations": 778,
-      "real_time": 5347081,
-      "cpu_time": 5346486,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/8M",
-      "iterations": 778,
-      "real_time": 5348082,
-      "cpu_time": 5347661,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/8M",
-      "iterations": 778,
-      "real_time": 5337725,
-      "cpu_time": 5337361,
+      "iterations": 781,
+      "real_time": 5386287,
+      "cpu_time": 5385898,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/8M_mean",
-      "iterations": 778,
-      "real_time": 5350220,
-      "cpu_time": 5349719,
+      "iterations": 781,
+      "real_time": 5388054,
+      "cpu_time": 5387659,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/8M_stddev",
       "iterations": 0,
-      "real_time": 8286,
-      "cpu_time": 8247,
+      "real_time": 10497,
+      "cpu_time": 10469,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/16M",
-      "iterations": 348,
-      "real_time": 12118652,
-      "cpu_time": 12117694,
+      "iterations": 313,
+      "real_time": 13414462,
+      "cpu_time": 13413112,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/16M",
-      "iterations": 348,
-      "real_time": 12099004,
-      "cpu_time": 12097757,
+      "iterations": 313,
+      "real_time": 13331486,
+      "cpu_time": 13330330,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/16M",
-      "iterations": 348,
-      "real_time": 12095748,
-      "cpu_time": 12094786,
+      "iterations": 313,
+      "real_time": 13333791,
+      "cpu_time": 13331901,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/16M",
-      "iterations": 348,
-      "real_time": 12080421,
-      "cpu_time": 12079495,
+      "iterations": 313,
+      "real_time": 13346020,
+      "cpu_time": 13345336,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/16M",
-      "iterations": 348,
-      "real_time": 12100374,
-      "cpu_time": 12099285,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/16M",
-      "iterations": 348,
-      "real_time": 12169770,
-      "cpu_time": 12168601,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/16M",
-      "iterations": 348,
-      "real_time": 12073465,
-      "cpu_time": 12072484,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_blob/16M",
-      "iterations": 348,
-      "real_time": 12090377,
-      "cpu_time": 12088195,
+      "iterations": 313,
+      "real_time": 13395203,
+      "cpu_time": 13394498,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/16M_mean",
-      "iterations": 348,
-      "real_time": 12103476,
-      "cpu_time": 12102287,
+      "iterations": 313,
+      "real_time": 13364192,
+      "cpu_time": 13363035,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_blob/16M_stddev",
       "iterations": 0,
-      "real_time": 28103,
-      "cpu_time": 28123,
+      "real_time": 34097,
+      "cpu_time": 34205,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/1024",
-      "iterations": 420231,
-      "real_time": 15375,
-      "cpu_time": 11021,
+      "iterations": 409413,
+      "real_time": 14491,
+      "cpu_time": 10449,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/1024",
-      "iterations": 420231,
-      "real_time": 14409,
-      "cpu_time": 10409,
+      "iterations": 409413,
+      "real_time": 14347,
+      "cpu_time": 10329,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/1024",
-      "iterations": 420231,
-      "real_time": 14241,
-      "cpu_time": 10306,
+      "iterations": 409413,
+      "real_time": 14232,
+      "cpu_time": 10263,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/1024",
-      "iterations": 420231,
-      "real_time": 14270,
-      "cpu_time": 10292,
+      "iterations": 409413,
+      "real_time": 14176,
+      "cpu_time": 10173,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/1024",
-      "iterations": 420231,
-      "real_time": 14281,
-      "cpu_time": 10354,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/1024",
-      "iterations": 420231,
-      "real_time": 14048,
-      "cpu_time": 10154,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/1024",
-      "iterations": 420231,
-      "real_time": 14148,
-      "cpu_time": 10287,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/1024",
-      "iterations": 420231,
-      "real_time": 14024,
-      "cpu_time": 10147,
+      "iterations": 409413,
+      "real_time": 14562,
+      "cpu_time": 10470,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/1024_mean",
-      "iterations": 420231,
-      "real_time": 14350,
-      "cpu_time": 10371,
+      "iterations": 409413,
+      "real_time": 14362,
+      "cpu_time": 10337,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/1024_stddev",
       "iterations": 0,
-      "real_time": 405,
-      "cpu_time": 259,
+      "real_time": 147,
+      "cpu_time": 112,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/2k",
-      "iterations": 362467,
-      "real_time": 15050,
-      "cpu_time": 10977,
+      "iterations": 292993,
+      "real_time": 15383,
+      "cpu_time": 11351,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/2k",
-      "iterations": 362467,
-      "real_time": 15329,
-      "cpu_time": 11278,
+      "iterations": 292993,
+      "real_time": 15260,
+      "cpu_time": 11200,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/2k",
-      "iterations": 362467,
-      "real_time": 15417,
-      "cpu_time": 11406,
+      "iterations": 292993,
+      "real_time": 15332,
+      "cpu_time": 11262,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/2k",
-      "iterations": 362467,
-      "real_time": 15407,
-      "cpu_time": 11386,
+      "iterations": 292993,
+      "real_time": 15263,
+      "cpu_time": 11214,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/2k",
-      "iterations": 362467,
-      "real_time": 15508,
-      "cpu_time": 11442,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/2k",
-      "iterations": 362467,
-      "real_time": 15201,
-      "cpu_time": 11224,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/2k",
-      "iterations": 362467,
-      "real_time": 15715,
-      "cpu_time": 11658,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/2k",
-      "iterations": 362467,
-      "real_time": 15369,
-      "cpu_time": 11278,
+      "iterations": 292993,
+      "real_time": 15045,
+      "cpu_time": 11036,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/2k_mean",
-      "iterations": 362467,
-      "real_time": 15374,
-      "cpu_time": 11331,
+      "iterations": 292993,
+      "real_time": 15257,
+      "cpu_time": 11213,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/2k_stddev",
       "iterations": 0,
-      "real_time": 185,
-      "cpu_time": 184,
+      "real_time": 115,
+      "cpu_time": 103,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/4k",
-      "iterations": 322515,
-      "real_time": 17406,
-      "cpu_time": 13148,
+      "iterations": 312091,
+      "real_time": 16735,
+      "cpu_time": 12543,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/4k",
-      "iterations": 322515,
-      "real_time": 16902,
-      "cpu_time": 12681,
+      "iterations": 312091,
+      "real_time": 16634,
+      "cpu_time": 12441,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/4k",
-      "iterations": 322515,
-      "real_time": 17309,
-      "cpu_time": 13011,
+      "iterations": 312091,
+      "real_time": 16769,
+      "cpu_time": 12522,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/4k",
-      "iterations": 322515,
-      "real_time": 17126,
-      "cpu_time": 12932,
+      "iterations": 312091,
+      "real_time": 16466,
+      "cpu_time": 12310,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/4k",
-      "iterations": 322515,
-      "real_time": 17230,
-      "cpu_time": 13044,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/4k",
-      "iterations": 322515,
-      "real_time": 16934,
-      "cpu_time": 12706,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/4k",
-      "iterations": 322515,
-      "real_time": 16488,
-      "cpu_time": 12347,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/4k",
-      "iterations": 322515,
-      "real_time": 16750,
-      "cpu_time": 12557,
+      "iterations": 312091,
+      "real_time": 16978,
+      "cpu_time": 12726,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/4k_mean",
-      "iterations": 322515,
-      "real_time": 17018,
-      "cpu_time": 12803,
+      "iterations": 312091,
+      "real_time": 16716,
+      "cpu_time": 12508,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/4k_stddev",
       "iterations": 0,
-      "real_time": 288,
-      "cpu_time": 257,
+      "real_time": 168,
+      "cpu_time": 136,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/8k",
-      "iterations": 262006,
-      "real_time": 20531,
-      "cpu_time": 15962,
+      "iterations": 262781,
+      "real_time": 20005,
+      "cpu_time": 15512,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/8k",
-      "iterations": 262006,
-      "real_time": 19968,
-      "cpu_time": 15540,
+      "iterations": 262781,
+      "real_time": 19877,
+      "cpu_time": 15368,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/8k",
-      "iterations": 262006,
-      "real_time": 19944,
-      "cpu_time": 15438,
+      "iterations": 262781,
+      "real_time": 21034,
+      "cpu_time": 16373,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/8k",
-      "iterations": 262006,
-      "real_time": 20467,
-      "cpu_time": 15949,
+      "iterations": 262781,
+      "real_time": 19912,
+      "cpu_time": 15407,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/8k",
-      "iterations": 262006,
-      "real_time": 19867,
-      "cpu_time": 15425,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/8k",
-      "iterations": 262006,
-      "real_time": 20406,
-      "cpu_time": 15854,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/8k",
-      "iterations": 262006,
-      "real_time": 20297,
-      "cpu_time": 15745,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/8k",
-      "iterations": 262006,
-      "real_time": 20111,
-      "cpu_time": 15643,
+      "iterations": 262781,
+      "real_time": 19427,
+      "cpu_time": 15012,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/8k_mean",
-      "iterations": 262006,
-      "real_time": 20199,
-      "cpu_time": 15695,
+      "iterations": 262781,
+      "real_time": 20051,
+      "cpu_time": 15534,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/8k_stddev",
       "iterations": 0,
-      "real_time": 243,
-      "cpu_time": 203,
+      "real_time": 531,
+      "cpu_time": 452,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/16k",
-      "iterations": 190919,
-      "real_time": 26204,
-      "cpu_time": 21205,
+      "iterations": 201103,
+      "real_time": 25326,
+      "cpu_time": 20468,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/16k",
-      "iterations": 190919,
-      "real_time": 25621,
-      "cpu_time": 20721,
+      "iterations": 201103,
+      "real_time": 26753,
+      "cpu_time": 21656,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/16k",
-      "iterations": 190919,
-      "real_time": 25666,
-      "cpu_time": 20776,
+      "iterations": 201103,
+      "real_time": 26728,
+      "cpu_time": 21631,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/16k",
-      "iterations": 190919,
-      "real_time": 26827,
-      "cpu_time": 21740,
+      "iterations": 201103,
+      "real_time": 27578,
+      "cpu_time": 22357,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/16k",
-      "iterations": 190919,
-      "real_time": 25976,
-      "cpu_time": 21029,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/16k",
-      "iterations": 190919,
-      "real_time": 26512,
-      "cpu_time": 21487,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/16k",
-      "iterations": 190919,
-      "real_time": 27405,
-      "cpu_time": 22174,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/16k",
-      "iterations": 190919,
-      "real_time": 27926,
-      "cpu_time": 22574,
+      "iterations": 201103,
+      "real_time": 28063,
+      "cpu_time": 22780,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/16k_mean",
-      "iterations": 190919,
-      "real_time": 26517,
-      "cpu_time": 21463,
+      "iterations": 201103,
+      "real_time": 26889,
+      "cpu_time": 21778,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/16k_stddev",
       "iterations": 0,
-      "real_time": 774,
-      "cpu_time": 622,
+      "real_time": 932,
+      "cpu_time": 786,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/32k",
-      "iterations": 118606,
-      "real_time": 38017,
-      "cpu_time": 32148,
+      "iterations": 117789,
+      "real_time": 40760,
+      "cpu_time": 34570,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/32k",
-      "iterations": 118606,
-      "real_time": 39650,
-      "cpu_time": 33599,
+      "iterations": 117789,
+      "real_time": 39596,
+      "cpu_time": 33445,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/32k",
-      "iterations": 118606,
-      "real_time": 38189,
-      "cpu_time": 32415,
+      "iterations": 117789,
+      "real_time": 38483,
+      "cpu_time": 32417,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/32k",
-      "iterations": 118606,
-      "real_time": 38053,
-      "cpu_time": 32298,
+      "iterations": 117789,
+      "real_time": 38511,
+      "cpu_time": 32562,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/32k",
-      "iterations": 118606,
-      "real_time": 40154,
-      "cpu_time": 33989,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/32k",
-      "iterations": 118606,
-      "real_time": 39165,
-      "cpu_time": 33257,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/32k",
-      "iterations": 118606,
-      "real_time": 38960,
-      "cpu_time": 33082,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/32k",
-      "iterations": 118606,
-      "real_time": 38477,
-      "cpu_time": 32627,
+      "iterations": 117789,
+      "real_time": 38636,
+      "cpu_time": 32668,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/32k_mean",
-      "iterations": 118606,
-      "real_time": 38833,
-      "cpu_time": 32927,
+      "iterations": 117789,
+      "real_time": 39197,
+      "cpu_time": 33132,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/32k_stddev",
       "iterations": 0,
-      "real_time": 738,
-      "cpu_time": 619,
+      "real_time": 883,
+      "cpu_time": 802,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/64k",
-      "iterations": 68465,
-      "real_time": 64579,
-      "cpu_time": 56737,
+      "iterations": 71798,
+      "real_time": 63663,
+      "cpu_time": 56004,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/64k",
-      "iterations": 68465,
-      "real_time": 65313,
-      "cpu_time": 57663,
+      "iterations": 71798,
+      "real_time": 63745,
+      "cpu_time": 56112,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/64k",
-      "iterations": 68465,
-      "real_time": 63214,
-      "cpu_time": 55519,
+      "iterations": 71798,
+      "real_time": 65003,
+      "cpu_time": 57382,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/64k",
-      "iterations": 68465,
-      "real_time": 64362,
-      "cpu_time": 56536,
+      "iterations": 71798,
+      "real_time": 63754,
+      "cpu_time": 56168,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/64k",
-      "iterations": 68465,
-      "real_time": 64273,
-      "cpu_time": 56415,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/64k",
-      "iterations": 68465,
-      "real_time": 63814,
-      "cpu_time": 56040,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/64k",
-      "iterations": 68465,
-      "real_time": 62501,
-      "cpu_time": 55003,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/64k",
-      "iterations": 68465,
-      "real_time": 63659,
-      "cpu_time": 56031,
+      "iterations": 71798,
+      "real_time": 64543,
+      "cpu_time": 56919,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/64k_mean",
-      "iterations": 68465,
-      "real_time": 63964,
-      "cpu_time": 56243,
+      "iterations": 71798,
+      "real_time": 64142,
+      "cpu_time": 56517,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/64k_stddev",
       "iterations": 0,
-      "real_time": 812,
-      "cpu_time": 752,
+      "real_time": 537,
+      "cpu_time": 540,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/128k",
-      "iterations": 40674,
-      "real_time": 113668,
-      "cpu_time": 102571,
+      "iterations": 41026,
+      "real_time": 110922,
+      "cpu_time": 100183,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/128k",
-      "iterations": 40674,
-      "real_time": 113853,
-      "cpu_time": 102618,
+      "iterations": 41026,
+      "real_time": 111952,
+      "cpu_time": 101343,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/128k",
-      "iterations": 40674,
-      "real_time": 112919,
-      "cpu_time": 101869,
+      "iterations": 41026,
+      "real_time": 112597,
+      "cpu_time": 101777,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/128k",
-      "iterations": 40674,
-      "real_time": 112240,
-      "cpu_time": 101328,
+      "iterations": 41026,
+      "real_time": 112005,
+      "cpu_time": 101400,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/128k",
-      "iterations": 40674,
-      "real_time": 111501,
-      "cpu_time": 100699,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/128k",
-      "iterations": 40674,
-      "real_time": 112345,
-      "cpu_time": 101289,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/128k",
-      "iterations": 40674,
-      "real_time": 111497,
-      "cpu_time": 100583,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/128k",
-      "iterations": 40674,
-      "real_time": 113716,
-      "cpu_time": 102729,
+      "iterations": 41026,
+      "real_time": 110584,
+      "cpu_time": 99748,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/128k_mean",
-      "iterations": 40674,
-      "real_time": 112718,
-      "cpu_time": 101711,
+      "iterations": 41026,
+      "real_time": 111612,
+      "cpu_time": 100890,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/128k_stddev",
       "iterations": 0,
-      "real_time": 906,
-      "cpu_time": 810,
+      "real_time": 745,
+      "cpu_time": 782,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/256k",
-      "iterations": 21479,
-      "real_time": 219754,
-      "cpu_time": 195930,
+      "iterations": 20585,
+      "real_time": 211203,
+      "cpu_time": 189902,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/256k",
-      "iterations": 21479,
-      "real_time": 210419,
-      "cpu_time": 191962,
+      "iterations": 20585,
+      "real_time": 218603,
+      "cpu_time": 196254,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/256k",
-      "iterations": 21479,
-      "real_time": 223413,
-      "cpu_time": 200976,
+      "iterations": 20585,
+      "real_time": 219607,
+      "cpu_time": 198368,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/256k",
-      "iterations": 21479,
-      "real_time": 210780,
-      "cpu_time": 191092,
+      "iterations": 20585,
+      "real_time": 218311,
+      "cpu_time": 197348,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/256k",
-      "iterations": 21479,
-      "real_time": 220569,
-      "cpu_time": 200099,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/256k",
-      "iterations": 21479,
-      "real_time": 211301,
-      "cpu_time": 191694,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/256k",
-      "iterations": 21479,
-      "real_time": 223382,
-      "cpu_time": 197533,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/256k",
-      "iterations": 21479,
-      "real_time": 209994,
-      "cpu_time": 190177,
+      "iterations": 20585,
+      "real_time": 213612,
+      "cpu_time": 193759,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/256k_mean",
-      "iterations": 21479,
-      "real_time": 216201,
-      "cpu_time": 194933,
+      "iterations": 20585,
+      "real_time": 216267,
+      "cpu_time": 195126,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/256k_stddev",
       "iterations": 0,
-      "real_time": 5708,
-      "cpu_time": 3995,
+      "real_time": 3271,
+      "cpu_time": 3029,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/512k",
-      "iterations": 10412,
-      "real_time": 425090,
-      "cpu_time": 372079,
+      "iterations": 10514,
+      "real_time": 441007,
+      "cpu_time": 371054,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/512k",
-      "iterations": 10412,
-      "real_time": 436008,
-      "cpu_time": 373116,
+      "iterations": 10514,
+      "real_time": 445197,
+      "cpu_time": 372221,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/512k",
-      "iterations": 10412,
-      "real_time": 427262,
-      "cpu_time": 374359,
+      "iterations": 10514,
+      "real_time": 433541,
+      "cpu_time": 371647,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/512k",
-      "iterations": 10412,
-      "real_time": 439829,
-      "cpu_time": 375330,
+      "iterations": 10514,
+      "real_time": 409055,
+      "cpu_time": 369071,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/512k",
-      "iterations": 10412,
-      "real_time": 424206,
-      "cpu_time": 377368,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/512k",
-      "iterations": 10412,
-      "real_time": 433910,
-      "cpu_time": 372915,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/512k",
-      "iterations": 10412,
-      "real_time": 433888,
-      "cpu_time": 380603,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/512k",
-      "iterations": 10412,
-      "real_time": 438565,
-      "cpu_time": 379680,
+      "iterations": 10514,
+      "real_time": 437789,
+      "cpu_time": 378214,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/512k_mean",
-      "iterations": 10412,
-      "real_time": 432345,
-      "cpu_time": 375682,
+      "iterations": 10514,
+      "real_time": 433318,
+      "cpu_time": 372442,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/512k_stddev",
       "iterations": 0,
-      "real_time": 5675,
-      "cpu_time": 3003,
+      "real_time": 12720,
+      "cpu_time": 3075,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/1024k",
-      "iterations": 5274,
-      "real_time": 981852,
-      "cpu_time": 788944,
+      "iterations": 5236,
+      "real_time": 960064,
+      "cpu_time": 773455,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/1024k",
-      "iterations": 5274,
-      "real_time": 973387,
-      "cpu_time": 780591,
+      "iterations": 5236,
+      "real_time": 948548,
+      "cpu_time": 769612,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/1024k",
-      "iterations": 5274,
-      "real_time": 978234,
-      "cpu_time": 774792,
+      "iterations": 5236,
+      "real_time": 952269,
+      "cpu_time": 775765,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/1024k",
-      "iterations": 5274,
-      "real_time": 974970,
-      "cpu_time": 778065,
+      "iterations": 5236,
+      "real_time": 945072,
+      "cpu_time": 774716,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/1024k",
-      "iterations": 5274,
-      "real_time": 970177,
-      "cpu_time": 778494,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/1024k",
-      "iterations": 5274,
-      "real_time": 968933,
-      "cpu_time": 766954,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/1024k",
-      "iterations": 5274,
-      "real_time": 973295,
-      "cpu_time": 778064,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/1024k",
-      "iterations": 5274,
-      "real_time": 969548,
-      "cpu_time": 775970,
+      "iterations": 5236,
+      "real_time": 955831,
+      "cpu_time": 771360,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/1024k_mean",
-      "iterations": 5274,
-      "real_time": 973800,
-      "cpu_time": 777734,
+      "iterations": 5236,
+      "real_time": 952357,
+      "cpu_time": 772982,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/1024k_stddev",
       "iterations": 0,
-      "real_time": 4201,
-      "cpu_time": 5729,
+      "real_time": 5273,
+      "cpu_time": 2235,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/2M",
-      "iterations": 2453,
-      "real_time": 2078575,
-      "cpu_time": 1707243,
+      "iterations": 2493,
+      "real_time": 2006758,
+      "cpu_time": 1670900,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/2M",
-      "iterations": 2453,
-      "real_time": 2082332,
-      "cpu_time": 1704956,
+      "iterations": 2493,
+      "real_time": 2010868,
+      "cpu_time": 1669364,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/2M",
-      "iterations": 2453,
-      "real_time": 2073292,
-      "cpu_time": 1697185,
+      "iterations": 2493,
+      "real_time": 2015536,
+      "cpu_time": 1670433,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/2M",
-      "iterations": 2453,
-      "real_time": 2073959,
-      "cpu_time": 1696000,
+      "iterations": 2493,
+      "real_time": 2013253,
+      "cpu_time": 1672365,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/2M",
-      "iterations": 2453,
-      "real_time": 2048509,
-      "cpu_time": 1671741,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/2M",
-      "iterations": 2453,
-      "real_time": 2075923,
-      "cpu_time": 1703177,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/2M",
-      "iterations": 2453,
-      "real_time": 2066053,
-      "cpu_time": 1693164,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/2M",
-      "iterations": 2453,
-      "real_time": 2051917,
-      "cpu_time": 1676257,
+      "iterations": 2493,
+      "real_time": 2031855,
+      "cpu_time": 1684620,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/2M_mean",
-      "iterations": 2453,
-      "real_time": 2068820,
-      "cpu_time": 1693716,
+      "iterations": 2493,
+      "real_time": 2015654,
+      "cpu_time": 1673536,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/2M_stddev",
       "iterations": 0,
-      "real_time": 11622,
-      "cpu_time": 12268,
+      "real_time": 8606,
+      "cpu_time": 5625,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/4M",
-      "iterations": 1174,
-      "real_time": 4083646,
-      "cpu_time": 3397214,
+      "iterations": 1198,
+      "real_time": 3986573,
+      "cpu_time": 3375523,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/4M",
-      "iterations": 1174,
-      "real_time": 4096265,
-      "cpu_time": 3406581,
+      "iterations": 1198,
+      "real_time": 3968072,
+      "cpu_time": 3359253,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/4M",
-      "iterations": 1174,
-      "real_time": 4111071,
-      "cpu_time": 3420820,
+      "iterations": 1198,
+      "real_time": 3974296,
+      "cpu_time": 3369077,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/4M",
-      "iterations": 1174,
-      "real_time": 4102569,
-      "cpu_time": 3414519,
+      "iterations": 1198,
+      "real_time": 3963688,
+      "cpu_time": 3364244,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/4M",
-      "iterations": 1174,
-      "real_time": 4106062,
-      "cpu_time": 3422360,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/4M",
-      "iterations": 1174,
-      "real_time": 4118622,
-      "cpu_time": 3430993,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/4M",
-      "iterations": 1174,
-      "real_time": 4127280,
-      "cpu_time": 3448395,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/4M",
-      "iterations": 1174,
-      "real_time": 4116133,
-      "cpu_time": 3426714,
+      "iterations": 1198,
+      "real_time": 3978982,
+      "cpu_time": 3377046,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/4M_mean",
-      "iterations": 1174,
-      "real_time": 4107706,
-      "cpu_time": 3420950,
+      "iterations": 1198,
+      "real_time": 3974322,
+      "cpu_time": 3369029,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/4M_stddev",
       "iterations": 0,
-      "real_time": 12862,
-      "cpu_time": 14580,
+      "real_time": 8049,
+      "cpu_time": 6707,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/8M",
-      "iterations": 619,
-      "real_time": 7570117,
-      "cpu_time": 6602432,
+      "iterations": 628,
+      "real_time": 7534389,
+      "cpu_time": 6555491,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/8M",
-      "iterations": 619,
-      "real_time": 7583692,
-      "cpu_time": 6622860,
+      "iterations": 628,
+      "real_time": 7520133,
+      "cpu_time": 6541102,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/8M",
-      "iterations": 619,
-      "real_time": 7554803,
-      "cpu_time": 6596210,
+      "iterations": 628,
+      "real_time": 7472858,
+      "cpu_time": 6495355,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/8M",
-      "iterations": 619,
-      "real_time": 7609576,
-      "cpu_time": 6615831,
+      "iterations": 628,
+      "real_time": 7524242,
+      "cpu_time": 6545810,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/8M",
-      "iterations": 619,
-      "real_time": 7619935,
-      "cpu_time": 6655368,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/8M",
-      "iterations": 619,
-      "real_time": 7556506,
-      "cpu_time": 6595931,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/8M",
-      "iterations": 619,
-      "real_time": 7620943,
-      "cpu_time": 6656853,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/8M",
-      "iterations": 619,
-      "real_time": 7625280,
-      "cpu_time": 6649279,
+      "iterations": 628,
+      "real_time": 7535442,
+      "cpu_time": 6561960,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/8M_mean",
-      "iterations": 619,
-      "real_time": 7592606,
-      "cpu_time": 6624346,
+      "iterations": 628,
+      "real_time": 7517413,
+      "cpu_time": 6539944,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/8M_stddev",
       "iterations": 0,
-      "real_time": 27890,
-      "cpu_time": 24481,
+      "real_time": 23032,
+      "cpu_time": 23454,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/16M",
-      "iterations": 311,
-      "real_time": 15233993,
-      "cpu_time": 13376764,
+      "iterations": 317,
+      "real_time": 15217941,
+      "cpu_time": 13434821,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/16M",
-      "iterations": 311,
-      "real_time": 15325077,
-      "cpu_time": 13467056,
+      "iterations": 317,
+      "real_time": 14948557,
+      "cpu_time": 13157772,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/16M",
-      "iterations": 311,
-      "real_time": 15526881,
-      "cpu_time": 13668475,
+      "iterations": 317,
+      "real_time": 15244783,
+      "cpu_time": 13458538,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/16M",
-      "iterations": 311,
-      "real_time": 18237414,
-      "cpu_time": 15874875,
+      "iterations": 317,
+      "real_time": 15214563,
+      "cpu_time": 13426219,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/16M",
-      "iterations": 311,
-      "real_time": 15553360,
-      "cpu_time": 13688902,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/16M",
-      "iterations": 311,
-      "real_time": 15400393,
-      "cpu_time": 13542406,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/16M",
-      "iterations": 311,
-      "real_time": 15112429,
-      "cpu_time": 13257862,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_blob/16M",
-      "iterations": 311,
-      "real_time": 15502381,
-      "cpu_time": 13641177,
+      "iterations": 317,
+      "real_time": 15008874,
+      "cpu_time": 13218637,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/16M_mean",
-      "iterations": 311,
-      "real_time": 15736491,
-      "cpu_time": 13814690,
+      "iterations": 317,
+      "real_time": 15126944,
+      "cpu_time": 13339197,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_blob/16M_stddev",
       "iterations": 0,
-      "real_time": 955973,
-      "cpu_time": 791241,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/1024",
-      "iterations": 120471,
-      "real_time": 48550,
-      "cpu_time": 29981,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/1024",
-      "iterations": 120471,
-      "real_time": 49490,
-      "cpu_time": 29456,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/1024",
-      "iterations": 120471,
-      "real_time": 49961,
-      "cpu_time": 29372,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/1024",
-      "iterations": 120471,
-      "real_time": 51193,
-      "cpu_time": 30366,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/1024",
-      "iterations": 120471,
-      "real_time": 48358,
-      "cpu_time": 29547,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/1024",
-      "iterations": 120471,
-      "real_time": 49081,
-      "cpu_time": 29522,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/1024",
-      "iterations": 120471,
-      "real_time": 49261,
-      "cpu_time": 29650,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/1024",
-      "iterations": 120471,
-      "real_time": 49520,
-      "cpu_time": 30296,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/1024_mean",
-      "iterations": 120471,
-      "real_time": 49427,
-      "cpu_time": 29774,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/1024_stddev",
-      "iterations": 0,
-      "real_time": 827,
-      "cpu_time": 364,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/2k",
-      "iterations": 140477,
-      "real_time": 49387,
-      "cpu_time": 29661,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/2k",
-      "iterations": 140477,
-      "real_time": 49094,
-      "cpu_time": 29595,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/2k",
-      "iterations": 140477,
-      "real_time": 50864,
-      "cpu_time": 30649,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/2k",
-      "iterations": 140477,
-      "real_time": 48934,
-      "cpu_time": 29956,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/2k",
-      "iterations": 140477,
-      "real_time": 50566,
-      "cpu_time": 29895,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/2k",
-      "iterations": 140477,
-      "real_time": 50148,
-      "cpu_time": 29389,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/2k",
-      "iterations": 140477,
-      "real_time": 49775,
-      "cpu_time": 29356,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/2k",
-      "iterations": 140477,
-      "real_time": 49673,
-      "cpu_time": 29355,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/2k_mean",
-      "iterations": 140477,
-      "real_time": 49805,
-      "cpu_time": 29732,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/2k_stddev",
-      "iterations": 0,
-      "real_time": 640,
-      "cpu_time": 410,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/4k",
-      "iterations": 139025,
-      "real_time": 50115,
-      "cpu_time": 30885,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/4k",
-      "iterations": 139025,
-      "real_time": 50240,
-      "cpu_time": 29901,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/4k",
-      "iterations": 139025,
-      "real_time": 50360,
-      "cpu_time": 29442,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/4k",
-      "iterations": 139025,
-      "real_time": 50433,
-      "cpu_time": 30128,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/4k",
-      "iterations": 139025,
-      "real_time": 49722,
-      "cpu_time": 29721,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/4k",
-      "iterations": 139025,
-      "real_time": 50904,
-      "cpu_time": 30293,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/4k",
-      "iterations": 139025,
-      "real_time": 49723,
-      "cpu_time": 29840,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/4k",
-      "iterations": 139025,
-      "real_time": 50638,
-      "cpu_time": 29762,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/4k_mean",
-      "iterations": 139025,
-      "real_time": 50267,
-      "cpu_time": 29996,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/4k_stddev",
-      "iterations": 0,
-      "real_time": 387,
-      "cpu_time": 413,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/8k",
-      "iterations": 135222,
-      "real_time": 50935,
-      "cpu_time": 30199,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/8k",
-      "iterations": 135222,
-      "real_time": 49192,
-      "cpu_time": 29578,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/8k",
-      "iterations": 135222,
-      "real_time": 50637,
-      "cpu_time": 30012,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/8k",
-      "iterations": 135222,
-      "real_time": 49804,
-      "cpu_time": 30193,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/8k",
-      "iterations": 135222,
-      "real_time": 50225,
-      "cpu_time": 29778,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/8k",
-      "iterations": 135222,
-      "real_time": 49188,
-      "cpu_time": 30109,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/8k",
-      "iterations": 135222,
-      "real_time": 50760,
-      "cpu_time": 30083,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/8k",
-      "iterations": 135222,
-      "real_time": 50050,
-      "cpu_time": 29354,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/8k_mean",
-      "iterations": 135222,
-      "real_time": 50099,
-      "cpu_time": 29913,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/8k_stddev",
-      "iterations": 0,
-      "real_time": 631,
-      "cpu_time": 292,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/16k",
-      "iterations": 140690,
-      "real_time": 49665,
-      "cpu_time": 29657,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/16k",
-      "iterations": 140690,
-      "real_time": 50225,
-      "cpu_time": 29748,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/16k",
-      "iterations": 140690,
-      "real_time": 49071,
-      "cpu_time": 29658,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/16k",
-      "iterations": 140690,
-      "real_time": 49058,
-      "cpu_time": 29565,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/16k",
-      "iterations": 140690,
-      "real_time": 50569,
-      "cpu_time": 30217,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/16k",
-      "iterations": 140690,
-      "real_time": 50320,
-      "cpu_time": 29489,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/16k",
-      "iterations": 140690,
-      "real_time": 48985,
-      "cpu_time": 29516,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/16k",
-      "iterations": 140690,
-      "real_time": 49969,
-      "cpu_time": 29769,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/16k_mean",
-      "iterations": 140690,
-      "real_time": 49733,
-      "cpu_time": 29702,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/16k_stddev",
-      "iterations": 0,
-      "real_time": 591,
-      "cpu_time": 217,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/32k",
-      "iterations": 100000,
-      "real_time": 49322,
-      "cpu_time": 30125,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/32k",
-      "iterations": 100000,
-      "real_time": 50531,
-      "cpu_time": 30075,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/32k",
-      "iterations": 100000,
-      "real_time": 50857,
-      "cpu_time": 30251,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/32k",
-      "iterations": 100000,
-      "real_time": 49442,
-      "cpu_time": 29496,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/32k",
-      "iterations": 100000,
-      "real_time": 50087,
-      "cpu_time": 30910,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/32k",
-      "iterations": 100000,
-      "real_time": 49794,
-      "cpu_time": 29300,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/32k",
-      "iterations": 100000,
-      "real_time": 49752,
-      "cpu_time": 29748,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/32k",
-      "iterations": 100000,
-      "real_time": 50731,
-      "cpu_time": 30196,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/32k_mean",
-      "iterations": 100000,
-      "real_time": 50064,
-      "cpu_time": 30013,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/32k_stddev",
-      "iterations": 0,
-      "real_time": 548,
-      "cpu_time": 469,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/64k",
-      "iterations": 100000,
-      "real_time": 50069,
-      "cpu_time": 30142,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/64k",
-      "iterations": 100000,
-      "real_time": 49954,
-      "cpu_time": 29807,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/64k",
-      "iterations": 100000,
-      "real_time": 48169,
-      "cpu_time": 29561,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/64k",
-      "iterations": 100000,
-      "real_time": 50417,
-      "cpu_time": 29602,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/64k",
-      "iterations": 100000,
-      "real_time": 50053,
-      "cpu_time": 29375,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/64k",
-      "iterations": 100000,
-      "real_time": 47724,
-      "cpu_time": 29555,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/64k",
-      "iterations": 100000,
-      "real_time": 47092,
-      "cpu_time": 29692,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/64k",
-      "iterations": 100000,
-      "real_time": 49507,
-      "cpu_time": 29790,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/64k_mean",
-      "iterations": 100000,
-      "real_time": 49123,
-      "cpu_time": 29691,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/64k_stddev",
-      "iterations": 0,
-      "real_time": 1187,
-      "cpu_time": 215,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/128k",
-      "iterations": 100000,
-      "real_time": 50949,
-      "cpu_time": 30033,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/128k",
-      "iterations": 100000,
-      "real_time": 49471,
-      "cpu_time": 29773,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/128k",
-      "iterations": 100000,
-      "real_time": 48146,
-      "cpu_time": 29711,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/128k",
-      "iterations": 100000,
-      "real_time": 48648,
-      "cpu_time": 29604,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/128k",
-      "iterations": 100000,
-      "real_time": 49966,
-      "cpu_time": 29520,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/128k",
-      "iterations": 100000,
-      "real_time": 50481,
-      "cpu_time": 30308,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/128k",
-      "iterations": 100000,
-      "real_time": 49736,
-      "cpu_time": 29942,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/128k",
-      "iterations": 100000,
-      "real_time": 50850,
-      "cpu_time": 30176,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/128k_mean",
-      "iterations": 100000,
-      "real_time": 49781,
-      "cpu_time": 29884,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/128k_stddev",
-      "iterations": 0,
-      "real_time": 941,
-      "cpu_time": 261,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/256k",
-      "iterations": 100000,
-      "real_time": 49721,
-      "cpu_time": 30142,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/256k",
-      "iterations": 100000,
-      "real_time": 49244,
-      "cpu_time": 29447,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/256k",
-      "iterations": 100000,
-      "real_time": 48543,
-      "cpu_time": 29764,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/256k",
-      "iterations": 100000,
-      "real_time": 49732,
-      "cpu_time": 29999,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/256k",
-      "iterations": 100000,
-      "real_time": 51039,
-      "cpu_time": 30342,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/256k",
-      "iterations": 100000,
-      "real_time": 50491,
-      "cpu_time": 30289,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/256k",
-      "iterations": 100000,
-      "real_time": 48487,
-      "cpu_time": 29369,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/256k",
-      "iterations": 100000,
-      "real_time": 50339,
-      "cpu_time": 29930,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/256k_mean",
-      "iterations": 100000,
-      "real_time": 49699,
-      "cpu_time": 29910,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/256k_stddev",
-      "iterations": 0,
-      "real_time": 855,
-      "cpu_time": 339,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/512k",
-      "iterations": 100000,
-      "real_time": 50545,
-      "cpu_time": 30332,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/512k",
-      "iterations": 100000,
-      "real_time": 50001,
-      "cpu_time": 29260,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/512k",
-      "iterations": 100000,
-      "real_time": 49190,
-      "cpu_time": 29863,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/512k",
-      "iterations": 100000,
-      "real_time": 48797,
-      "cpu_time": 29589,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/512k",
-      "iterations": 100000,
-      "real_time": 50567,
-      "cpu_time": 29875,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/512k",
-      "iterations": 100000,
-      "real_time": 50881,
-      "cpu_time": 30692,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/512k",
-      "iterations": 100000,
-      "real_time": 50181,
-      "cpu_time": 29859,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/512k",
-      "iterations": 100000,
-      "real_time": 48732,
-      "cpu_time": 29341,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/512k_mean",
-      "iterations": 100000,
-      "real_time": 49862,
-      "cpu_time": 29851,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/512k_stddev",
-      "iterations": 0,
-      "real_time": 789,
-      "cpu_time": 450,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/1024k",
-      "iterations": 143448,
-      "real_time": 49626,
-      "cpu_time": 29452,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/1024k",
-      "iterations": 143448,
-      "real_time": 50008,
-      "cpu_time": 29747,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/1024k",
-      "iterations": 143448,
-      "real_time": 50291,
-      "cpu_time": 29637,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/1024k",
-      "iterations": 143448,
-      "real_time": 46863,
-      "cpu_time": 29768,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/1024k",
-      "iterations": 143448,
-      "real_time": 51175,
-      "cpu_time": 30952,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/1024k",
-      "iterations": 143448,
-      "real_time": 52158,
-      "cpu_time": 30810,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/1024k",
-      "iterations": 143448,
-      "real_time": 50561,
-      "cpu_time": 30063,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/1024k",
-      "iterations": 143448,
-      "real_time": 49394,
-      "cpu_time": 29644,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/1024k_mean",
-      "iterations": 143448,
-      "real_time": 50010,
-      "cpu_time": 30009,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_blob/1024k_stddev",
-      "iterations": 0,
-      "real_time": 1448,
-      "cpu_time": 530,
+      "real_time": 122968,
+      "cpu_time": 125227,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_structs",
-      "iterations": 1065,
-      "real_time": 3890441,
-      "cpu_time": 3890111,
+      "iterations": 1077,
+      "real_time": 3875821,
+      "cpu_time": 3875650,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_structs",
-      "iterations": 1065,
-      "real_time": 3922486,
-      "cpu_time": 3922314,
+      "iterations": 1077,
+      "real_time": 3872932,
+      "cpu_time": 3872660,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_structs",
-      "iterations": 1065,
-      "real_time": 3909344,
-      "cpu_time": 3909178,
+      "iterations": 1077,
+      "real_time": 3844185,
+      "cpu_time": 3843778,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_structs",
-      "iterations": 1065,
-      "real_time": 3894428,
-      "cpu_time": 3894258,
+      "iterations": 1077,
+      "real_time": 3848681,
+      "cpu_time": 3848363,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_structs",
-      "iterations": 1065,
-      "real_time": 3887100,
-      "cpu_time": 3887030,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_structs",
-      "iterations": 1065,
-      "real_time": 3885622,
-      "cpu_time": 3885541,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_structs",
-      "iterations": 1065,
-      "real_time": 3887527,
-      "cpu_time": 3887433,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_structs",
-      "iterations": 1065,
-      "real_time": 3879402,
-      "cpu_time": 3879313,
+      "iterations": 1077,
+      "real_time": 3853672,
+      "cpu_time": 3853206,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_structs_mean",
-      "iterations": 1065,
-      "real_time": 3894544,
-      "cpu_time": 3894397,
+      "iterations": 1077,
+      "real_time": 3859058,
+      "cpu_time": 3858731,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_structs_stddev",
       "iterations": 0,
-      "real_time": 13371,
-      "cpu_time": 13346,
+      "real_time": 12895,
+      "cpu_time": 12976,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_structs",
-      "iterations": 977,
-      "real_time": 8348076,
-      "cpu_time": 4755438,
+      "iterations": 876,
+      "real_time": 8439091,
+      "cpu_time": 4864700,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_structs",
-      "iterations": 977,
-      "real_time": 8399692,
-      "cpu_time": 4801859,
+      "iterations": 876,
+      "real_time": 8395446,
+      "cpu_time": 4836706,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_structs",
-      "iterations": 977,
-      "real_time": 7886387,
-      "cpu_time": 4359707,
+      "iterations": 876,
+      "real_time": 8421884,
+      "cpu_time": 4839861,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_structs",
-      "iterations": 977,
-      "real_time": 8368540,
-      "cpu_time": 4778839,
+      "iterations": 876,
+      "real_time": 8391460,
+      "cpu_time": 4835050,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_structs",
-      "iterations": 977,
-      "real_time": 8489927,
-      "cpu_time": 4871063,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_structs",
-      "iterations": 977,
-      "real_time": 8508628,
-      "cpu_time": 4886326,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_structs",
-      "iterations": 977,
-      "real_time": 8267768,
-      "cpu_time": 4696079,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_structs",
-      "iterations": 977,
-      "real_time": 8462068,
-      "cpu_time": 4861802,
+      "iterations": 876,
+      "real_time": 7881467,
+      "cpu_time": 4384601,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_structs_mean",
-      "iterations": 977,
-      "real_time": 8341386,
-      "cpu_time": 4751389,
+      "iterations": 876,
+      "real_time": 8305870,
+      "cpu_time": 4752184,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_structs_stddev",
       "iterations": 0,
-      "real_time": 187491,
-      "cpu_time": 159888,
+      "real_time": 212920,
+      "cpu_time": 184106,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_structs",
-      "iterations": 400,
-      "real_time": 12043279,
-      "cpu_time": 8735341,
+      "iterations": 496,
+      "real_time": 11759067,
+      "cpu_time": 8416373,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_structs",
-      "iterations": 400,
-      "real_time": 12391879,
-      "cpu_time": 9165370,
+      "iterations": 496,
+      "real_time": 11245855,
+      "cpu_time": 7912415,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_structs",
-      "iterations": 400,
-      "real_time": 12557481,
-      "cpu_time": 9261587,
+      "iterations": 496,
+      "real_time": 11868540,
+      "cpu_time": 9065434,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_structs",
-      "iterations": 400,
-      "real_time": 12344620,
-      "cpu_time": 9062144,
+      "iterations": 496,
+      "real_time": 11629326,
+      "cpu_time": 8325662,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_structs",
-      "iterations": 400,
-      "real_time": 12506798,
-      "cpu_time": 9188303,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_structs",
-      "iterations": 400,
-      "real_time": 12491973,
-      "cpu_time": 9216738,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_structs",
-      "iterations": 400,
-      "real_time": 11472638,
-      "cpu_time": 8074817,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_structs",
-      "iterations": 400,
-      "real_time": 12562867,
-      "cpu_time": 9202334,
+      "iterations": 496,
+      "real_time": 11737504,
+      "cpu_time": 8935075,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_structs_mean",
-      "iterations": 400,
-      "real_time": 12296442,
-      "cpu_time": 8988329,
+      "iterations": 496,
+      "real_time": 11648059,
+      "cpu_time": 8530992,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_structs_stddev",
       "iterations": 0,
-      "real_time": 349246,
-      "cpu_time": 378802,
+      "real_time": 214967,
+      "cpu_time": 421152,
       "time_unit": "ns"
     },
     {
       "name": "grpc_bench/get_structs",
-      "iterations": 374,
-      "real_time": 17630981,
-      "cpu_time": 11236258,
+      "iterations": 382,
+      "real_time": 17501989,
+      "cpu_time": 11003504,
       "time_unit": "ns"
     },
     {
       "name": "grpc_bench/get_structs",
-      "iterations": 374,
-      "real_time": 17497258,
-      "cpu_time": 11057915,
+      "iterations": 382,
+      "real_time": 17570151,
+      "cpu_time": 11061160,
       "time_unit": "ns"
     },
     {
       "name": "grpc_bench/get_structs",
-      "iterations": 374,
-      "real_time": 17514935,
-      "cpu_time": 11202387,
+      "iterations": 382,
+      "real_time": 17752578,
+      "cpu_time": 11103080,
       "time_unit": "ns"
     },
     {
       "name": "grpc_bench/get_structs",
-      "iterations": 374,
-      "real_time": 17706967,
-      "cpu_time": 11253250,
+      "iterations": 382,
+      "real_time": 17774696,
+      "cpu_time": 11046295,
       "time_unit": "ns"
     },
     {
       "name": "grpc_bench/get_structs",
-      "iterations": 374,
-      "real_time": 17565010,
-      "cpu_time": 11078282,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_structs",
-      "iterations": 374,
-      "real_time": 17707054,
-      "cpu_time": 11490304,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_structs",
-      "iterations": 374,
-      "real_time": 17746001,
-      "cpu_time": 11402812,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_structs",
-      "iterations": 374,
-      "real_time": 17837073,
-      "cpu_time": 11370237,
+      "iterations": 382,
+      "real_time": 17781095,
+      "cpu_time": 11161818,
       "time_unit": "ns"
     },
     {
       "name": "grpc_bench/get_structs_mean",
-      "iterations": 374,
-      "real_time": 17650660,
-      "cpu_time": 11261431,
+      "iterations": 382,
+      "real_time": 17676102,
+      "cpu_time": 11075171,
       "time_unit": "ns"
     },
     {
       "name": "grpc_bench/get_structs_stddev",
       "iterations": 0,
-      "real_time": 111729,
-      "cpu_time": 142898,
+      "real_time": 116734,
+      "cpu_time": 53764,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_structs",
-      "iterations": 23147,
-      "real_time": 181272,
-      "cpu_time": 181262,
+      "iterations": 22833,
+      "real_time": 184136,
+      "cpu_time": 184129,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_structs",
-      "iterations": 23147,
-      "real_time": 180825,
-      "cpu_time": 180818,
+      "iterations": 22833,
+      "real_time": 182602,
+      "cpu_time": 182595,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_structs",
-      "iterations": 23147,
-      "real_time": 180942,
-      "cpu_time": 180934,
+      "iterations": 22833,
+      "real_time": 183575,
+      "cpu_time": 183570,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_structs",
-      "iterations": 23147,
-      "real_time": 181003,
-      "cpu_time": 180994,
+      "iterations": 22833,
+      "real_time": 183861,
+      "cpu_time": 183855,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_structs",
-      "iterations": 23147,
-      "real_time": 181257,
-      "cpu_time": 181250,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_structs",
-      "iterations": 23147,
-      "real_time": 180969,
-      "cpu_time": 180962,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_structs",
-      "iterations": 23147,
-      "real_time": 180677,
-      "cpu_time": 180670,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_structs",
-      "iterations": 23147,
-      "real_time": 180551,
-      "cpu_time": 180543,
+      "iterations": 22833,
+      "real_time": 182901,
+      "cpu_time": 182896,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_structs_mean",
-      "iterations": 23147,
-      "real_time": 180937,
-      "cpu_time": 180929,
+      "iterations": 22833,
+      "real_time": 183415,
+      "cpu_time": 183409,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_structs_stddev",
       "iterations": 0,
-      "real_time": 237,
-      "cpu_time": 237,
+      "real_time": 578,
+      "cpu_time": 578,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20258169,
-      "cpu_time": 31247,
+      "iterations": 1000000000,
+      "real_time": 2,
+      "cpu_time": 2,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20261054,
-      "cpu_time": 32127,
+      "iterations": 1000000000,
+      "real_time": 2,
+      "cpu_time": 2,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20263099,
-      "cpu_time": 32260,
+      "iterations": 1000000000,
+      "real_time": 2,
+      "cpu_time": 2,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20260439,
-      "cpu_time": 32559,
+      "iterations": 1000000000,
+      "real_time": 2,
+      "cpu_time": 2,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20261016,
-      "cpu_time": 32718,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20263938,
-      "cpu_time": 32689,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20263358,
-      "cpu_time": 33144,
-      "time_unit": "ns"
-    },
-    {
-      "name": "direct_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20244576,
-      "cpu_time": 32807,
+      "iterations": 1000000000,
+      "real_time": 2,
+      "cpu_time": 2,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_answer_mean",
-      "iterations": 1000,
-      "real_time": 20259456,
-      "cpu_time": 32444,
+      "iterations": 1000000000,
+      "real_time": 2,
+      "cpu_time": 2,
       "time_unit": "ns"
     },
     {
       "name": "direct_bench/get_answer_stddev",
       "iterations": 0,
-      "real_time": 5891,
-      "cpu_time": 540,
+      "real_time": 0,
+      "cpu_time": 0,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20648493,
-      "cpu_time": 77129,
+      "iterations": 885606,
+      "real_time": 22259,
+      "cpu_time": 4800,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20736723,
-      "cpu_time": 78112,
+      "iterations": 885606,
+      "real_time": 22294,
+      "cpu_time": 4738,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20763108,
-      "cpu_time": 84003,
+      "iterations": 885606,
+      "real_time": 21822,
+      "cpu_time": 4637,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20816160,
-      "cpu_time": 79946,
+      "iterations": 885606,
+      "real_time": 22173,
+      "cpu_time": 4793,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20772605,
-      "cpu_time": 80350,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20731450,
-      "cpu_time": 75829,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20754327,
-      "cpu_time": 74000,
-      "time_unit": "ns"
-    },
-    {
-      "name": "rpclib_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20749706,
-      "cpu_time": 79388,
+      "iterations": 885606,
+      "real_time": 22028,
+      "cpu_time": 4659,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_answer_mean",
-      "iterations": 1000,
-      "real_time": 20746572,
-      "cpu_time": 78595,
+      "iterations": 885606,
+      "real_time": 22115,
+      "cpu_time": 4725,
       "time_unit": "ns"
     },
     {
       "name": "rpclib_bench/get_answer_stddev",
       "iterations": 0,
-      "real_time": 44454,
-      "cpu_time": 2871,
+      "real_time": 173,
+      "cpu_time": 67,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20862466,
-      "cpu_time": 630841,
+      "iterations": 115159,
+      "real_time": 36326,
+      "cpu_time": 36324,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20856323,
-      "cpu_time": 618546,
+      "iterations": 115159,
+      "real_time": 36293,
+      "cpu_time": 36291,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20853834,
-      "cpu_time": 620820,
+      "iterations": 115159,
+      "real_time": 36275,
+      "cpu_time": 36273,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20853883,
-      "cpu_time": 615493,
+      "iterations": 115159,
+      "real_time": 36295,
+      "cpu_time": 36293,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20861749,
-      "cpu_time": 624707,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20873404,
-      "cpu_time": 634161,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20882978,
-      "cpu_time": 645494,
-      "time_unit": "ns"
-    },
-    {
-      "name": "capnp_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20869089,
-      "cpu_time": 634101,
+      "iterations": 115159,
+      "real_time": 36269,
+      "cpu_time": 36267,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_answer_mean",
-      "iterations": 1000,
-      "real_time": 20864216,
-      "cpu_time": 628020,
+      "iterations": 115159,
+      "real_time": 36292,
+      "cpu_time": 36290,
       "time_unit": "ns"
     },
     {
       "name": "capnp_bench/get_answer_stddev",
       "iterations": 0,
-      "real_time": 9658,
-      "cpu_time": 9337,
+      "real_time": 20,
+      "cpu_time": 20,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20519983,
-      "cpu_time": 130302,
+      "iterations": 593383,
+      "real_time": 10328,
+      "cpu_time": 6580,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20512893,
-      "cpu_time": 128794,
+      "iterations": 593383,
+      "real_time": 10401,
+      "cpu_time": 6612,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20523580,
-      "cpu_time": 129317,
+      "iterations": 593383,
+      "real_time": 10135,
+      "cpu_time": 6519,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20527594,
-      "cpu_time": 134014,
+      "iterations": 593383,
+      "real_time": 10310,
+      "cpu_time": 6610,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20550223,
-      "cpu_time": 133867,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20530789,
-      "cpu_time": 130849,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20549927,
-      "cpu_time": 135755,
-      "time_unit": "ns"
-    },
-    {
-      "name": "thrift_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 20541238,
-      "cpu_time": 133952,
+      "iterations": 593383,
+      "real_time": 10251,
+      "cpu_time": 6579,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_answer_mean",
-      "iterations": 1000,
-      "real_time": 20532028,
-      "cpu_time": 132106,
+      "iterations": 593383,
+      "real_time": 10285,
+      "cpu_time": 6580,
       "time_unit": "ns"
     },
     {
       "name": "thrift_bench/get_answer_stddev",
       "iterations": 0,
-      "real_time": 12943,
-      "cpu_time": 2425,
+      "real_time": 89,
+      "cpu_time": 34,
       "time_unit": "ns"
     },
     {
       "name": "grpc_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 21081435,
-      "cpu_time": 455206,
+      "iterations": 126052,
+      "real_time": 53044,
+      "cpu_time": 31945,
       "time_unit": "ns"
     },
     {
       "name": "grpc_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 21083570,
-      "cpu_time": 453869,
+      "iterations": 126052,
+      "real_time": 55396,
+      "cpu_time": 32654,
       "time_unit": "ns"
     },
     {
       "name": "grpc_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 21071022,
-      "cpu_time": 445946,
+      "iterations": 126052,
+      "real_time": 55306,
+      "cpu_time": 32747,
       "time_unit": "ns"
     },
     {
       "name": "grpc_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 21070433,
-      "cpu_time": 453871,
+      "iterations": 126052,
+      "real_time": 56212,
+      "cpu_time": 33090,
       "time_unit": "ns"
     },
     {
       "name": "grpc_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 21046620,
-      "cpu_time": 445469,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 21074635,
-      "cpu_time": 456013,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 21078959,
-      "cpu_time": 458114,
-      "time_unit": "ns"
-    },
-    {
-      "name": "grpc_bench/get_answer",
-      "iterations": 1000,
-      "real_time": 21064241,
-      "cpu_time": 448387,
+      "iterations": 126052,
+      "real_time": 54245,
+      "cpu_time": 32252,
       "time_unit": "ns"
     },
     {
       "name": "grpc_bench/get_answer_mean",
-      "iterations": 1000,
-      "real_time": 21071364,
-      "cpu_time": 452109,
+      "iterations": 126052,
+      "real_time": 54841,
+      "cpu_time": 32538,
       "time_unit": "ns"
     },
     {
       "name": "grpc_bench/get_answer_stddev",
       "iterations": 0,
-      "real_time": 11084,
-      "cpu_time": 4514,
+      "real_time": 1094,
+      "cpu_time": 399,
       "time_unit": "ns"
     }
   ]
