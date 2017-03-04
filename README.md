@@ -43,8 +43,7 @@ Each library is set up to create local client and server that communicate throug
 This benchmark suite uses [Google Benchmark](https://github.com/google/benchmark) to manage the
 benchmarking. Each library has a fixture that is set up and torn down in each benchmark run once
 (similarly to unit tests). The setup and teardown performance is not measured. Each microbenchmark is performed in a number of
-iterations (determined by Google Benchmark). All runs are performed five times and the lowest and
-highest times are thrown away. The results are the means, medians and standard deviations of the
+iterations (determined by Google Benchmark). All runs are performed five times. The results are the means, medians and standard deviations of the
 remaining three measured times.
 
 ### What is `rpclib`?
