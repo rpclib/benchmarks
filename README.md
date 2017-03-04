@@ -16,11 +16,30 @@ The following libraries are or will be benchmarked:
 
 ## Results
 
-TBD
+The results can be found in this repository (json files and plots, plus a [Jupyter Notebook](https://github.com/rpclib/benchmarks/blob/master/rpclib%20benchmark%20results.ipynb)). 
 
 ## Compiling and running
 
-TBD
+Currently, this benchmark set can only be compiled on Linux. Even though all libraries are cross-platform, the conan packages I'm using aren't.
+
+### Requirements
+
+  * A reasonably modern Linux distribution (tested on Arch Linux and Ubuntu 16.04)
+  * g++ 5.4 or later, or clang-3.8 or later
+  * cmake 3.x
+  
+#### Build steps
+
+```
+mkdir build && cd build
+conan install .. --build missing
+cmake ..
+make
+```
+
+#### Running the benchmarks
+
+I suggest using the `run_benchmarks.sh` script. It took about 40 minutes no my machine to complete all benchmark runs.
 
 ## FAQ
 
