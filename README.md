@@ -16,7 +16,7 @@ The following libraries are or will be benchmarked:
 
 ## Results
 
-The results can be found in this repository (json files and plots, plus a [Jupyter Notebook](https://github.com/rpclib/benchmarks/blob/master/rpclib%20benchmark%20results.ipynb)). 
+The results can be found in this repository (json files and plots, plus a [Jupyter Notebook](https://github.com/rpclib/benchmarks/blob/master/rpclib%20benchmark%20results.ipynb)). I've also written a blog post about this: http://szelei.me/rpc-benchmark-part1/
 
 ## Compiling and running
 
