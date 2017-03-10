@@ -1,4 +1,4 @@
-# rpclib (micro)benchmarks
+# rpclib benchmarks
 
 This is a set of benchmarks that compares the performance of various RPC libraries/frameworks in
 specific situations. The benchmark suite is created as part of the [rpclib](http://rpclib.net)
