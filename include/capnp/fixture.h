@@ -72,10 +72,8 @@ public:
     blob_size_ = param;
     auto request = client->getBlobRequest();
     auto resultPromise = request.send();
-    std::string s;
-    auto result =
-        resultPromise.wait(client_thing->getWaitScope()).getResult().asChars();
-    benchmark::DoNotOptimize(s = result.begin());
+    auto result = resultPromise.wait(client_thing->getWaitScope());
+    benchmark::DoNotOptimize(result.getResult().size());
   }
 
   void get_structs(int param) {
