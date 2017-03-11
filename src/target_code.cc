@@ -8,7 +8,7 @@ int get_answer(int num) {
 
 static std::map<int, std::string> blob_cache;
 
-std::string get_blob(int size) {
+const std::string& get_blob(int size) {
   if (blob_cache.find(size) != end(blob_cache)) {
     return blob_cache[size];
   }
@@ -19,8 +19,8 @@ std::string get_blob(int size) {
     c = static_cast<unsigned char>(rand() % 256);
   }
 
-  blob_cache[size] = s;
-  return s;
+  blob_cache[size] = std::move(s);
+  return blob_cache[size];
 }
 
 std::string rand_str(std::size_t size) {

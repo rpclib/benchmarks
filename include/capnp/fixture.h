@@ -24,7 +24,7 @@ private:
     }
 
     kj::Promise<void> getBlob(GetBlobContext context) override {
-      auto blob = ::get_blob(blob_size_);
+      auto& blob = ::get_blob(blob_size_);
       kj::ArrayPtr<unsigned char> arr((unsigned char *)blob.data(),
                                       blob.size());
       context.getResults().setResult(capnp::Data::Reader(arr));

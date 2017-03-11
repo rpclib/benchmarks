@@ -11,7 +11,7 @@
 
 
 int get_answer(int num);
-std::string get_blob(int size);
+const std::string& get_blob(int size);
 
 std::string rand_str(std::size_t length);
 
