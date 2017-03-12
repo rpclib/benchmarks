@@ -24,7 +24,7 @@ private:
     }
 
     kj::Promise<void> getBlob(GetBlobContext context) override {
-      auto blob = ::get_blob(blob_size_);
+      auto& blob = ::get_blob(blob_size_);
       kj::ArrayPtr<unsigned char> arr((unsigned char *)blob.data(),
                                       blob.size());
       context.getResults().setResult(capnp::Data::Reader(arr));
@@ -72,10 +72,8 @@ public:
     blob_size_ = param;
     auto request = client->getBlobRequest();
     auto resultPromise = request.send();
-    std::string s;
-    auto result =
-        resultPromise.wait(client_thing->getWaitScope()).getResult().asChars();
-    benchmark::DoNotOptimize(s = result.begin());
+    auto result = resultPromise.wait(client_thing->getWaitScope());
+    benchmark::DoNotOptimize(result.getResult().size());
   }
 
   void get_structs(int param) {

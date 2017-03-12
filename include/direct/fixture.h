@@ -18,10 +18,10 @@ public:
   }
 
   void get_blob(int param) {
-    std::string s;
-    benchmark::DoNotOptimize(s = ::get_blob(param));
+    const std::string* s;
+    benchmark::DoNotOptimize(s = &::get_blob(param));
     std::size_t size;
-    benchmark::DoNotOptimize(size = s.size());
+    benchmark::DoNotOptimize(size = s->size());
   }
 
   void get_structs(int param) {

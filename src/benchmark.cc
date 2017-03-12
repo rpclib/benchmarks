@@ -59,9 +59,8 @@ MAKE_BENCHMARK0(grpc_bench, get_answer);
 
 int main(int argc, char *argv[]) {
   printf("Initalizing blob cache...\n");
-  for (std::size_t s = min_size; s < max_size; ++s) {
+  for (std::size_t s = min_size; s <= max_size; s *= multiplier) {
     get_blob(s);
-    s *= multiplier;
   }
 
   printf("Initalizing struct cache...\n");
